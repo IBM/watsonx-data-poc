@@ -1,0 +1,669 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>Revisions - watsonx.data Proof of Concept</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"IBM Plex Sans";--md-code-font:"IBM Plex Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="black">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#revisions" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="watsonx.data Proof of Concept" class="md-header__button md-logo" aria-label="watsonx.data Proof of Concept" data-md-component="logo">
+      
+  <img src="../wxd-images/IBM_logo®_rev_RGB.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            watsonx.data Proof of Concept
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Revisions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="watsonx.data Proof of Concept" class="md-nav__button md-logo" aria-label="watsonx.data Proof of Concept" data-md-component="logo">
+      
+  <img src="../wxd-images/IBM_logo®_rev_RGB.png" alt="logo">
+
+    </a>
+    watsonx.data Proof of Concept
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-intro/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-reference-ibmid/" class="md-nav__link">
+        Requesting an IBMid
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-reference-techzone/" class="md-nav__link">
+        Requesting an image
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-reference-access/" class="md-nav__link">
+        Accessing the reservation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-reference-ports/" class="md-nav__link">
+        Available Ports
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-reference-vnc/" class="md-nav__link">
+        VM Remote Console
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-reference-ssh/" class="md-nav__link">
+        SSH and SCP Commands
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-reference-passwords/" class="md-nav__link">
+        Userids and Passwords
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-reference-documentation/" class="md-nav__link">
+        Documentation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-lab-instructions/" class="md-nav__link">
+        Lab Instructions
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#january-8-2024" class="md-nav__link">
+    January 8, 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#january-3-2024" class="md-nav__link">
+    January 3, 2024
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#december-6-2023" class="md-nav__link">
+    December 6, 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#october-6-2023" class="md-nav__link">
+    October 6, 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#july-25-2023" class="md-nav__link">
+    July 25, 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#june-12-2023" class="md-nav__link">
+    June 12, 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#june-6-2023" class="md-nav__link">
+    June 6, 2023
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#may-25th-2023" class="md-nav__link">
+    May 25th, 2023
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="revisions">Revisions</h1>
+<h3 id="january-8-2024">January 8, 2024</h3>
+<ul>
+<li>
+<p>Updated the lab to GA watsonx.data 1.1.1 code</p>
+<ul>
+<li>
+<p><a href="https://www.ibm.com/docs/en/watsonxdata/1.1.x?topic=watsonxdata-whats-new-in">What's new in watsonx.data version 1.1.1 Reference</a></p>
+</li>
+<li>
+<p>Audit logging</p>
+</li>
+</ul>
+<p>IBM watsonx.data now integrates with the Cloud Pak for Data audit logging service. Auditable events for watsonx.data are forwarded to the security information and event management (SIEM) solution that you integrate with.</p>
+<ul>
+<li>Use self-signed certificates and CA certificates to connect to object stores</li>
+</ul>
+<p>Previously, watsonx.data could connect to HTTPS endpoints that used certificates signed by well-known certificate authorities, such as IBM Cloud® Object Storage and Amazon S3. Now, you can connect to object stores that use self-signed certificates or certificates that are signed by other certificate authorities.</p>
+<ul>
+<li>Integration with Db2® and Netezza®</li>
+</ul>
+<p>You can now register Db2 or Netezza engines with valid console URL. You can use the metastore URL shown in Engine detail page to sync the respective engines with appropriate bucket catalog-based table.</p>
+<ul>
+<li>IBM Data Virtualization Manager for z/OS® connector</li>
+</ul>
+<p>You can use the new IBM Data Virtualization Manager for z/OS® connector to read and write IBM Z® without having to move, replicate, or transform the data. For more information, see Connecting to an IBM Data Virtualization Manager (DVM) data source.</p>
+<ul>
+<li>Better memory management</li>
+</ul>
+<p>Metastore caching and metadata caching (header and footer caching) are now enabled by default to optimize the memory usage. Also, now you can create a local staging directory to optimize the use of resources during data operations. For more information, see Enhancing the query performance through caching and Configuring a local staging directory.</p>
+<ul>
+<li>Presto case-sensitive behavior</li>
+</ul>
+<p>The Presto behavior is changed from case-insensitive to case-sensitive. Now you can provide the object names in original case format as in the database. You can also create Schemas, Tables and Columns in mixed case that is, uppercase and lowercase through Presto if the database supports it.</p>
+<ul>
+<li>Teradata connector is enabled for multiple ALTER TABLE statements</li>
+</ul>
+<p>Teradata connector now supports the ALTER TABLE RENAME TO, ALTER TABLE DROP COLUMN, ALTER TABLE RENAME COLUMN column_name TO new_column_name statements.</p>
+<ul>
+<li>Removal of development (*-devel) packages</li>
+</ul>
+<p>For security reasons, the *-devel packages are removed from watsonx.data. If you are already using the development packages, the programs that use the development packages cannot be compiled . For any queries, contact IBM Support.</p>
+<ul>
+<li>SSL is enabled for PostgreSQL</li>
+</ul>
+<p>Now ingestion can use mounted certificates when connecting to PostgreSQL.</p>
+</li>
+</ul>
+<h3 id="january-3-2024">January 3, 2024</h3>
+<ul>
+<li>
+<p>Added two open ports to the image</p>
+<p>Sometimes there is a requirement to add another service to the watsonx.data image. For instance, you may want to add MongoDB or MSSQL to the system in order to demonstrate federations with these data source. Since we do not know what your requirements are, we have opened up two ports that can be assigned to any service. The documentation has been updated to describe what steps are needed to use these open up and use these ports.</p>
+</li>
+</ul>
+<h3 id="december-6-2023">December 6, 2023</h3>
+<ul>
+<li>
+<p>Updated the lab to GA 1.1.0 code</p>
+<ul>
+<li>
+<p><a href="https://www.ibm.com/docs/en/watsonxdata/1.1.x?topic=watsonxdata-whats-new-in">What's new in watsonx.data version 1.1.0 Reference</a></p>
+</li>
+<li>
+<p>Time-travel and roll-back queries</p>
+<p>You can now run the following time-travel queries to access historical data in Apache Iceberg tables:</p>
+<p><pre style="font-size: small; color: darkgreen; overflow: auto">
+SELECT &lt;columns&gt; FROM &lt;iceberg-table&gt; FOR TIMESTAMP AS OF TIMESTAMP &lt;timestamp&gt;
+SELECT &lt;columns&gt; FROM &lt;iceberg-table&gt; FOR VERSION AS OF &lt;snapshotId&gt;
+</pre></p>
+<p>You can use time-travel queries to query and restore data that was updated or deleted in the past.</p>
+<p>You can also roll back an Apache Iceberg table to any existing snapshot.</p>
+</li>
+<li>
+<p>Capture historical data about Presto queries</p>
+<p>The Query History Monitoring and Management (QHMM) service captures historical data about Presto queries and events. The historical data is stored in a MinIO bucket and you can use the data to understand the queries that were run and to debug the Presto engine.</p>
+</li>
+<li>
+<p>Improved query performance with Metastore, File list, and File metadata caching</p>
+</li>
+<li>
+<p>You can now capture and track the DDL changes in watsonx.data by using    an event listener.</p>
+</li>
+<li>
+<p>Ingest data by using Spark</p>
+<p>You can now use the IBM Analytics Engine powered by Apache Spark to run ingestion jobs in watsonx.data.</p>
+</li>
+<li>
+<p>Integration with Db2 and Netezza Performance Server</p>
+<p>You can now register Db2 or Netezza Performance Server engines in watsonx.data console.</p>
+</li>
+<li>
+<p>New connectors</p>
+<p>You can now use connectors in watsonx.data to establish connections to the following types of databases:</p>
+<ul>
+<li>Teradata</li>
+<li>Delta Lake</li>
+<li>Elasticsearch</li>
+<li>SAP HANA</li>
+<li>SingleStoreDB</li>
+<li>Snowflake</li>
+<li>Teradata</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Db2 Upgraded to 11.5.9</p>
+<ul>
+<li><a href="https://www.ibm.com/docs/en/db2/11.5?topic=new-1159">What's new in Db2 11.5.9 Reference</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="october-6-2023">October 6, 2023</h3>
+<ul>
+<li>
+<p>Updated the lab to GA 1.0.3 code</p>
+<ul>
+<li><a href="https://www.ibm.com/docs/en/watsonxdata/1.0.x?topic=watsonxdata-version-103">What's new in watsonx.data version 1.1.0</a></li>
+</ul>
+</li>
+<li>
+<p>Image now available in 10 data centers with simpler provisioning</p>
+<ul>
+<li><a href="../wxd-reference-techzone/">Requesting an Image</a></li>
+</ul>
+</li>
+<li>
+<p>Removed VPN Requirement</p>
+</li>
+<li>
+<p>External URLs and Ports for all UI Services</p>
+<ul>
+<li><a href="../wxd-reference-ports/">watsonx.data Ports</a></li>
+</ul>
+</li>
+<li>
+<p>Added PostgreSQL and MySQL databases</p>
+<ul>
+<li><a href="../wxd-connections/#postgresql-access">Postgres Connection</a></li>
+<li><a href="../wxd-connections/#mysql-access">MySQL Connection</a></li>
+</ul>
+</li>
+<li>
+<p>Added Jupyter notebook examples</p>
+<ul>
+<li><a href="../wxd-jupyter/">Jupyter Notebook support</a></li>
+</ul>
+</li>
+<li>
+<p>Fixed Presto certificate to support TechZone addresses without updating<code>/etc/hosts</code></p>
+<ul>
+<li><a href="../wxd-connections/#watsonxdata-connection-certificate">Watsonx.data Connection Certificate</a></li>
+</ul>
+</li>
+<li>
+<p>Added standalone Spark server to show connectivity to the Presto database</p>
+<ul>
+<li><a href="../wxd-jupyter/#accessing-watsonxdata-with-spark">Accessing watsonx.data with Spark</a></li>
+</ul>
+</li>
+<li>
+<p>Added watsonx.data Client code</p>
+<ul>
+<li><a href="https://www.ibm.com/docs/en/watsonxdata/1.0.x?topic=utilities-lh-client-commands-usage">Watsonx.data client utilities</a></li>
+</ul>
+</li>
+<li>
+<p>Added MinIO CLI interface</p>
+<ul>
+<li><a href="../wxd-minio/">MinIO CLI</a></li>
+</ul>
+</li>
+<li>
+<p>Exposed external ports for MinIO, Db2, MySQL, PostgreSQL, Hive, PrestoDB</p>
+<ul>
+<li><a href="../wxd-reference-ports/">watsonx.data Ports</a></li>
+</ul>
+</li>
+<li>
+<p>VNC Interface disabled by default</p>
+<ul>
+<li><a href="wxd-reference-vnc#enabling-vnc-access.md">Enabling VNC Access</a></li>
+</ul>
+</li>
+<li>
+<p>Added Ingesting data chapter</p>
+<ul>
+<li><a href="../wxd-ingest/">Ingesting Data</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="july-25-2023">July 25, 2023</h3>
+<ul>
+<li>Updated the lab to GA 1.0.1 code</li>
+<li>Automated start of watsonx.data and simplification of many of the sections</li>
+<li>Removed the Ingest section until a new version is available</li>
+<li>Added Db2 and PostgreSQL connection details</li>
+</ul>
+<h3 id="june-12-2023">June 12, 2023</h3>
+<p>Clarified some commands and added an Appendix on common issues.</p>
+<h3 id="june-6-2023">June 6, 2023</h3>
+<p>Updated instructions for new TechZone image and added Ingest lab instructions.</p>
+<h3 id="may-25th-2023">May 25th, 2023</h3>
+<p>Initial publication.</p>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 IBM
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+    
+  </body>
+</html>
