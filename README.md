@@ -1,2 +1,2 @@
-# watsonx-data-poc
-Watsonx.data POC Instructions
+# watsonx-data-lab
+Documentation for watsonx.data Development Lab
