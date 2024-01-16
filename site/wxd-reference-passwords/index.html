@@ -327,8 +327,215 @@
   
     <li class="md-nav__item">
       <a href="../wxd-lab-instructions/" class="md-nav__link">
-        Lab Instructions
+        Lab Conventions and Startup
       </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11">
+          Core Components
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Core Components" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Core Components
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-prestocli/" class="md-nav__link">
+        Presto CLI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-watsonui/" class="md-nav__link">
+        watsonx.data UI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-presto/" class="md-nav__link">
+        Presto UI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-minio/" class="md-nav__link">
+        MinIO UI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_5" type="checkbox" id="__nav_11_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_5">
+          Presto SQL
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Presto SQL" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_5">
+          <span class="md-nav__icon md-icon"></span>
+          Presto SQL
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-analytics/" class="md-nav__link">
+        Analytic Workloads
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-advanced/" class="md-nav__link">
+        Advanced Functions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-timetravel/" class="md-nav__link">
+        Time Travel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-federation/" class="md-nav__link">
+        Federation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-systemconnector/" class="md-nav__link">
+        System Connector
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-reference-portainer/" class="md-nav__link">
+        Portainer Console
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -392,11 +599,6 @@
 <td>password</td>
 </tr>
 <tr>
-<td>Jupyter Notebook</td>
-<td>none</td>
-<td>watsonx.data</td>
-</tr>
-<tr>
 <td>Presto</td>
 <td>ibmlhadmin</td>
 <td>password</td>
@@ -412,34 +614,14 @@
 <td>Generated</td>
 </tr>
 <tr>
-<td>Apache Superset</td>
-<td>admin</td>
-<td>admin</td>
-</tr>
-<tr>
 <td>Portainer</td>
 <td>admin</td>
 <td>watsonx.data</td>
 </tr>
 <tr>
-<td>Db2</td>
-<td>db2inst1</td>
-<td>db2inst1</td>
-</tr>
-<tr>
-<td>MySQL</td>
-<td>root</td>
-<td>password</td>
-</tr>
-<tr>
-<td>VNC Windows</td>
-<td>none</td>
-<td>watsonx.</td>
-</tr>
-<tr>
-<td>VNC OSX</td>
-<td>none</td>
-<td>watsonx.data</td>
+<td>Thrift</td>
+<td>lh-default</td>
+<td>Generated</td>
 </tr>
 </tbody>
 </table>
@@ -454,7 +636,7 @@ echo &quot;MinIO Password: &quot; $LH_S3_SECRET_KEY
 echo &quot;Postgres Userid   : admin&quot;
 echo &quot;Postgres Password : &quot; $POSTGRES_PASSWORD
 </code></pre>
-<p>You can get all passwords for the system when you are logged by issuing the following command:</p>
+<p>You can get all passwords for the system when you are logged in by issuing the following command:</p>
 <pre><code class="language-bash">cat /certs/passwords
 </code></pre>
 <p>If the passwords do not appear to work, you may need to regenerate them. The following must be run as the <code>root</code> user.</p>

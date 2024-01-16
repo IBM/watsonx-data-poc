@@ -7,16 +7,11 @@ This table lists the passwords for the services that have "fixed" userids and pa
 |Virtual Machine|watsonx|watsonx.data
 |Virtual Machine|root|watsonx.data
 |watsonx.data UI|ibmlhadmin|password
-|Jupyter Notebook|none|watsonx.data
 |Presto|ibmlhadmin|password
 |Minio|Generated|Generated
 |Postgres|admin|Generated
-|Apache Superset|admin|admin
 |Portainer|admin|watsonx.data
-|Db2|db2inst1|db2inst1
-|MySQL|root|password
-|VNC Windows|none|watsonx.
-|VNC OSX|none|watsonx.data
+|Thrift|lh-default|Generated
 
 Use the following commands to get the generated userid and password for MinIO.
 ```
@@ -33,7 +28,7 @@ echo "Postgres Userid   : admin"
 echo "Postgres Password : " $POSTGRES_PASSWORD
 ```
 
-You can get all passwords for the system when you are logged by issuing the following command:
+You can get all passwords for the system when you are logged in by issuing the following command:
 ```bash
 cat /certs/passwords
 ```

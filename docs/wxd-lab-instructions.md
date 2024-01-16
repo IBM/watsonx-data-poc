@@ -1,4 +1,4 @@
-# Lab Instructions
+# Lab Conventions and Startup
 
 ## URL Conventions
 
@@ -18,9 +18,9 @@ A copy icon is usually found on the far right-hand side of the command box. Use 
 * Commands pasted into a terminal window will require that you hit the `Return` or `Enter` key for the command to be executed
 * Commands pasted into a Presto CLI window will execute automatically
 
-## System Check
+## System Startup
 
-The watsonx.data server automatically starts all services except for Apache Superset and the VNC service. To check the status of the server, run the following commands.
+The watsonx.data server is **not** started as part of the lab. You must start the system manually. To start the server, run the following commands.
 
 Make sure that you have an open terminal session and use the following command to connect to the watsonx.data server.
 
@@ -38,7 +38,26 @@ Switch to the development code bin directory.
 cd /root/ibm-lh-dev/bin
 ```
 
-Once you have switched to the development directory, you can start running watsonx.data commands. You can check the status with the following command.
+Once you have switched to the development directory, you can start running watsonx.data commands. You must start the watsonx.data service using either of these commands:
+```
+systemctl start watsonx.service
+```
+or
+```
+export LH_RUN_MODE=diag
+./start
+```
+
+If you want to start the prestissimo engine, you must use the following syntax:
+```
+cd /root/ibm-lh-dev/bin
+export LH_RUN_MODE=diag
+./start prestissimo
+```
+
+**Note:** Using the `systemctl` or `start` command will take a few minutes to complete. There will not be any status messages displayed when using the `systemctl` command, so if you want to watch the startup sequence, use the `start` command instead. You must set `LH_RUN_MODE` to `diag` to open up the ports in the various watsonx.data containers. If you do not set this environment variable, you will not be able to access several services externally.
+
+ You can check the status with the following command.
 ```bash
 ./status.sh --all
 ```

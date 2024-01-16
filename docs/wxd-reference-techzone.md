@@ -13,7 +13,7 @@ you have logged in, you should see the following.
  
 Select the Environment tab on the far-left side. 
 
-**Note**: There may be more than one environment available. Choose the one best suited for your requirements.
+**Note**: There may be more than one environment available. Choose the **IBM watsonx.data Development POC R1M0**. The version number may change as newer versions of watsonx.data are released. Make sure to sure to select the **POC** image and not the standard Developer edition versions.
 
 ![Browser](wxd-images/techzone-environment.png)
  
@@ -30,7 +30,9 @@ For “Purpose” select Self Education. This will expand to request additional 
 ![Browser](wxd-images/techzone-reason.png)
  
 Fill in the purpose field with something meaningful (watsonx.data
-education). Next select preferred Geography for the image.
+education). Next select preferred Geography for the image. 
+
+**Note:** The data centers and geographies available will change over time. The current release is only available in the Americas (WDC04 data center).
 
 ![Browser](wxd-images/techzone-region.png)
 
@@ -44,7 +46,7 @@ Next select the end date for the lab.
 
 ![Browser](wxd-images/techzone-date.png)
 
-Make sure you select enough time for you to use the lab! It defaults to 2 days, but you can extend the reservation! **You do not need to enable VPN Access**.
+Make sure you select enough time for you to use the POC! It defaults to 2 days, but you can extend the reservation! **You do not need to enable VPN Access**.
 
 Once you have completed the form, check the box indicating that you agree to the terms and conditions of using TechZone, and click SUBMIT on the bottom right-hand corner.
 
