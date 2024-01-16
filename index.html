@@ -317,8 +317,215 @@
   
     <li class="md-nav__item">
       <a href="wxd-lab-instructions/" class="md-nav__link">
-        Lab Instructions
+        Lab Conventions and Startup
       </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11">
+          Core Components
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Core Components" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Core Components
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="wxd-prestocli/" class="md-nav__link">
+        Presto CLI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="wxd-watsonui/" class="md-nav__link">
+        watsonx.data UI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="wxd-presto/" class="md-nav__link">
+        Presto UI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="wxd-minio/" class="md-nav__link">
+        MinIO UI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_5" type="checkbox" id="__nav_11_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_5">
+          Presto SQL
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Presto SQL" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_5">
+          <span class="md-nav__icon md-icon"></span>
+          Presto SQL
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="wxd-analytics/" class="md-nav__link">
+        Analytic Workloads
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="wxd-advanced/" class="md-nav__link">
+        Advanced Functions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="wxd-timetravel/" class="md-nav__link">
+        Time Travel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="wxd-federation/" class="md-nav__link">
+        Federation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="wxd-systemconnector/" class="md-nav__link">
+        System Connector
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="wxd-reference-portainer/" class="md-nav__link">
+        Portainer Console
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -379,19 +586,8 @@
 
 <h1 id="ibm-watsonxdata-proof-of-concept-lab">IBM watsonx.data Proof of Concept Lab</h1>
 <p><img alt="WatsonX" src="wxd-images/watsonxlogoibm.png" /></p>
-<p>Welcome to the watsonx.data Proof of Concept lab. Upon the completion of this lab, you will have the skills necessary to perform a POC in a customer environment. </p>
+<p>Welcome to the watsonx.data Proof of Concept lab. Upon the completion of this lab, you have the skills necessary to perform a POC in a customer environment. </p>
 <p>This lab uses the watsonx.data developer package. The Developer package is meant to be used on single nodes, so it has some restrictions compared to a deployment on a cluster. However, the concepts and commands used in the developer edition environment are similar to those used in a cluster. Where commands differ, a separate presentation or video will be provided to highlight the differences.</p>
-<p>We organized this lab into a number of sections that cover many of the highlights and key features of watsonx.data.</p>
-<ul>
-<li>Access a TechZone or VMWare image for testing</li>
-<li>Checking watsonx.data status</li>
-<li>Introduction to watsonx.data components</li>
-<li>Analytical SQL</li>
-<li>Advanced SQL functions</li>
-<li>Time Travel and Federation</li>
-<li>Working with Object Store Buckets</li>
-</ul>
-<p>In addition, there is an Appendix which includes common errors and potential fixes or workarounds. </p>
 <h2 id="watsonxdata-developer-image">Watsonx.data Developer Image</h2>
 <p>The watsonx.data system is running on a virtual machine with the following resources:</p>
 <ul>
@@ -401,7 +597,7 @@
 </ul>
 <p>This is sufficient capacity for running this exercises found in this lab but should not be used for performance testing or dealing with large data sets.</p>
 <h2 id="watsonxdata-level-34-technical-training">Watsonx.data Level 3/4 Technical Training</h2>
-<p>This system is used as a basis for the watsonx.data Level 3/4 Technical Training. For the detailed lab material, please refer to the following PDF found in Seismic: <a href="https://ibm.seismic.com/Link/Content/DCG37pjmPj7VmGCHj2Df8fHVmDJj">https://ibm.seismic.com/Link/Content/DCG37pjmPj7VmGCHj2Df8fHVmDJj</a></p>
+<p>This system is <strong>not</strong> used for the watsonx.data Level 3/4 Technical Training. For the detailed lab material, please refer to the following PDF found in Seismic: <a href="https://ibm.seismic.com/Link/Content/DCG37pjmPj7VmGCHj2Df8fHVmDJj">https://ibm.seismic.com/Link/Content/DCG37pjmPj7VmGCHj2Df8fHVmDJj</a></p>
 
               
             </article>

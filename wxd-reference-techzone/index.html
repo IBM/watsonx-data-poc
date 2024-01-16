@@ -327,8 +327,215 @@
   
     <li class="md-nav__item">
       <a href="../wxd-lab-instructions/" class="md-nav__link">
-        Lab Instructions
+        Lab Conventions and Startup
       </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11">
+          Core Components
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Core Components" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Core Components
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-prestocli/" class="md-nav__link">
+        Presto CLI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-watsonui/" class="md-nav__link">
+        watsonx.data UI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-presto/" class="md-nav__link">
+        Presto UI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-minio/" class="md-nav__link">
+        MinIO UI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_5" type="checkbox" id="__nav_11_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_5">
+          Presto SQL
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Presto SQL" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_5">
+          <span class="md-nav__icon md-icon"></span>
+          Presto SQL
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-analytics/" class="md-nav__link">
+        Analytic Workloads
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-advanced/" class="md-nav__link">
+        Advanced Functions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-timetravel/" class="md-nav__link">
+        Time Travel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-federation/" class="md-nav__link">
+        Federation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-systemconnector/" class="md-nav__link">
+        System Connector
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-reference-portainer/" class="md-nav__link">
+        Portainer Console
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -375,7 +582,7 @@ need to register for one. This lab is open to IBMers and Business Partners. Once
 you have logged in, you should see the following.</p>
 <p><img alt="Browser" src="../wxd-images/techzone-main.png" /></p>
 <p>Select the Environment tab on the far-left side. </p>
-<p><strong>Note</strong>: There may be more than one environment available. Choose the one best suited for your requirements.</p>
+<p><strong>Note</strong>: There may be more than one environment available. Choose the <strong>IBM watsonx.data Development POC R1M0</strong>. The version number may change as newer versions of watsonx.data are released. Make sure to sure to select the <strong>POC</strong> image and not the standard Developer edition versions.</p>
 <p><img alt="Browser" src="../wxd-images/techzone-environment.png" /></p>
 <p>Press the Reserve button.</p>
 <p><img alt="Browser" src="../wxd-images/techzone-reservenow.png" /></p>
@@ -384,14 +591,15 @@ you have logged in, you should see the following.</p>
 <p>For “Purpose” select Self Education. This will expand to request additional information.</p>
 <p><img alt="Browser" src="../wxd-images/techzone-reason.png" /></p>
 <p>Fill in the purpose field with something meaningful (watsonx.data
-education). Next select preferred Geography for the image.</p>
+education). Next select preferred Geography for the image. </p>
+<p><strong>Note:</strong> The data centers and geographies available will change over time. The current release is only available in the Americas (WDC04 data center).</p>
 <p><img alt="Browser" src="../wxd-images/techzone-region.png" /></p>
 <p>Choose any of the regions that are closest to your location. </p>
 <p><strong>Note</strong>: The TechZone scheduler will pick a location in your region that has capacity to deploy your image. Previously you needed to pick a physical location (DAL10, WDC04, TOK02, etc...). The number of locations has expanded to 4 North American, 4 European and 2 AP locations which will hopefully provide more capacity to deploy the lab.</p>
 <p>If you find that your reservation is not being provisioned, check the status of the TechZone environment by referring to the TechZone status page at <a href="https://techzone.status.io" target="_blank">https://techzone.status.io</a>.</p>
 <p>Next select the end date for the lab.</p>
 <p><img alt="Browser" src="../wxd-images/techzone-date.png" /></p>
-<p>Make sure you select enough time for you to use the lab! It defaults to 2 days, but you can extend the reservation! <strong>You do not need to enable VPN Access</strong>.</p>
+<p>Make sure you select enough time for you to use the POC! It defaults to 2 days, but you can extend the reservation! <strong>You do not need to enable VPN Access</strong>.</p>
 <p>Once you have completed the form, check the box indicating that you agree to the terms and conditions of using TechZone, and click SUBMIT on the bottom right-hand corner.</p>
 <p><img alt="Browser" src="../wxd-images/techzone-submit.png" /></p>
 <p>At this point you will need to wait patiently for an email that acknowledges that your request has been placed into Provisioning mode.</p>
