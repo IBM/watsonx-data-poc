@@ -899,10 +899,10 @@
 <li>Open Port 1 - Server: region.techzone-services.com: Port: 47354</li>
 <li>Open Port 2 - Server: region.techzone-services.com: Port: 48932</li>
 </ul>
-<p>The server URL will be different for each region and data center that your machine is provisioned on. The server name is usually in the format:</p>
-<pre><code class="language-bash">region.techzone-services.com:port
-</code></pre>
-<p>The <code>port</code> number that is provided in the reservation is mapped to the proper port number in the server. For instance, the Presto Port number is 8443 in the server, but the reservation above shows a port number of 43943. Use the following rules for determining what server name and port number to use when connecting to the databases:</p>
+<p>The server URL will be different for each region and data center that your machine is provisioned on. The server name is usually in the format:
+<div class="highlight"><pre><span></span><code>region.techzone-services.com:port
+</code></pre></div>
+The <code>port</code> number that is provided in the reservation is mapped to the proper port number in the server. For instance, the Presto Port number is 8443 in the server, but the reservation above shows a port number of 43943. Use the following rules for determining what server name and port number to use when connecting to the databases:</p>
 <ul>
 <li>If you are using a program "inside" the watsonx server, the host is <code>watsonxdata</code> or <code>localhost</code>. Some systems will require the watsonx service name (ibm-lh-postgres) and these are highlighted in the documentation. The port number will always be the native port (i.e. 5432 for PostgreSQL).</li>
 <li>If you are using a program "outside" the watsonx server, the host is the one provided in your reservation <code>region.techzone-services.com</code> and the port will the one that is included as part of the URL (i.e. 49618 in the example above).</li>

@@ -949,9 +949,9 @@ The ports that are used in the lab are listed below.</p>
 <h2 id="using-external-ports-with-vmwarevirtual-box">Using External Ports with VMware/Virtual Box</h2>
 <p>The labs assume that you are using a browser "within" your virtual machine console. However, both VMware and VirtualBox provide a method for accessing the ports on the virtual machine in your local environment. </p>
 <h3 id="vmware">VMware</h3>
-<p>For VMware, the easiest way to connect to the virtual machine from your host machine is to use the ifconfig command to determine your virtual machine IP address.</p>
-<pre><code>ifconfig
-</code></pre>
+<p>For VMware, the easiest way to connect to the virtual machine from your host machine is to use the ifconfig command to determine your virtual machine IP address.
+<div class="highlight"><pre><span></span><code>ifconfig
+</code></pre></div></p>
 <p><img alt="Browser" src="../wxd-images/wxd-ipaddress.png" /></p>
 <p>Search for an <code>ensxx**</code> value in the output from the command. There you should see the inet address of your virtual machine (<code>172.16.210.237</code>). To access the Portainer application from your local browser, you would use this address followed by the Portainer PORT number: <code>https://172.16.210.237:6443</code>.</p>
 <p>Remember that inside your virtual machine, you will be using <code>https://localhost:6443</code>. The following PORT numbers are open in the machine:</p>
@@ -978,23 +978,23 @@ The ports that are used in the lab are listed below.</p>
 <h2 id="terminal-command-window">Terminal Command Window</h2>
 <p>All the commands in the lab will require you execute commands in a terminal window. In addition, the labs require access to the root userid, and this can be accomplished in two ways that are described below.</p>
 <h3 id="local-terminal-shell">Local Terminal Shell</h3>
-<p>Use a local terminal shell (iterm, Hyper, terminal) and use the SSH command to shell into the machine. For the VMware image, you need to know the IP address of the image and the port number that has been exposed for SSH command (default is 22). Assuming that your VMware machine has an IP address of <code>172.16.210.237</code>, the command to SSH into the machine would be:</p>
-<pre><code>ssh watsonx@172.16.210.237
-</code></pre>
-<p><img alt="Browser" src="../wxd-images/ssh-local.png" /></p>
+<p>Use a local terminal shell (iterm, Hyper, terminal) and use the SSH command to shell into the machine. For the VMware image, you need to know the IP address of the image and the port number that has been exposed for SSH command (default is 22). Assuming that your VMware machine has an IP address of <code>172.16.210.237</code>, the command to SSH into the machine would be:
+<div class="highlight"><pre><span></span><code>ssh watsonx@172.16.210.237
+</code></pre></div>
+<img alt="Browser" src="../wxd-images/ssh-local.png" /></p>
 <p>You will need to accept the unknown host warning and then provide the password for the watsonx userid: <code>watsonx.data</code>.</p>
-<p>At this point you are connected as the watsonx user. To become the root user, you must enter the following command in the terminal window.</p>
-<pre><code>sudo su -
-</code></pre>
-<p>Now as the root user you will be ready to run the commands found in the lab.</p>
+<p>At this point you are connected as the watsonx user. To become the root user, you must enter the following command in the terminal window.
+<div class="highlight"><pre><span></span><code>sudo su -
+</code></pre></div>
+Now as the root user you will be ready to run the commands found in the lab.</p>
 <h3 id="terminal-window-in-virtual-machine">Terminal Window in Virtual Machine</h3>
 <p>You can use the Terminal application in the virtual machine to issue commands. </p>
 <p><img alt="Browser" src="../wxd-images/terminal-vmware-command.png" /></p>
 <p>This will open up the terminal window.</p>
 <p><img alt="Browser" src="../wxd-images/terminal-vmware.png" /></p>
-<p>At this point you are connected as the watsonx user. You can ignore any lab instructions that ask you to <code>ssh</code> into the watsonx server. To become the root user, you must enter the following command in the terminal window.</p>
-<pre><code>sudo su -
-</code></pre>
+<p>At this point you are connected as the watsonx user. You can ignore any lab instructions that ask you to <code>ssh</code> into the watsonx server. To become the root user, you must enter the following command in the terminal window.
+<div class="highlight"><pre><span></span><code>sudo su -
+</code></pre></div></p>
 <p>Now as the root user you will be ready to run the commands found in the lab.</p>
 
               
