@@ -26,7 +26,7 @@ This structure reflects the versatility and strategic positioning of GO Accessor
 
 The following diagram illustrates the consolidated corporate structure of Watson’s Great Outdoors Company. The diagram also includes the percentage changes in ownership for GO Central Europe, and the reporting currency and GL (general ledger) prefix for each subsidiary. In year 1, GO Asia Pacific owns 60% of GO Central Europe, and in year 3, its ownership decreases to 50%. In year 1, GO Accessories owns 40% of GO Central Europe, and in year 3 its ownership increases to 50%.
 
- ![Watsons](wxd-images/poc-watsons-org.png)
+ ![Watsons](wxd-images/watsons-go-corp.jpg)
 
 Each corporation in Watson’s Great Outdoors Company has the same departmental structure and the same general ledger (GL) structure, as shown in the following table. Divisions may not report in the same currencies. For example, the Americas subsidiary reports in US dollars, but the corporate division local currency reports in Canadian dollars, and the Operations division local currency is pesos.
 
@@ -41,7 +41,7 @@ Each corporation in Watson’s Great Outdoors Company has the same departmental 
 |Operations (1800)|Production and Distribution (1820)
 ||Customer Service (1820)
 
-#### Table 1. Departmental structure
+<sub><sup>*Table 1. Departmental structure*</sup></sub>
 
 Each corporation has a complete chart of accounts. Most of the accounts, such as those under non-personnel expenses, are at the department level, and contain only summary amounts. For example, although each marketing department has expenses, the cost is unspecified at the transaction level where marketing promotions occur.
 

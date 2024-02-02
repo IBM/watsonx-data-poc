@@ -31,6 +31,8 @@ The following test are to be executed during the proof-of-concept.
 |3|Concurrency|Duration: 30-minute<p><ul><li>10 simple</li><li>5 intermediate</li><li>2 complex</li></ul>|<ul><li>Record number of query execution per query and the average time to run</li><li>Save each query results into a file</li><li>Record Queries Per Hour (QPH)</li></ul>
 |4|Concurrency|Duration: 30-minute<p><ul><li>20 simple</li><li>10 intermediate</li><li>5 complex</ul>|<ul><li>Record number of query execution per query and the average time to run</li><li>Save each query results into a file.</il><li>Record Queries Per Hour (QPH)</li></ul>
 
+<sub><sup>*Table 2. Performance Tests*</sup></sub>
+
 Use the following JMeter Listener and provide the output for each test.
 
 * View Results Tree
