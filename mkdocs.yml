@@ -1,30 +1,45 @@
-site_name: watsonx.data Proof of Concept
+site_name: Watson's Great Outdoors
 # theme:
 #   name: material
 nav:
-  - Introduction: "wxd-intro.md"
-  # - Quick Start: "wxd-quick.md"
-  - Requesting an IBMid: "wxd-reference-ibmid.md"
-  - Requesting an image: "wxd-reference-techzone.md"
-  - Accessing the reservation: "wxd-reference-access.md"
-  - Available Ports: "wxd-reference-ports.md"
-  - VM Remote Console: "wxd-reference-vnc.md"
-  - SSH and SCP Commands: "wxd-reference-ssh.md"
-  - Userids and Passwords: "wxd-reference-passwords.md"
-  - Documentation: "wxd-reference-documentation.md"
-  - Lab Conventions and Startup: "wxd-lab-instructions.md"
-  # - Jupyter Notebook: "wxd-jupyter.md"
-  - Core Components: 
-    - Presto CLI: "wxd-prestocli.md"
-    - watsonx.data UI: "wxd-watsonui.md"
-    - Presto UI: "wxd-presto.md"
-    - MinIO UI: "wxd-minio.md"
-    - Presto SQL:
-      - Analytic Workloads: "wxd-analytics.md"
-      - Advanced Functions: "wxd-advanced.md"
-      - Time Travel: "wxd-timetravel.md"
-      - Federation: "wxd-federation.md"
-      - System Connector: "wxd-systemconnector.md"
+  - Watson's Great Outdoors POC:
+    - Introduction: "watsons-introduction.md"
+    - Proof-of-Concept Objectives: "watsons-objectives.md"
+    - Migration Requirements: "watsons-migration.md"
+    - Architecture and Technology: "watsons-architecture.md"
+    - Testing: "watsons-testing.md"
+    - Proof of Concept Tests: "watsons-poc-tests.md"
+    - Performance Metrics: "watsons-performance.md"
+    - Final Report: "watsons-report.md"
+    - Conclusion: "watsons-conclusion.md"
+    - Appendices:
+      - File Information: "watsons-fileinfo.md"
+      - Database and Table Sizes: "watsons-database.md"
+      - Object Definitions: "watsons-objects.md"
+  - POC Image Details:
+    - Introduction: "wxd-intro.md"
+    # - Quick Start: "wxd-quick.md"
+    - Requesting an IBMid: "wxd-reference-ibmid.md"
+    - Requesting an image: "wxd-reference-techzone.md"
+    - Accessing the reservation: "wxd-reference-access.md"
+    - Available Ports: "wxd-reference-ports.md"
+    - VM Remote Console: "wxd-reference-vnc.md"
+    - SSH and SCP Commands: "wxd-reference-ssh.md"
+    - Userids and Passwords: "wxd-reference-passwords.md"
+    - Documentation: "wxd-reference-documentation.md"
+    - Lab Conventions and Startup: "wxd-lab-instructions.md"
+    # - Jupyter Notebook: "wxd-jupyter.md"
+    - Core Components: 
+      - Presto CLI: "wxd-prestocli.md"
+      - watsonx.data UI: "wxd-watsonui.md"
+      - Presto UI: "wxd-presto.md"
+      - MinIO UI: "wxd-minio.md"
+      - Presto SQL:
+        - Analytic Workloads: "wxd-analytics.md"
+        - Advanced Functions: "wxd-advanced.md"
+        - Time Travel: "wxd-timetravel.md"
+        - Federation: "wxd-federation.md"
+        - System Connector: "wxd-systemconnector.md"
   # - Optional Tools:
   #   - Apache Superset: "wxd-superset.md"
   #   - dBeaver: "wxd-dbeaver.md"
