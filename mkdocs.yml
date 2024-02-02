@@ -75,3 +75,8 @@ theme:
     scheme: default
     primary: black
     accent: black
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
