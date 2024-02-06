@@ -26,7 +26,7 @@ The following test are to be executed during the proof-of-concept.
 
 | Test No.|Test|Description|Required output
 |---------|----|-----------|---------------|
-|1|Serial|Run each query serially|<ul><li>Record query times for each query</li><li>Save each query results into a file</li></ul>
+|1|Serial|Run each query serially three times|<ul><li>Save each query results into a file</li><li>Provide avg, minimum, maximum, median timings</li></ul>
 |2|Concurrency|Duration: 30-minute <p><ul><li>5 simple</li><li>2 intermediate</li><li>1 complex</li></ul>|<ul><li>Record number of query execution per query and the average time to run</li><li>Save each query results into a file</li><li>Record Queries Per Hour (QPH)</li></ul>
 |3|Concurrency|Duration: 30-minute<p><ul><li>10 simple</li><li>5 intermediate</li><li>2 complex</li></ul>|<ul><li>Record number of query execution per query and the average time to run</li><li>Save each query results into a file</li><li>Record Queries Per Hour (QPH)</li></ul>
 |4|Concurrency|Duration: 30-minute<p><ul><li>20 simple</li><li>10 intermediate</li><li>5 complex</ul>|<ul><li>Record number of query execution per query and the average time to run</li><li>Save each query results into a file.</il><li>Record Queries Per Hour (QPH)</li></ul>

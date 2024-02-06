@@ -16,6 +16,7 @@ nav:
       - File Information: "watsons-fileinfo.md"
       - Database and Table Sizes: "watsons-database.md"
       - Object Definitions: "watsons-objects.md"
+      - Query Definition and Timing: "watsons-queries.md"
   - POC Image Details:
     - Introduction: "wxd-intro.md"
     # - Quick Start: "wxd-quick.md"

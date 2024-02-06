@@ -9,3 +9,6 @@ This model contains financial, human resources, and sales and marketing informat
 
 The DDL file can be downloaded with the following URL: 
 [Watsons Go DDL](wxd-files/watsons-go.sql)
+
+The data to load into the tables can be found in the following URL:
+[Watsons Go Data](wxd-files/watsons-go-pocdata.tar.gz)
