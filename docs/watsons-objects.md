@@ -8,4 +8,4 @@
 This model contains financial, human resources, and sales and marketing information for the fictional company, The Sample Outdoors. The model accesses a dimensional relational data source.
 
 The DDL file can be downloaded with the following URL: 
-[Watsons Go DDL](https://ibm.biz/watsons-go-ddlfile)
+[Watsons Go DDL](wxd-files/watsons-go.sql)
