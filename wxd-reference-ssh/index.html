@@ -409,6 +409,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-datasets-gosales/" class="md-nav__link">
+        Dataset Details
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -460,20 +474,6 @@
     <li class="md-nav__item">
       <a href="../wxd-intro/" class="md-nav__link">
         Introduction
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../wxd-reference-ibmid/" class="md-nav__link">
-        Requesting an IBMid
       </a>
     </li>
   
@@ -576,6 +576,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#ssh-command" class="md-nav__link">
+    SSH Command
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-browser-terminal" class="md-nav__link">
+    Web Browser Terminal
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terminal-window-in-the-vm" class="md-nav__link">
+    Terminal Window in the VM
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#copying-files" class="md-nav__link">
     Copying Files
   </a>
@@ -642,18 +663,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_11" type="checkbox" id="__nav_2_11" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_10" type="checkbox" id="__nav_2_10" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_2_11">
+        <label class="md-nav__link" for="__nav_2_10">
           Core Components
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Core Components" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_11">
+        <label class="md-nav__title" for="__nav_2_10">
           <span class="md-nav__icon md-icon"></span>
           Core Components
         </label>
@@ -724,18 +745,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_11_5" type="checkbox" id="__nav_2_11_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_10_5" type="checkbox" id="__nav_2_10_5" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_2_11_5">
+        <label class="md-nav__link" for="__nav_2_10_5">
           Presto SQL
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Presto SQL" data-md-level="3">
-        <label class="md-nav__title" for="__nav_2_11_5">
+        <label class="md-nav__title" for="__nav_2_10_5">
           <span class="md-nav__icon md-icon"></span>
           Presto SQL
         </label>
@@ -839,23 +860,22 @@
 
             
           
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
+            
+              
   
   
   
     <li class="md-nav__item">
-      <a href="../wxd-datasets-gosales/" class="md-nav__link">
-        Dataset Details
+      <a href="../wxd-jupyter/" class="md-nav__link">
+        Jupyter Notebook
       </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -887,6 +907,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#ssh-command" class="md-nav__link">
+    SSH Command
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-browser-terminal" class="md-nav__link">
+    Web Browser Terminal
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terminal-window-in-the-vm" class="md-nav__link">
+    Terminal Window in the VM
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#copying-files" class="md-nav__link">
     Copying Files
   </a>
@@ -908,9 +949,17 @@
 
 
 <h1 id="ssh-access">SSH Access</h1>
+<p>All the commands in the lab will require you execute commands in a terminal window. Access to a terminal window can be accomplished in the three ways as described below:</p>
+<ul>
+<li><a href="#ssh-command">Use the SSH Command Locally</a></li>
+<li><a href="#web-browser-terminal">Use SSH Browser Window</a></li>
+<li><a href="#terminal-window-in-the-vm">Terminal window in the VM</a></li>
+</ul>
+<p>If you are unable to use <code>ssh</code> because of connection restrictions, the Browser Window SSH option is the easiest one to use.</p>
+<h2 id="ssh-command">SSH Command</h2>
 <p>Your TechZone reservation will include the server name and port number to use when connecting using ssh. The port number is referred to as <tt style="font-size: large; color: darkgreen;">port</tt> in the command below, while the server will be referred to as <tt style="font-size: large; color: darkgreen;">region.techzone-server.com</tt>. Replace these values with those found in your reservation.</p>
 <p>You have the choice of using the VM Remote console and logging in as the watsonx user to issues commands, or using a local terminal shell (iTerm, Hyper, terminal) to run commands against the watsonx.data server. You can have multiple connections into the machine at any one time. </p>
-<p>You may find it is easier to cut-and-paste commands into a local terminal shell rather than using the VM Remote Console because the console does not support cut-and-paste operation from your workstation to the remote desktop.</p>
+<p>It will be easier to cut-and-paste commands into a local terminal shell. The VM Remote Console does not support cut-and-paste operation from outside the virtual console environment.</p>
 <p>Open a terminal window and use the following syntax to connect as the <code style="font-size: medium;color:blue;">watsonx</code> userid.</p>
 <div class="highlight"><pre><span></span><code>ssh -p port watsonx@region.techzone-server.com
 </code></pre></div>
@@ -919,6 +968,45 @@
 <div class="highlight"><pre><span></span><code>sudo su -
 </code></pre></div>
 Password for both users is <code style="color:blue;font-size:medium;">watsonx.data</code>.</p>
+<h2 id="web-browser-terminal">Web Browser Terminal</h2>
+<p>An SSH service in a browser window is provided in this image. As part of the reservation, you will see a URL with the following description:</p>
+<ul>
+<li>SSH Browser - http://region.techzone-server.com:port</li>
+</ul>
+<p>When you first click on this link, the browser will display a login prompt.</p>
+<p><img alt="Browser" src="../wxd-images/watsonx-ssh-browser-url.png" /></p>
+<p>The userid is <code>watsonx</code> and the password is <code>watsonx.data</code>. Once you press the <code>Sign in</code> button, you will see a blank display.</p>
+<p><img alt="Browser" src="../wxd-images/watsonx-ssh-browser-blank.png" /></p>
+<p>Press the browser "refresh" button, and you should see the login prompt.</p>
+<p><img alt="Browser" src="../wxd-images/watsonx-ssh-browser-login.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Patience!</p>
+<p>Sometimes it takes a few "refresh" commands to get the login prompt to display. It may take 5-6 attempts before it wakes up. Don't give up too soon! It will eventually display the login prompt. </p>
+</div>
+<p>The userid is <code>watsonx</code> and the password is <code>watsonx.data</code>. You are now using a terminal session inside the watsonx.data server. </p>
+<p><img alt="Browser" src="../wxd-images/watsonx-ssh-browser-example.png" /></p>
+<p>Since you have logged in as the <code>watsonx</code> user, you must use the <code>sudo su -</code> command to become the root user. Note that you are not in the correct directory to run commands. You must issue the following command to be in the command directory.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> /root/ibm-lh-dev/bin
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Cut and Paste</p>
+<p>The Browser SSH screen supports full cut and paste operations. This makes it easy to copy scripts into this window without having to retype the commands.</p>
+</div>
+<p>All the commands in the lab can now be run from within this browser rather than using the VM Remote console. If at any time you accidentally close this window, you can open another one using the SSH browser link in the reservation.</p>
+<h2 id="terminal-window-in-the-vm">Terminal Window in the VM</h2>
+<p>If you use the <a href="wxd-reference-console.md">Remote VM Console</a>, you can log into the watsonx.data user and use a Terminal shell to run commands against the watsonx.data server. </p>
+<p>Select the Terminal application in the virtual machine to issue commands. </p>
+<p><img alt="Browser" src="../wxd-images/terminal-vmware-command.png" /></p>
+<p>This will open up the terminal window.</p>
+<p><img alt="Browser" src="../wxd-images/terminal-vmware.png" /></p>
+<p>At this point you are connected as the watsonx user. You can ignore any lab instructions that ask you to <code>ssh</code> into the watsonx server. To become the root user, you must enter the following command in the terminal window.
+<div class="highlight"><pre><span></span><code>sudo su -
+</code></pre></div></p>
+<p>Now as the root user you will be ready to run the commands found in the lab.</p>
+<div class="admonition warning">
+<p class="admonition-title">Cut and Paste</p>
+<p>The VM Remote Console does <strong>not</strong> support cut and paste operations from outside the VM environment. Cut and paste is supported inside the virtual machine, but attempting to paste something from you workstation into the VM Console will fail.</p>
+</div>
 <h2 id="copying-files">Copying Files</h2>
 <p>If you need to move files into or out of the virtual machine, you can use the following commands.</p>
 <p>To copy a file into the virtual machine use the following syntax:</p>
