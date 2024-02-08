@@ -20,7 +20,7 @@ A copy icon is usually found on the far right-hand side of the command box. Use 
 
 ## System Startup
 
-The watsonx.data server is **not** started as part of the lab. You must start the system manually. To start the server, run the following commands.
+The watsonx.data server is started as part of the lab. If at any time you must restart the system for any reason, follow these commands.
 
 Make sure that you have an open terminal session and use the following command to connect to the watsonx.data server.
 

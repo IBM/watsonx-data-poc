@@ -5,7 +5,13 @@ When you initially open the link, it will request a password to view the Table o
 
 ![Browser](wxd-images/jupyter-password.png)
 
-The default password for the notebook is `watsonx.data`. Once you enter the password, the Table of Contents will be displayed.
+The default password for the notebook is `watsonx.data`. 
+
+The initial screen will display the list of files that are in the `notebook` directory. You can upload Jupyter notebooks into the system using the Upload button found at the top right of the screen.
+
+![Browser](wxd-images/jupyter-filelist.png)
+
+If you want to view the current list of notebooks in the system, double-click on the `Table_of_Contents.ipynb` file and the Table of Contents will be displayed.
 
 ![Browser](wxd-images/jupyter-toc.png)
 
@@ -71,3 +77,7 @@ This notebook demonstrates connecting to the local PostgreSQL server using Jupyt
 #### Connecting to MySQL
 
 This notebook demonstrates connecting to the local MySQL server using Jupyter notebooks. 
+
+#### Connect to Milvus
+
+This notebook demonstrates connecting to the local Milvus vector database.

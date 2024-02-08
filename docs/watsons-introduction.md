@@ -4,7 +4,7 @@
 
 ## Purpose
 ![Watsons](wxd-images/poc-bullseye.png)
-The purpose of this document is to outline the requirements for a proof-of-concept (PoC) for migrating workload and data from a traditional data warehouse to a data lakehouse architecture for Watson’s Great Outdoors Company. Watson’s Great Outdoors Company will be referred to as WGO or GO in this document.
+The purpose of this document is to outline the requirements for a proof-of-concept (PoC) for migrating workload and data from a traditional data warehouse to a data lakehouse architecture for Watson's Great Outdoors Company. Watson's Great Outdoors Company will be referred to as WGO or GO in this document.
 
 ## Scope
 ![Watsons](wxd-images/poc-target.png)
@@ -22,13 +22,13 @@ With a strong emphasis on sales, we offer a diverse range of products tailored t
 
 **Dual Functionality**: GO Accessories functions both as an operating company based in Geneva and as a part owner of three GO subsidiaries in Europe. This dual role positions GO Accessories as a key player in the overall operations of The Sample Outdoors Company, contributing not only to its own success but also playing a significant role in the success of the European subsidiaries.
 
-This structure reflects the versatility and strategic positioning of GO Accessories within the larger framework of Watson’s Great Outdoors Company. By offering a unique product line, operating from a centralized location, and participating in ownership stakes across regions, GO Accessories plays a pivotal role in the company's overall revenue generation and market presence.
+This structure reflects the versatility and strategic positioning of GO Accessories within the larger framework of Watson's Great Outdoors Company. By offering a unique product line, operating from a centralized location, and participating in ownership stakes across regions, GO Accessories plays a pivotal role in the company's overall revenue generation and market presence.
 
-The following diagram illustrates the consolidated corporate structure of Watson’s Great Outdoors Company. The diagram also includes the percentage changes in ownership for GO Central Europe, and the reporting currency and GL (general ledger) prefix for each subsidiary. In year 1, GO Asia Pacific owns 60% of GO Central Europe, and in year 3, its ownership decreases to 50%. In year 1, GO Accessories owns 40% of GO Central Europe, and in year 3 its ownership increases to 50%.
+The following diagram illustrates the consolidated corporate structure of Watson's Great Outdoors Company. The diagram also includes the percentage changes in ownership for GO Central Europe, and the reporting currency and GL (general ledger) prefix for each subsidiary. In year 1, GO Asia Pacific owns 60% of GO Central Europe, and in year 3, its ownership decreases to 50%. In year 1, GO Accessories owns 40% of GO Central Europe, and in year 3 its ownership increases to 50%.
 
  ![Watsons](wxd-images/watsons-go-corp.jpg)
 
-Each corporation in Watson’s Great Outdoors Company has the same departmental structure and the same general ledger (GL) structure, as shown in the following table. Divisions may not report in the same currencies. For example, the Americas subsidiary reports in US dollars, but the corporate division local currency reports in Canadian dollars, and the Operations division local currency is pesos.
+Each corporation in Watson's Great Outdoors Company has the same departmental structure and the same general ledger (GL) structure, as shown in the following table. Divisions may not report in the same currencies. For example, the Americas subsidiary reports in US dollars, but the corporate division local currency reports in Canadian dollars, and the Operations division local currency is pesos.
 
 |Division (GL)|Department (GL)
 |-------------|---------------|

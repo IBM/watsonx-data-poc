@@ -466,6 +466,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-datasets-gosales/" class="md-nav__link">
+        Dataset Details
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -515,20 +529,6 @@
     <li class="md-nav__item">
       <a href="../wxd-intro/" class="md-nav__link">
         Introduction
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../wxd-reference-ibmid/" class="md-nav__link">
-        Requesting an IBMid
       </a>
     </li>
   
@@ -656,18 +656,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_11" type="checkbox" id="__nav_2_11" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_10" type="checkbox" id="__nav_2_10" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_2_11">
+        <label class="md-nav__link" for="__nav_2_10">
           Core Components
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Core Components" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_11">
+        <label class="md-nav__title" for="__nav_2_10">
           <span class="md-nav__icon md-icon"></span>
           Core Components
         </label>
@@ -738,18 +738,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_11_5" type="checkbox" id="__nav_2_11_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_10_5" type="checkbox" id="__nav_2_10_5" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_2_11_5">
+        <label class="md-nav__link" for="__nav_2_10_5">
           Presto SQL
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Presto SQL" data-md-level="3">
-        <label class="md-nav__title" for="__nav_2_11_5">
+        <label class="md-nav__title" for="__nav_2_10_5">
           <span class="md-nav__icon md-icon"></span>
           Presto SQL
         </label>
@@ -853,23 +853,22 @@
 
             
           
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
+            
+              
   
   
   
     <li class="md-nav__item">
-      <a href="../wxd-datasets-gosales/" class="md-nav__link">
-        Dataset Details
+      <a href="../wxd-jupyter/" class="md-nav__link">
+        Jupyter Notebook
       </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -939,7 +938,7 @@
 <h1 id="introduction">Introduction</h1>
 <h2 id="purpose">Purpose</h2>
 <p><img alt="Watsons" src="../wxd-images/poc-bullseye.png" />
-The purpose of this document is to outline the requirements for a proof-of-concept (PoC) for migrating workload and data from a traditional data warehouse to a data lakehouse architecture for Watson’s Great Outdoors Company. Watson’s Great Outdoors Company will be referred to as WGO or GO in this document.</p>
+The purpose of this document is to outline the requirements for a proof-of-concept (PoC) for migrating workload and data from a traditional data warehouse to a data lakehouse architecture for Watson's Great Outdoors Company. Watson's Great Outdoors Company will be referred to as WGO or GO in this document.</p>
 <h2 id="scope">Scope</h2>
 <p><img alt="Watsons" src="../wxd-images/poc-target.png" />
 This PoC will focus on validating the feasibility and benefits of migrating workload and data from the existing data warehouse to a data lakehouse. The scope includes understanding data migration processes, workload adaptation, and assessing the overall performance and scalability of the proposed solution.</p>
@@ -950,10 +949,10 @@ Watson's Great Outdoors is a leading provider of high-quality outdoor equipment,
 <p><strong>Distinct Product Collection</strong>: GO Accessories boasts its own exclusive collection of products, setting itself apart from the other GO companies. This differentiation is achieved through unique brand identities, names, pricing strategies, color variations, and size options, offering customers a diverse and specialized range of outdoor goods.</p>
 <p><strong>Single Branch Sales</strong>: Unlike the regionally based GO companies, GO Accessories operates from a single branch. However, its reach extends beyond regional boundaries, serving customers across all regions and retailers. This strategic approach allows for a centralized point of sale while catering to a broad customer base.</p>
 <p><strong>Dual Functionality</strong>: GO Accessories functions both as an operating company based in Geneva and as a part owner of three GO subsidiaries in Europe. This dual role positions GO Accessories as a key player in the overall operations of The Sample Outdoors Company, contributing not only to its own success but also playing a significant role in the success of the European subsidiaries.</p>
-<p>This structure reflects the versatility and strategic positioning of GO Accessories within the larger framework of Watson’s Great Outdoors Company. By offering a unique product line, operating from a centralized location, and participating in ownership stakes across regions, GO Accessories plays a pivotal role in the company's overall revenue generation and market presence.</p>
-<p>The following diagram illustrates the consolidated corporate structure of Watson’s Great Outdoors Company. The diagram also includes the percentage changes in ownership for GO Central Europe, and the reporting currency and GL (general ledger) prefix for each subsidiary. In year 1, GO Asia Pacific owns 60% of GO Central Europe, and in year 3, its ownership decreases to 50%. In year 1, GO Accessories owns 40% of GO Central Europe, and in year 3 its ownership increases to 50%.</p>
+<p>This structure reflects the versatility and strategic positioning of GO Accessories within the larger framework of Watson's Great Outdoors Company. By offering a unique product line, operating from a centralized location, and participating in ownership stakes across regions, GO Accessories plays a pivotal role in the company's overall revenue generation and market presence.</p>
+<p>The following diagram illustrates the consolidated corporate structure of Watson's Great Outdoors Company. The diagram also includes the percentage changes in ownership for GO Central Europe, and the reporting currency and GL (general ledger) prefix for each subsidiary. In year 1, GO Asia Pacific owns 60% of GO Central Europe, and in year 3, its ownership decreases to 50%. In year 1, GO Accessories owns 40% of GO Central Europe, and in year 3 its ownership increases to 50%.</p>
 <p><img alt="Watsons" src="../wxd-images/watsons-go-corp.jpg" /></p>
-<p>Each corporation in Watson’s Great Outdoors Company has the same departmental structure and the same general ledger (GL) structure, as shown in the following table. Divisions may not report in the same currencies. For example, the Americas subsidiary reports in US dollars, but the corporate division local currency reports in Canadian dollars, and the Operations division local currency is pesos.</p>
+<p>Each corporation in Watson's Great Outdoors Company has the same departmental structure and the same general ledger (GL) structure, as shown in the following table. Divisions may not report in the same currencies. For example, the Americas subsidiary reports in US dollars, but the corporate division local currency reports in Canadian dollars, and the Operations division local currency is pesos.</p>
 <table>
 <thead>
 <tr>

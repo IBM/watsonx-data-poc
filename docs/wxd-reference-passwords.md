@@ -12,6 +12,9 @@ This table lists the passwords for the services that have "fixed" userids and pa
 |Postgres|admin|Generated
 |Portainer|admin|watsonx.data
 |Thrift|lh-default|Generated
+|Jupyter||watsonx.data
+|Milvus|ibmlhadmin|password
+|SSH Browser|watsonx|watsonx.data
 
 Use the following commands to get the generated userid and password for MinIO.
 ```

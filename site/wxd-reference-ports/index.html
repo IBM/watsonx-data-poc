@@ -409,6 +409,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-datasets-gosales/" class="md-nav__link">
+        Dataset Details
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -460,20 +474,6 @@
     <li class="md-nav__item">
       <a href="../wxd-intro/" class="md-nav__link">
         Introduction
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../wxd-reference-ibmid/" class="md-nav__link">
-        Requesting an IBMid
       </a>
     </li>
   
@@ -642,18 +642,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_11" type="checkbox" id="__nav_2_11" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_10" type="checkbox" id="__nav_2_10" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_2_11">
+        <label class="md-nav__link" for="__nav_2_10">
           Core Components
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Core Components" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_11">
+        <label class="md-nav__title" for="__nav_2_10">
           <span class="md-nav__icon md-icon"></span>
           Core Components
         </label>
@@ -724,18 +724,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_11_5" type="checkbox" id="__nav_2_11_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_10_5" type="checkbox" id="__nav_2_10_5" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_2_11_5">
+        <label class="md-nav__link" for="__nav_2_10_5">
           Presto SQL
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Presto SQL" data-md-level="3">
-        <label class="md-nav__title" for="__nav_2_11_5">
+        <label class="md-nav__title" for="__nav_2_10_5">
           <span class="md-nav__icon md-icon"></span>
           Presto SQL
         </label>
@@ -839,23 +839,22 @@
 
             
           
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
+            
+              
   
   
   
     <li class="md-nav__item">
-      <a href="../wxd-datasets-gosales/" class="md-nav__link">
-        Dataset Details
+      <a href="../wxd-jupyter/" class="md-nav__link">
+        Jupyter Notebook
       </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -909,19 +908,22 @@
 
 <h1 id="watsonxdata-ports">Watsonx.data Ports</h1>
 <p>The top of your TechZone reservation will contain a list of published services at the top of the details page.</p>
-<p><img alt="Browser" src="../wxd-images/techzone-my-details.png" /></p>
+<p><img alt="Browser" src="../wxd-images/watsonx-poc-details.png" /></p>
 <p>These URLs and Port numbers are needed to access the watsonx.data services. The list will contain the following information: </p>
 <ul>
 <li>SSH for watsonx userid - ssh -p 20200 watsonx@region.techzone-services.com</li>
 <li>Portainer console - https://region.techzone-services.com:44449</li>
+<li>SSH Browser - https:/region.techzone-services.com:46241</li>
 <li>Presto console - https://region.techzone-services.com:49618</li>
 <li>Presto Port - Server: region.techzone-services.com Port: 49618</li>
+<li>Jupyter Notebook - http://region.techzone-services.com:12435</li>
 <li>Minio Endpoint - Server: region.techzone-services.com Port: 29652</li>
 <li>Minio console - http://region.techzone-services.com:45050</li>
 <li>Hive Thrift URL - thrift://region.techzone-services.com:22211</li>
 <li>Watsonx UI - https://region.techzone-services.com:37997</li>
 <li>Open Port 1 - Server: region.techzone-services.com Port: 47354</li>
 <li>Open Port 2 - Server: region.techzone-services.com Port: 48932</li>
+<li>Milvus Endpoint - Server: region.techzone-services.com Port: 31452</li>
 </ul>
 <p>There are two additional ports which are available for use with any service you install in the system. These ports are:</p>
 <ul>
@@ -933,8 +935,8 @@
 </code></pre></div>
 The <code>port</code> number that is provided in the reservation is mapped to the proper port number in the server. For instance, the Presto Port number is 8443 in the server, but the reservation above shows a port number of 43943. Use the following rules for determining what server name and port number to use when connecting to the databases:</p>
 <ul>
-<li>If you are using a program "inside" the watsonx server, the host is <code>watsonxdata</code> or <code>localhost</code>. Some systems will require the watsonx service name (ibm-lh-postgres) and these are highlighted in the documentation. The port number will always be the native port (i.e. 5432 for PostgreSQL).</li>
-<li>If you are using a program "outside" the watsonx server, the host is the one provided in your reservation <code>region.techzone-services.com</code> and the port will the one that is included as part of the URL (i.e. 49618 in the example above).</li>
+<li>If you are using a program "inside" the watsonx server, the host is <code>watsonxdata</code> or <code>localhost</code>. Some systems will require the watsonx service name (ibm-lh-postgres) and these are highlighted in the documentation. The port number will always be the native port (i.e. 8443 for Presto).</li>
+<li>If you are using a program "outside" the watsonx server, the host is the one provided in your reservation <code>region.techzone-services.com</code> and the port will the one that is included as part of the URL (i.e. 43943 in the example above).</li>
 </ul>
 <h2 id="watsonxdata-open-ports">Watsonx.data Open Ports</h2>
 <p>The following URLs and Ports are used to access the watsonx.data services. Most browsers will work with these URLs. </p>
@@ -960,6 +962,11 @@ The <code>port</code> number that is provided in the reservation is mapped to th
 <td>Yes</td>
 </tr>
 <tr>
+<td>Jupyter Notebook</td>
+<td>8888</td>
+<td>Yes</td>
+</tr>
+<tr>
 <td>MinIO console (S3 buckets)</td>
 <td>9001</td>
 <td>Yes</td>
@@ -982,6 +989,11 @@ The <code>port</code> number that is provided in the reservation is mapped to th
 <tr>
 <td>Hive metadata Port</td>
 <td>9043</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Milvus</td>
+<td>19530</td>
 <td>Yes</td>
 </tr>
 <tr>

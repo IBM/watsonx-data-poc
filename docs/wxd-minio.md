@@ -106,7 +106,7 @@ How do we know that this data is based on Apache iceberg? If you open the file u
  
 ### Do I really need Apache Iceberg?
 
-YES, YOU DO! However, it is good to understand why? Metadata is also stored in the Parquet file format but only for the single parquet file. If we add more data/partitions, the data is split into multiple Parquet files, and we don’t have a mechanism to get the table to parquet files mapping. Run the following example to understand this better.
+YES, YOU DO! However, it is good to understand why? Metadata is also stored in the Parquet file format but only for the single parquet file. If we add more data/partitions, the data is split into multiple Parquet files, and we don't have a mechanism to get the table to parquet files mapping. Run the following example to understand this better.
 
 You need to get the access keys for MinIO before running the following lab. Make sure you are still connected as `root`.
 ```
@@ -388,7 +388,7 @@ mc rb watsonxdata/sampledata
 ``` 
 <pre style="font-size: small; color: darkgreen; overflow: auto">
 mc: <ERROR> `watsonxdata/sampledata` is not empty. 
-Retry this command with ‘--force’ flag if you want to remove 
+Retry this command with `--force` flag if you want to remove 
 `watsonxdata/sampledata` and all its contents 
 </pre>
 

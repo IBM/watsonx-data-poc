@@ -13,7 +13,7 @@ you have logged in, you should see the following.
  
 Select the Environment tab on the far-left side. 
 
-**Note**: There may be more than one environment available. Choose the **IBM watsonx.data Development POC R1M0**. The version number may change as newer versions of watsonx.data are released. Make sure to sure to select the **POC** image and not the standard Developer edition versions.
+**Note**: There may be more than one environment available. Choose the **IBM watsonx.data Development POC R1M1**. The version number may change as newer versions of watsonx.data are released. Make sure to sure to select the **POC** image and not the standard Developer edition versions.
 
 ![Browser](wxd-images/techzone-environment.png)
  

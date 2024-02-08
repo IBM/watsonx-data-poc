@@ -21,7 +21,7 @@ The following test are to be executed during the proof-of-concept.
 * Show query results with screenshots or recorded demonstration.
 
 ### Serial and Concurrency Testing
-* Utilize Apache JMeter as the tool for simulating concurrent user activities by executing multiple instances of simple, intermediate, and complex queries simultaneously for Watson’s Great Outdoors Company.
+* Utilize Apache JMeter as the tool for simulating concurrent user activities by executing multiple instances of simple, intermediate, and complex queries simultaneously for Watson's Great Outdoors Company.
 * Evaluate the system's ability to handle concurrent transactions without compromising performance or data integrity.
 
 | Test No.|Test|Description|Required output

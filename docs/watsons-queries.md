@@ -2,7 +2,7 @@
 
 # Appendix D – Query Definitions and Timings
 
-## Watsons Queries 
+## Watson's Queries 
 ![Watsons](wxd-images/poc-query.png)
 There are three sets of queries that need to be executed as part of the POC:
 

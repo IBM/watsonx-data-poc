@@ -9,3 +9,4 @@ The following links provide more information on the components in this lab.
 * MinIO CLI - <a href="https://min.io/docs/minio/linux/reference/minio-mc.html" target="_blank">https://min.io/docs/minio/linux/reference/minio-mc.html</a>
 * dBeaver - <a href="https://dbeaver.com/docs/wiki/Application-Window-Overview/" target="_blank">https://dbeaver.com/docs/wiki/Application-Window-Overview/</a>
 * PostgreSQL SQL - <a href="https://www.postgresql.org/docs/current/sql.html" target="_blank">https://www.postgresql.org/docs/current/sql.html</a>
+* Milvus Vector Database - <a href="https://milvus.io/docs" target="_blank">https://milvus.io/docs</a>

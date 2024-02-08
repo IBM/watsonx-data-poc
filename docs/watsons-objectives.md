@@ -12,7 +12,7 @@ The main objectives of a proof-of-concept for data warehouse modernization invol
 * Database JDBC connectivity.
 
 ### Success Criteria
-* Successful migration of a subset of data from the data warehouse to the data lakehouse for Watson’s Great Outdoors Company.
+* Successful migration of a subset of data from the data warehouse to the data lakehouse for Watson's Great Outdoors Company.
 * Demonstrated adaptability of workload processes to the data lakehouse architecture.
 * Positive results from performance and scalability tests.
 * Identification of potential cost savings and efficiency gains.

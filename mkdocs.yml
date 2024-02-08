@@ -17,10 +17,10 @@ nav:
       - Database and Table Sizes: "watsons-database.md"
       - Object Definitions: "watsons-objects.md"
       - Query Definition and Timing: "watsons-queries.md"
+      - Dataset Details: "wxd-datasets-gosales.md"
   - POC Image Details:
     - Introduction: "wxd-intro.md"
     # - Quick Start: "wxd-quick.md"
-    - Requesting an IBMid: "wxd-reference-ibmid.md"
     - Requesting an image: "wxd-reference-techzone.md"
     - Accessing the reservation: "wxd-reference-access.md"
     - Available Ports: "wxd-reference-ports.md"
@@ -29,7 +29,6 @@ nav:
     - Userids and Passwords: "wxd-reference-passwords.md"
     - Documentation: "wxd-reference-documentation.md"
     - Lab Conventions and Startup: "wxd-lab-instructions.md"
-    # - Jupyter Notebook: "wxd-jupyter.md"
     - Core Components: 
       - Presto CLI: "wxd-prestocli.md"
       - watsonx.data UI: "wxd-watsonui.md"
@@ -45,6 +44,7 @@ nav:
   #   - Apache Superset: "wxd-superset.md"
   #   - dBeaver: "wxd-dbeaver.md"
     - Portainer Console: "wxd-reference-portainer.md"
+    - Jupyter Notebook: "wxd-jupyter.md"
   # - Working with Object Store Buckets: "wxd-objectstore.md"
   # - Ingesting Data: "wxd-ingest.md"
   # - Documentation: "wxd-reference-documentation.md"
@@ -52,7 +52,6 @@ nav:
   # - Dataset Details: 
   #   - Dataset Overview: "wxd-datasets-intro.md"
   #   - Loading External Datasets: "wxd-datasets-load.md"
-  - Dataset Details: "wxd-datasets-gosales.md"
   #   - Ontime Flight Performance: "wxd-datasets-ontime.md"
   #   - Taxi Rides: "wxd-datasets-taxi.md"
   # - Database Connections: "wxd-connections.md"

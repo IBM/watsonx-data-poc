@@ -64,7 +64,7 @@ ORDER BY
 (2 rows)
 </pre>
 
-Querying the customer table in the workshop schema, we can see the record inserted with name=’Deepak’.
+Querying the customer table in the workshop schema, we can see the record inserted with name='Deepak'.
 ```
 select * from customer where name='Deepak';
 ```
@@ -75,7 +75,7 @@ select * from customer where name='Deepak';
 (1 row)
 </pre>
 
-We realize that we don’t want the recent updates or just want to see what the data was at any point in time to respond to regulatory requirements. We will leverage the out-of-box system function `rollback_to_snapshot` to rollback to an older snapshot. The syntax for this function is:
+We realize that we don't want the recent updates or just want to see what the data was at any point in time to respond to regulatory requirements. We will leverage the out-of-box system function `rollback_to_snapshot` to rollback to an older snapshot. The syntax for this function is:
 <code style="color:blue; font-size: small">CALL iceberg_data.system.rollback_to_snapshot('workshop','customer',x);</code>
 
 The "x" would get replaced with the <code style="color:blue;font-size:medium;">snapshot_id</code> number that was found in the earlier query. It will be different on your system than the examples above.
@@ -108,7 +108,7 @@ CALL iceberg_data.system.rollback_to_snapshot('workshop','customer',
 CALL
 </pre>
 
-Querying the customer table in the workshop schema, we cannot see the record inserted with name=’Deepak’.
+Querying the customer table in the workshop schema, we cannot see the record inserted with name='Deepak'.
 ```
 select * from customer where name='Deepak';
 ```
