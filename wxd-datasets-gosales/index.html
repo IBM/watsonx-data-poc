@@ -13,7 +13,7 @@
     
     
       
-        <title>Great Outdoors Company - Watson's Great Outdoors</title>
+        <title>Dataset Details - Watson's Great Outdoors</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#great-outdoors-company" class="md-skip">
+        <a href="#watsons-great-outdoors-company" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Great Outdoors Company
+              Dataset Details
             
           </span>
         </div>
@@ -802,6 +802,523 @@
   
 
     
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Dataset Details
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Dataset Details
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-definitions" class="md-nav__link">
+    Table Definitions
+  </a>
+  
+    <nav class="md-nav" aria-label="Table Definitions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dist_inventory_fact" class="md-nav__link">
+    DIST_INVENTORY_FACT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dist_product_forecase_fact" class="md-nav__link">
+    DIST_PRODUCT_FORECASE_FACT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dist_returned_items_fact" class="md-nav__link">
+    DIST_RETURNED_ITEMS_FACT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dist_return_reason_dim" class="md-nav__link">
+    DIST_RETURN_REASON_DIM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emp_employee_dim" class="md-nav__link">
+    EMP_EMPLOYEE_DIM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emp_expense_fact" class="md-nav__link">
+    EMP_EXPENSE_FACT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emp_expense_plan_fact" class="md-nav__link">
+    EMP_EXPENSE_PLAN_FACT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emp_expense_type_dim" class="md-nav__link">
+    EMP_EXPENSE_TYPE_DIM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emp_expense_unit_lookup" class="md-nav__link">
+    EMP_EXPENSE_UNIT_LOOKUP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emp_position_dim" class="md-nav__link">
+    EMP_POSITION_DIM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emp_position_lookup" class="md-nav__link">
+    EMP_POSITION_LOOKUP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emp_position_summary_fact" class="md-nav__link">
+    EMP_POSITION_SUMMARY_FACT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emp_ranking_dim" class="md-nav__link">
+    EMP_RANKING_DIM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emp_ranking_fact" class="md-nav__link">
+    EMP_RANKING_FACT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emp_recruitment_dim" class="md-nav__link">
+    EMP_RECRUITMENT_DIM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emp_recruitment_fact" class="md-nav__link">
+    EMP_RECRUITMENT_FACT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emp_succession_fact" class="md-nav__link">
+    EMP_SUCCESSION_FACT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emp_succession_status_dim" class="md-nav__link">
+    EMP_SUCCESSION_STATUS_DIM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emp_summary_fact" class="md-nav__link">
+    EMP_SUMMARY_FACT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emp_survey_fact" class="md-nav__link">
+    EMP_SURVEY_FACT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emp_survey_targ_fact" class="md-nav__link">
+    EMP_SURVEY_TARG_FACT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emp_survey_topic_dim" class="md-nav__link">
+    EMP_SURVEY_TOPIC_DIM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emp_termination_lookup" class="md-nav__link">
+    EMP_TERMINATION_LOOKUP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emp_training_dim" class="md-nav__link">
+    EMP_TRAINING_DIM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emp_training_fact" class="md-nav__link">
+    EMP_TRAINING_FACT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fin_account_class_lookup" class="md-nav__link">
+    FIN_ACCOUNT_CLASS_LOOKUP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fin_account_dim" class="md-nav__link">
+    FIN_ACCOUNT_DIM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fin_account_name_lookup" class="md-nav__link">
+    FIN_ACCOUNT_NAME_LOOKUP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fin_account_type_lookup" class="md-nav__link">
+    FIN_ACCOUNT_TYPE_LOOKUP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fin_finance_fact" class="md-nav__link">
+    FIN_FINANCE_FACT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fin_subm_currency_lookup" class="md-nav__link">
+    FIN_SUBM_CURRENCY_LOOKUP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fin_subm_dim" class="md-nav__link">
+    FIN_SUBM_DIM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fin_subm_type_lookup" class="md-nav__link">
+    FIN_SUBM_TYPE_LOOKUP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#go_branch_dim" class="md-nav__link">
+    GO_BRANCH_DIM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#go_gender_lookup" class="md-nav__link">
+    GO_GENDER_LOOKUP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#go_org_dim" class="md-nav__link">
+    GO_ORG_DIM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#go_org_name_lookup" class="md-nav__link">
+    GO_ORG_NAME_LOOKUP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#go_region_dim" class="md-nav__link">
+    GO_REGION_DIM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#go_satisfaction_dim" class="md-nav__link">
+    GO_SATISFACTION_DIM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#go_time_dim" class="md-nav__link">
+    GO_TIME_DIM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#go_time_quarter_lookup" class="md-nav__link">
+    GO_TIME_QUARTER_LOOKUP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mrk_activity_status_dim" class="md-nav__link">
+    MRK_ACTIVITY_STATUS_DIM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mrk_bundle_group_lookup" class="md-nav__link">
+    MRK_BUNDLE_GROUP_LOOKUP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mrk_campaign_lookup" class="md-nav__link">
+    MRK_CAMPAIGN_LOOKUP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mrk_product_survey_dim" class="md-nav__link">
+    MRK_PRODUCT_SURVEY_DIM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mrk_product_survey_fact" class="md-nav__link">
+    MRK_PRODUCT_SURVEY_FACT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mrk_prod_survey_targ_fact" class="md-nav__link">
+    MRK_PROD_SURVEY_TARG_FACT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mrk_promotion_dim" class="md-nav__link">
+    MRK_PROMOTION_DIM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mrk_promotion_fact" class="md-nav__link">
+    MRK_PROMOTION_FACT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mrk_promotion_plan_fact" class="md-nav__link">
+    MRK_PROMOTION_PLAN_FACT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mrk_rtl_survey_dim" class="md-nav__link">
+    MRK_RTL_SURVEY_DIM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mrk_rtl_survey_fact" class="md-nav__link">
+    MRK_RTL_SURVEY_FACT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mrk_rtl_survey_targ_fact" class="md-nav__link">
+    MRK_RTL_SURVEY_TARG_FACT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sls_order_method_dim" class="md-nav__link">
+    SLS_ORDER_METHOD_DIM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sls_product_brand_lookup" class="md-nav__link">
+    SLS_PRODUCT_BRAND_LOOKUP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sls_product_color_lookup" class="md-nav__link">
+    SLS_PRODUCT_COLOR_LOOKUP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sls_product_dim" class="md-nav__link">
+    SLS_PRODUCT_DIM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sls_product_line_lookup" class="md-nav__link">
+    SLS_PRODUCT_LINE_LOOKUP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sls_product_lookup" class="md-nav__link">
+    SLS_PRODUCT_LOOKUP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sls_product_size_lookup" class="md-nav__link">
+    SLS_PRODUCT_SIZE_LOOKUP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sls_product_type_lookup" class="md-nav__link">
+    SLS_PRODUCT_TYPE_LOOKUP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sls_rtl_dim" class="md-nav__link">
+    SLS_RTL_DIM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sls_sales_fact" class="md-nav__link">
+    SLS_SALES_FACT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sls_sales_order_dim" class="md-nav__link">
+    SLS_SALES_ORDER_DIM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sls_sales_targ_fact" class="md-nav__link">
+    SLS_SALES_TARG_FACT
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -827,13 +1344,6 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#disclaimer" class="md-nav__link">
-    Disclaimer
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#table-definitions" class="md-nav__link">
@@ -1317,16 +1827,14 @@
                 
 
 
-<h1 id="great-outdoors-company">Great Outdoors Company</h1>
-<p>The Sample Outdoors Company, or GO Sales, or any variation of the Sample Outdoors name, is the name of a fictitious business operation whose sample data is used to develop sample applications for IBM® and IBM customers. Its fictitious records include sample data for sales transactions, product distribution, finance, and human resources. Any resemblance to actual names, addresses, contact numbers, or transaction values, is coincidental. </p>
+<h1 id="watsons-great-outdoors-company">Watsons Great Outdoors Company</h1>
+<p>The Watsons Great Outdoors Company, or GO Sales, or any variation of the Sample Outdoors name, is the name of a fictitious business operation whose sample data is used to develop sample applications for IBM® and IBM customers. Its fictitious records include sample data for sales transactions, product distribution, finance, and human resources. Any resemblance to actual names, addresses, contact numbers, or transaction values, is coincidental. Unauthorized duplication is prohibited.</p>
 <p>Two links that provide more details on the database.</p>
 <ul>
-<li><a href="https://www.ibm.com/docs/en/cognos-analytics/11.1.0?topic=packages-sample-outdoors-company" target="_blank">Great Outdoors Company</a></li>
-<li><a href="https://www.ibm.com/docs/en/data-studio/4.1.1?topic=database-gsdb-reference" target="_blank">Great Outdoors Database Reference</a></li>
+<li><a href="https://www.ibm.com/docs/en/cognos-analytics/11.1.0?topic=packages-sample-outdoors-company" target="_blank">Watsons Great Outdoors Company</a></li>
+<li><a href="https://www.ibm.com/docs/en/data-studio/4.1.1?topic=database-gsdb-reference" target="_blank">Watsons Great Outdoors Database Reference</a></li>
 </ul>
 <p>The second link will say that there is no content available, but if you click on the down arrow you will see the table names.</p>
-<h2 id="disclaimer">Disclaimer</h2>
-<p>The Sample Outdoors Company, or GO Sales, or any variation of the Sample Outdoors name, is the name of a fictitious business operation whose sample data is used to develop sample applications for IBM® and IBM customers. Its fictitious records include sample data for sales transactions, product distribution, finance, and human resources. Any resemblance to actual names, addresses, contact numbers, or transaction values, is coincidental. Unauthorized duplication is prohibited.</p>
 <h2 id="table-definitions">Table Definitions</h2>
 <p>These tables are created under the GOSALESDW schema. Thanks to Michael Schapira for generating the following ER diagram. You may need to download the image to zoom in on the relationships.</p>
 <p><img alt="Browser" src="../wxd-images/GOSALESDW.png" /></p>
@@ -3891,6 +4399,27 @@
       </main>
       
         <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../wxd-reference-portainer/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Portainer Console" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Portainer Console
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
