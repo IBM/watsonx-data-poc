@@ -1,17 +1,13 @@
-# Great Outdoors Company
+# Watsons Great Outdoors Company
 
-The Sample Outdoors Company, or GO Sales, or any variation of the Sample Outdoors name, is the name of a fictitious business operation whose sample data is used to develop sample applications for IBM® and IBM customers. Its fictitious records include sample data for sales transactions, product distribution, finance, and human resources. Any resemblance to actual names, addresses, contact numbers, or transaction values, is coincidental. 
+The Watsons Great Outdoors Company, or GO Sales, or any variation of the Sample Outdoors name, is the name of a fictitious business operation whose sample data is used to develop sample applications for IBM® and IBM customers. Its fictitious records include sample data for sales transactions, product distribution, finance, and human resources. Any resemblance to actual names, addresses, contact numbers, or transaction values, is coincidental. Unauthorized duplication is prohibited.
 
 Two links that provide more details on the database.
 
-* <a href="https://www.ibm.com/docs/en/cognos-analytics/11.1.0?topic=packages-sample-outdoors-company" target="_blank">Great Outdoors Company</a>
-* <a href="https://www.ibm.com/docs/en/data-studio/4.1.1?topic=database-gsdb-reference" target="_blank">Great Outdoors Database Reference</a>
+* <a href="https://www.ibm.com/docs/en/cognos-analytics/11.1.0?topic=packages-sample-outdoors-company" target="_blank">Watsons Great Outdoors Company</a>
+* <a href="https://www.ibm.com/docs/en/data-studio/4.1.1?topic=database-gsdb-reference" target="_blank">Watsons Great Outdoors Database Reference</a>
 
 The second link will say that there is no content available, but if you click on the down arrow you will see the table names.
-
-## Disclaimer
-
-The Sample Outdoors Company, or GO Sales, or any variation of the Sample Outdoors name, is the name of a fictitious business operation whose sample data is used to develop sample applications for IBM® and IBM customers. Its fictitious records include sample data for sales transactions, product distribution, finance, and human resources. Any resemblance to actual names, addresses, contact numbers, or transaction values, is coincidental. Unauthorized duplication is prohibited.
 
 ## Table Definitions
 

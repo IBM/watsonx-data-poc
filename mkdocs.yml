@@ -52,7 +52,7 @@ nav:
   # - Dataset Details: 
   #   - Dataset Overview: "wxd-datasets-intro.md"
   #   - Loading External Datasets: "wxd-datasets-load.md"
-  #   - Great Outdoors Company: "wxd-datasets-gosales.md"
+  - Dataset Details: "wxd-datasets-gosales.md"
   #   - Ontime Flight Performance: "wxd-datasets-ontime.md"
   #   - Taxi Rides: "wxd-datasets-taxi.md"
   # - Database Connections: "wxd-connections.md"
