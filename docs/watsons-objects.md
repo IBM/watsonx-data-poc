@@ -12,3 +12,9 @@ The DDL file can be downloaded with the following URL:
 
 The data to load into the tables can be found in the following URL:
 [Watsons Go Data](wxd-files/watsons-go-pocdata.tar.gz)
+
+If you want to load the data directly in your virtual machine, use the following command in a terminal shell. Change the name of the output file with the `-O` option. 
+
+```
+wget https://ibm.github.io/watsonx-data-poc/wxd-files/watsons-go-pocdata.tar.gz -O pocdata.tar.gz
+```
