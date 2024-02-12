@@ -13,6 +13,17 @@ The files to be loaded into the data lakehouse can be accessed from the followin
 |access_key_id|`ad280939fcd14e5dbf4684cb57fe7aab`
 |secret_access_key|`23a3f80b7cda491e41e0ee1af55d3179d98661eac80c374b`
 
+### Alternate File Location
+
+The data to load into the tables can also be found in the following URL:
+[Watsons Go Data](wxd-files/watsons-go-pocdata.tar.gz)
+
+If you want to load the data directly in your virtual machine, use the following command in a terminal shell. Change the name of the output file with the `-O` option. 
+
+```
+wget https://ibm.github.io/watsonx-data-poc/wxd-files/watsons-go-pocdata.tar.gz -O pocdata.tar.gz
+```
+
 ### File Sizes
 <pre style="font-size: small; color: darkgreen; overflow: auto">
 File Name                           Size Rowcount  
