@@ -10,6 +10,7 @@ The files to be loaded into the data lakehouse can be accessed from the followin
 |---------|------
 |Type|`IBM Cloud Object Storage`
 |Endpoint|`s3.us-south.cloud-object-storage.appdomain.cloud`
+|Bucket Name|`watsonsgodata`
 |access_key_id|`ad280939fcd14e5dbf4684cb57fe7aab`
 |secret_access_key|`23a3f80b7cda491e41e0ee1af55d3179d98661eac80c374b`
 
