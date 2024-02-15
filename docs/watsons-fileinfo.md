@@ -16,13 +16,21 @@ The files to be loaded into the data lakehouse can be accessed from the followin
 
 ### Alternate File Location
 
-The data to load into the tables can also be found in the following URL:
-[Watsons Go Data](wxd-files/watsons-go-pocdata.tar.gz)
+The data to load into the tables can also be found in the following URLs:
 
-If you want to load the data directly in your virtual machine, use the following command in a terminal shell. Change the name of the output file with the `-O` option. 
+* Pipe delimited: [Watsons Go Pipe Data](wxd-files/watsons-go-pocdata.tar.gz)
+* CSV delimited: [Watsons Go CSV Data](wxd-files/watsons-go-pocdata-csv.tar.gz)
 
+If you want to load the data directly in your virtual machine, use either of the following commands in a terminal shell. Change the name of the output file with the `-O` option. 
+
+#### Pipe Delimited
 ```
 wget https://ibm.github.io/watsonx-data-poc/wxd-files/watsons-go-pocdata.tar.gz -O pocdata.tar.gz
+```
+
+#### CSV Delimited
+```
+wget https://ibm.github.io/watsonx-data-poc/wxd-files/watsons-go-pocdata-csv.tar.gz -O pocdata.tar.gz
 ```
 
 ### File Sizes
