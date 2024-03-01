@@ -26,37 +26,45 @@ The execution time for the queries on the data warehouse are listed below.
 
 
 <pre style="font-size: small; color: darkgreen; overflow: auto">
-simple-01.sql       1.529060627 seconds
-simple-02.sql       1.476164566 seconds
-simple-03.sql       1.482101832 seconds
-simple-04.sql       1.480695440 seconds
-simple-05.sql       1.454873974 seconds
-simple-06.sql       1.476483577 seconds
-simple-07.sql       1.472377979 seconds
-simple-08.sql       1.769063665 seconds
-simple-09.sql       1.693034872 seconds
-simple-10.sql       1.988209064 seconds
-simple-11.sql       1.469593858 seconds
-simple-12.sql       1.523729453 seconds
-simple-13.sql       1.476710008 seconds
-simple-14.sql       1.457579428 seconds
-simple-15.sql       1.548640598 seconds
-intermediate-01.sql 1.506923581 seconds
-intermediate-02.sql 1.456880916 seconds
-intermediate-03.sql 1.493955653 seconds
-intermediate-04.sql 1.622981975 seconds
-intermediate-05.sql 1.476399535 seconds
-intermediate-06.sql 1.486358352 seconds
-intermediate-07.sql 1.746402775 seconds
-intermediate-08.sql 1.539039405 seconds
-intermediate-09.sql 1.574140735 seconds
-intermediate-10.sql 1.514428503 seconds
-complex-01.sql      1.576090906 seconds
-complex-02.sql      2.073730398 seconds
-complex-03.sql      1.596002877 seconds
-complex-04.sql      1.923587676 seconds
-complex-05.sql      1.479848074 seconds
-complex-06.sql      1.890319044 seconds
-complex-07.sql      1.704899679 seconds
-complex-08.sql      1.602149198 seconds 
+Query               Time(s)
+------------------- ------------
+simple-01.sql       0.0570000000
+simple-02.sql       0.0500000000
+simple-03.sql       0.0480000000
+simple-04.sql       0.0550000000
+simple-05.sql       0.0460000000
+simple-06.sql       0.0480000000
+simple-07.sql       0.0450000000
+simple-08.sql       0.1790000000
+simple-09.sql       0.0650000000
+simple-10.sql       0.3680000000
+simple-11.sql       0.0560000000
+simple-12.sql       0.0690000000
+simple-13.sql       0.0430000000
+simple-14.sql       0.0430000000
+simple-15.sql       0.0450000000
+intermediate-01.sql 0.0800000000
+intermediate-02.sql 0.0430000000
+intermediate-03.sql 0.0530000000
+intermediate-04.sql 0.2040000000
+intermediate-05.sql 0.0660000000
+intermediate-06.sql 0.0590000000
+intermediate-07.sql 0.0760000000
+intermediate-08.sql 0.0950000000
+intermediate-09.sql 0.0710000000
+intermediate-10.sql 0.1010000000
+complex-01.sql      0.0990000000
+complex-02.sql      0.3100000000
+complex-03.sql      0.1620000000
+complex-04.sql      0.2110000000
+complex-05.sql      0.0660000000
+complex-06.sql      0.1620000000
+complex-07.sql      0.0740000000
+complex-08.sql      0.0960000000 
 </pre>
+
+## Watsons JMeter HTML Reports
+
+The following links display the serial and concurrent reports when running the queries on the existing data warehouse.
+
+* [Serial Report](./serial-report/index.html)

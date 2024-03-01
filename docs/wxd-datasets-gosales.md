@@ -1,4 +1,6 @@
-# Watson's Great Outdoors Company
+![Watsons](wxd-images/watsons-go-logo-small.png)
+
+# Appendix E - Watson's Great Outdoors Company
 
 The Watson's Great Outdoors Company, or GO Sales, or any variation of the Sample Outdoors name, is the name of a fictitious business operation whose sample data is used to develop sample applications for IBM® and IBM customers. Its fictitious records include sample data for sales transactions, product distribution, finance, and human resources. Any resemblance to actual names, addresses, contact numbers, or transaction values, is coincidental. Unauthorized duplication is prohibited.
 

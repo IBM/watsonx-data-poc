@@ -18,6 +18,8 @@ nav:
       - Object Definitions: "watsons-objects.md"
       - Query Definition and Timing: "watsons-queries.md"
       - Dataset Details: "wxd-datasets-gosales.md"
+      - Database Validation: "watsons-database-validation.md"
+      - JMeter Test PLan: "watsons-jmeter.md"
   - POC Image Details:
     - Introduction: "wxd-intro.md"
     # - Quick Start: "wxd-quick.md"
