@@ -63,7 +63,7 @@ complex-07.sql      0.0740000000
 complex-08.sql      0.0960000000 
 </pre>
 
-## Watsons JMeter HTML Reports
+## Watsons JMeter Reports
 
 The following links display the serial and concurrent reports when running the queries on the existing data warehouse.
 
