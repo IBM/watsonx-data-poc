@@ -5,6 +5,16 @@
 ![Watsons](wxd-images/poc-crashdummy.png)
 The following details the tests to be performance by each vendor.
 
+## JDBC Connectivity
+### Connectivity Test
+* Ensure seamless communication between the data lakehouse and external tools through JDBC connections.
+* Demonstrate DBeaver connectivity to the data lakehouse and execute one query from each category (simple, medium, complex).
+
+### Connectivity Results
+* Provide details on the process to establish connectivity.
+* Show connectivity results using screenshots or recorded demonstration.
+* Show query results with screenshots or recorded demonstration.
+
 ## Performance Testing
 
 * Conduct performance tests to evaluate the speed and efficiency of data processing in the data lakehouse for Watson's Great Outdoors Company.
@@ -23,16 +33,6 @@ Three query categories have been provided for replicating the standard workload 
 * Intermediate Queries - A compilation of SQL queries involving joins, subqueries, and aggregation functions at a moderate level of complexity.
 
 * Complex Queries - An assortment of intricate SQL queries comprising multiple joins, nested subqueries, and advanced analytical functions.
-
-## JDBC Connectivity
-### Connectivity Test
-* Ensure seamless communication between the data lakehouse and external tools through JDBC connections.
-* Demonstrate DBeaver connectivity to the data lakehouse and execute one query from each category (simple, medium, complex).
-
-### Connectivity Results
-* Provide details on the process to establish connectivity.
-* Show connectivity results using screenshots or recorded demonstration.
-* Show query results with screenshots or recorded demonstration.
 
 ## Serial and Concurrency Testing
 
