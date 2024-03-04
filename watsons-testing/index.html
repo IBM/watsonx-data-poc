@@ -346,6 +346,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#jdbc-connectivity" class="md-nav__link">
+    JDBC Connectivity
+  </a>
+  
+    <nav class="md-nav" aria-label="JDBC Connectivity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connectivity-test" class="md-nav__link">
+    Connectivity Test
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connectivity-results" class="md-nav__link">
+    Connectivity Results
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serial-and-concurrency-testing" class="md-nav__link">
+    Serial and Concurrency Testing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1002,6 +1036,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#jdbc-connectivity" class="md-nav__link">
+    JDBC Connectivity
+  </a>
+  
+    <nav class="md-nav" aria-label="JDBC Connectivity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connectivity-test" class="md-nav__link">
+    Connectivity Test
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connectivity-results" class="md-nav__link">
+    Connectivity Results
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serial-and-concurrency-testing" class="md-nav__link">
+    Serial and Concurrency Testing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1046,6 +1114,83 @@ The following details the tests to be performance by each vendor.</p>
 <li>Formulate complex SQL queries that include multiple joins, nested subqueries, and advanced analytical functions for Watson's Great Outdoors Company.</li>
 <li>Validate the correctness and performance of these queries under realistic scenarios.</li>
 </ul>
+<p><img alt="Watsons" src="../wxd-images/poc-crashdummy.png" />
+The following test are to be executed during the proof-of-concept.</p>
+<ol>
+<li>JDBC Connectivity</li>
+<li>Query Tests<ol>
+<li>Serial Query</li>
+<li>Concurrency</li>
+</ol>
+</li>
+</ol>
+<h2 id="jdbc-connectivity">JDBC Connectivity</h2>
+<h3 id="connectivity-test">Connectivity Test</h3>
+<ul>
+<li>Ensure seamless communication between the data lakehouse and external tools through JDBC connections.</li>
+<li>Demonstrate DBeaver connectivity to the data lakehouse and execute one query from each category (simple, medium, complex).</li>
+</ul>
+<h3 id="connectivity-results">Connectivity Results</h3>
+<ul>
+<li>Provide details on the process to establish connectivity.</li>
+<li>Show connectivity results using screenshots or recorded demonstration.</li>
+<li>Show query results with screenshots or recorded demonstration.</li>
+</ul>
+<h3 id="serial-and-concurrency-testing">Serial and Concurrency Testing</h3>
+<ul>
+<li>Utilize Apache JMeter as the tool for simulating concurrent user activities by executing multiple instances of simple, intermediate, and complex queries simultaneously for Watson's Great Outdoors Company.</li>
+<li>Evaluate the system's ability to handle concurrent transactions without compromising performance or data integrity.</li>
+<li>Create four users for the testing:<ul>
+<li>Serial<ul>
+<li>serial - user for running the serial test</li>
+</ul>
+</li>
+<li>Concurrency<ul>
+<li>simple - user for simple queries</li>
+<li>intermediate - user for intermediate queries</li>
+<li>complex - user for complex queries</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Test No.</th>
+<th>Test</th>
+<th>Description</th>
+<th>Required output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Serial</td>
+<td>Run each query serially three times</td>
+<td><ul><li>Save each query results into a file</li><li>Provide avg, minimum, maximum, median timings</li></ul></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Concurrency</td>
+<td>Duration: 30-minute <p><ul><li>5 simple</li><li>2 intermediate</li><li>1 complex</li></ul></td>
+<td><ul><li>Record number of query execution per query and the average time to run</li><li>Save each query results into a file</li><li>Record Queries Per Hour (QPH)</li></ul></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Concurrency</td>
+<td>Duration: 30-minute<p><ul><li>10 simple</li><li>5 intermediate</li><li>2 complex</li></ul></td>
+<td><ul><li>Record number of query execution per query and the average time to run</li><li>Save each query results into a file</li><li>Record Queries Per Hour (QPH)</li></ul></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Concurrency</td>
+<td>Duration: 30-minute<p><ul><li>20 simple</li><li>10 intermediate</li><li>5 complex</ul></td>
+<td><ul><li>Record number of query execution per query and the average time to run</li><li>Save each query results into a file.</il><li>Record Queries Per Hour (QPH)</li></ul></td>
+</tr>
+</tbody>
+</table>
+<p><sub><sup><em>Table 2. Performance Tests</em></sup></sub></p>
 
               
             </article>
