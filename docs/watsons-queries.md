@@ -67,4 +67,5 @@ complex-08.sql      0.0960000000
 
 The following links display the serial and concurrent reports when running the queries on the existing data warehouse.
 
-* [Serial Report](./serial-report/index.html)
+* Serial Report (TBD)
+* Concurrent Report (TBD)

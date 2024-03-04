@@ -8,4 +8,5 @@ The following control files contain the information required to run JMeter tests
 
     The settings in the testplans below were built for the original data warehouse. You will need to modify the values in the test plan to match your watsonx.data configuration.
 
-* [JMeter Serial Testplan](./wxd-files/watsonsPoC-Serial-testplan.jmx)
+* [JMeter Serial Testplan](./wxd-files/watsons-serial-testplan-netezza.jmx)
+* [Jmeter Concurrent Testplan](./wxd-files/watsons-concur-testplan-netezza.jmx)
