@@ -1,0 +1,1440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.3">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Watsons PoC Concurrency Performance Test">
+      <stringProp name="TestPlan.comments">Netezza</stringProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+    </TestPlan>
+    <hashTree>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="1-User Defined Variables">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="test_num" elementType="Argument">
+            <stringProp name="Argument.name">test_num</stringProp>
+            <stringProp name="Argument.value">${__P(testnum,t2)}</stringProp>
+            <stringProp name="Argument.desc">test number t1=2, t3 or t4 for concurrency tests</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="test_prefix" elementType="Argument">
+            <stringProp name="Argument.name">test_prefix</stringProp>
+            <stringProp name="Argument.value">${__P(testprefix,mockpoc-concur)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">prefix name for the test used in the naming of the results files</stringProp>
+          </elementProp>
+          <elementProp name="test_case" elementType="Argument">
+            <stringProp name="Argument.name">test_case</stringProp>
+            <stringProp name="Argument.value">${__P(testcase,${__time(yyyy-MM-dd.HHmmss)})}</stringProp>
+            <stringProp name="Argument.desc">unique qualifier used in output file name</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="root_path" elementType="Argument">
+            <stringProp name="Argument.name">root_path</stringProp>
+            <stringProp name="Argument.value">${__P(rootpath,/Users/danielhancock/mockpoc/jmeter)}</stringProp>
+            <stringProp name="Argument.desc">top level directory</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="jmeter_home" elementType="Argument">
+            <stringProp name="Argument.name">jmeter_home</stringProp>
+            <stringProp name="Argument.value">/usr/local/Cellar/jmeter/5.6.3</stringProp>
+            <stringProp name="Argument.desc">path to jmeter</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="host" elementType="Argument">
+            <stringProp name="Argument.name">host</stringProp>
+            <stringProp name="Argument.desc">netezza hostname</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.value">CHANGEME</stringProp>
+          </elementProp>
+          <elementProp name="port" elementType="Argument">
+            <stringProp name="Argument.name">port</stringProp>
+            <stringProp name="Argument.value">5480</stringProp>
+            <stringProp name="Argument.desc">netezza host port</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="database" elementType="Argument">
+            <stringProp name="Argument.name">database</stringProp>
+            <stringProp name="Argument.value">MOCKDB</stringProp>
+            <stringProp name="Argument.desc">database name</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="schema" elementType="Argument">
+            <stringProp name="Argument.name">schema</stringProp>
+            <stringProp name="Argument.value">POC</stringProp>
+            <stringProp name="Argument.desc">schema name</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="s_username" elementType="Argument">
+            <stringProp name="Argument.name">s_username</stringProp>
+            <stringProp name="Argument.value">simple</stringProp>
+            <stringProp name="Argument.desc">database user for simple queries</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="i_username" elementType="Argument">
+            <stringProp name="Argument.name">i_username</stringProp>
+            <stringProp name="Argument.value">intermediate</stringProp>
+            <stringProp name="Argument.desc">database user for intermediate queries</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="c_username" elementType="Argument">
+            <stringProp name="Argument.name">c_username</stringProp>
+            <stringProp name="Argument.value">complex</stringProp>
+            <stringProp name="Argument.desc">database user for complex queries</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="test_duration" elementType="Argument">
+            <stringProp name="Argument.name">test_duration</stringProp>
+            <stringProp name="Argument.value">${__P(duration,30)}</stringProp>
+            <stringProp name="Argument.desc">test length in seconds</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="s_users" elementType="Argument">
+            <stringProp name="Argument.name">s_users</stringProp>
+            <stringProp name="Argument.value">${__P(s_users,5)}</stringProp>
+            <stringProp name="Argument.desc">number of concurrent simple queries</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="i_users" elementType="Argument">
+            <stringProp name="Argument.name">i_users</stringProp>
+            <stringProp name="Argument.value">${__P(i_users,2)}</stringProp>
+            <stringProp name="Argument.desc">number of concurrent intermediate queries</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="c_users" elementType="Argument">
+            <stringProp name="Argument.name">c_users</stringProp>
+            <stringProp name="Argument.value">${__P(c_users,1)}</stringProp>
+            <stringProp name="Argument.desc">number of concurrent complex queries</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+        <stringProp name="TestPlan.comments">must be at the top level for the test plan, used by </stringProp>
+      </Arguments>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="2-User Defined Variables">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="output_path" elementType="Argument">
+            <stringProp name="Argument.name">output_path</stringProp>
+            <stringProp name="Argument.value">${__V(${root_path})}/output/${__V(${test_num})}/${__V(${test_case})}/results</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">path to the directory where the results saved</stringProp>
+          </elementProp>
+          <elementProp name="results_csv" elementType="Argument">
+            <stringProp name="Argument.name">results_csv</stringProp>
+            <stringProp name="Argument.value">${__V(${test_prefix})}-${__V(${test_case})}-results.csv</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">name of the results csv file</stringProp>
+          </elementProp>
+          <elementProp name="responses_path" elementType="Argument">
+            <stringProp name="Argument.name">responses_path</stringProp>
+            <stringProp name="Argument.value">${__V(${root_path})}/output/${__V(${test_num})}/${__V(${test_case})}/results/responses</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">query output</stringProp>
+          </elementProp>
+        </collectionProp>
+        <stringProp name="TestPlan.comments">Concat variables from 1-User Defined Variables</stringProp>
+      </Arguments>
+      <hashTree/>
+      <Summariser guiclass="SummariserGui" testclass="Summariser" testname="GenerateSummaryResults"/>
+      <hashTree/>
+      <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <hostname>true</hostname>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename">${output_path}/${results_csv}</stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="false">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename">${output_path}/${results_csv}</stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="false">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename">${output_path}/${results_csv}</stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultSaver guiclass="ResultSaverGui" testclass="ResultSaver" testname="Save Responses to a file">
+        <stringProp name="FileSaver.filename">${responses_path}/${__samplerName()}-</stringProp>
+        <boolProp name="FileSaver.errorsonly">true</boolProp>
+        <boolProp name="FileSaver.successonly">false</boolProp>
+        <boolProp name="FileSaver.skipsuffix">false</boolProp>
+        <boolProp name="FileSaver.skipautonumber">false</boolProp>
+        <boolProp name="FileSaver.ignoreTC">false</boolProp>
+        <boolProp name="FileSaver.addTimstamp">true</boolProp>
+      </ResultSaver>
+      <hashTree/>
+      <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="false">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>true</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename">${results_path}/${results_csv}</stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Simple Queries" enabled="true">
+        <stringProp name="ThreadGroup.num_threads">${s_users}</stringProp>
+        <intProp name="ThreadGroup.ramp_time">5</intProp>
+        <stringProp name="ThreadGroup.duration">${test_duration}</stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
+          <intProp name="LoopController.loops">-1</intProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+      </ThreadGroup>
+      <hashTree>
+        <JDBCDataSource guiclass="TestBeanGUI" testclass="JDBCDataSource" testname="JDBC Connection - Netezza userid: simple" enabled="true">
+          <boolProp name="autocommit">true</boolProp>
+          <stringProp name="checkQuery">select 1</stringProp>
+          <stringProp name="connectionAge">5000</stringProp>
+          <stringProp name="dataSource">simple</stringProp>
+          <stringProp name="dbUrl">jdbc:netezza://${host}:${port}/${database}</stringProp>
+          <stringProp name="driver">org.netezza.Driver</stringProp>
+          <boolProp name="keepAlive">true</boolProp>
+          <stringProp name="password">CHANGEME</stringProp>
+          <stringProp name="poolMax">25</stringProp>
+          <stringProp name="timeout">1000</stringProp>
+          <stringProp name="transactionIsolation">DEFAULT</stringProp>
+          <stringProp name="trimInterval">10</stringProp>
+          <stringProp name="username">${s_username}</stringProp>
+          <stringProp name="initQuery"></stringProp>
+          <boolProp name="preinit">false</boolProp>
+          <stringProp name="connectionProperties"></stringProp>
+        </JDBCDataSource>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="simple-01.sql" enabled="true">
+          <stringProp name="dataSource">simple</stringProp>
+          <stringProp name="query">-- simple-01.sql
+-- select 100 rows from SLS_PRODUCT_DIM by year
+
+SELECT *
+FROM sls_product_dim
+WHERE extract(YEAR
+              FROM introduction_date) = 2001 -- 2006 2007 2008 2009 2010 2011 2012
+LIMIT 10
+
+</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="simple-02.sql" enabled="true">
+          <stringProp name="dataSource">simple</stringProp>
+          <stringProp name="query">-- simple-02.sql
+-- retrieves order method information from the SLS_ORDER_METHOD_DIM table
+-- and orders the results by ORDER_METHOD_KEY and ORDER_METHOD_CODE
+
+SELECT order_method_key,
+       order_method_code,
+       order_method_en
+FROM sls_order_method_dim
+ORDER BY 1,
+         2</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="simple-03.sql" enabled="true">
+          <stringProp name="dataSource">simple</stringProp>
+          <stringProp name="query">-- simple-03.sql
+-- retrieve customer names and email addresses
+
+SELECT e.employee_key,
+       e.employee_name,
+       e.manager_key,
+       e.organization_code
+FROM emp_employee_dim e
+WHERE e.branch_code = 6
+ORDER BY e.employee_name
+--LIMIT 50
+
+</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="simple-04.sql" enabled="true">
+          <stringProp name="dataSource">simple</stringProp>
+          <stringProp name="query">-- simple-04.sql
+-- count number of orders for each WAREHOUSE_BRANCH_CODE
+
+SELECT warehouse_branch_code,
+       COUNT(*) AS order_count
+FROM sls_sales_order_dim
+GROUP BY warehouse_branch_code
+HAVING COUNT(*) &lt; 50000 -- 5000 10000 15000 20000 50000
+ORDER BY order_count DESC</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="simple-05.sql" enabled="true">
+          <stringProp name="dataSource">simple</stringProp>
+          <stringProp name="query">-- simple-05.sql
+-- count number of products by PRODUCT_BRAND_CODE
+
+SELECT product_brand_code,
+       count(*) AS product_count
+FROM sls_product_dim
+GROUP BY product_brand_code
+</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="simple-06.sql" enabled="true">
+          <stringProp name="dataSource">simple</stringProp>
+          <stringProp name="query">-- simple-06.sql
+-- count records from the GO_BRANCH_DIM and DIST_INVENTORY_FACT tables,
+-- where the DIST_INVENTORY_FACT&apos;s BRANCH_KEY matches with GO_BRANCH_DIM&apos;s BRANCH_KEY, and
+-- the GO_BRANCH_DIM&apos;s BRANCH_CODE is greater than some BD.BRANCH_CODE
+
+SELECT count(*)
+FROM go_branch_dim AS bd,
+     dist_inventory_fact AS if -- changed from &quot;IF&quot; to &quot;if&quot; case sensitive
+WHERE if.branch_key = bd.branch_key
+  AND bd.branch_code &gt; 20 </stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="simple-07.sql" enabled="true">
+          <stringProp name="dataSource">simple</stringProp>
+          <stringProp name="query">-- simple-07.sql
+-- retrieves specific columns from the GO_REGION_DIM table
+
+SELECT country_key,
+       country_code, -- FLAG_IMAGE,
+ iso_three_letter_code,
+ iso_two_letter_code,
+ iso_three_digit_code,
+ region_key,
+ region_code,
+ region_en
+FROM go_region_dim
+WHERE region_code = 740 --  710 740 750 760 770
+LIMIT 100
+</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="simple-08.sql" enabled="true">
+          <stringProp name="dataSource">simple</stringProp>
+          <stringProp name="query">-- simple-08.sql
+-- retrieves specific columns from the SLS_SALES_FACT table
+-- for sales where the sale_total is greater than X
+
+SELECT sales_order_key,
+       product_key,
+       quantity,
+       sale_total
+FROM sls_sales_fact
+WHERE sale_total &gt;  100000 -- 1000 5000 10000 25000 50000 75000 100000 150000 200000
+--LIMIT 1000
+</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="simple-09.sql" enabled="true">
+          <stringProp name="dataSource">simple</stringProp>
+          <stringProp name="query">
+-- simple-09.sql
+-- retrieve products with a unit cost higher than the average unit cost:
+
+SELECT *
+FROM dist_inventory_fact
+WHERE unit_cost &gt;
+    (SELECT avg(average_unit_cost)
+     FROM dist_inventory_fact)
+  AND month_key BETWEEN 201201 AND 201203 -- 201204 and 201206 201207 and 201209 201210 and 201212
+ORDER BY product_key
+--limit 100</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="simple-10.sql" enabled="true">
+          <stringProp name="dataSource">simple</stringProp>
+          <stringProp name="query">-- simple-10.sql
+-- retrieves sales-related information from the sls_sales_fact table,
+-- including details such as order day, organization, employee, retailer, product, promotion, and more
+-- to include only records from the year(s) months specified
+
+SELECT sls_sales_fact.order_day_key,
+       sls_sales_fact.organization_key,
+       sls_sales_fact.employee_key,
+       sls_sales_fact.retailer_key,
+       sls_sales_fact.retailer_site_key,
+       sls_sales_fact.product_key,
+       sls_sales_fact.promotion_key,
+       sls_sales_fact.order_method_key,
+       sls_sales_fact.sales_order_key,
+       sls_sales_fact.ship_day_key,
+       sls_sales_fact.close_day_key,
+       sls_sales_fact.quantity,
+       sls_sales_fact.unit_cost,
+       sls_sales_fact.unit_price,
+       sls_sales_fact.unit_sale_price,
+       sls_sales_fact.gross_margin,
+       sls_sales_fact.sale_total,
+       sls_sales_fact.gross_profit
+FROM sls_sales_fact,
+     go_time_dim
+WHERE sls_sales_fact.order_day_key = go_time_dim.day_key
+  AND go_time_dim.current_year = 2010 -- 2007 2008 2009 2010 2011 2012
+  AND go_time_dim.current_month = 1 -- 1 2 3 4 5 6 7 8 9 10 11 12
+--limit 100
+</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="simple-11.sql" enabled="true">
+          <stringProp name="dataSource">simple</stringProp>
+          <stringProp name="query">-- simple-11.sql (*)
+-- retrieve orders placed on a specified date
+
+SELECT extract(YEAR
+               FROM gd.day_date) AS YEAR,
+       extract(MONTH
+               FROM gd.day_date) AS MONTH,
+       sum(sf.sale_total) AS total_sales
+FROM sls_sales_fact sf
+JOIN go_time_dim gd ON sf.order_day_key = gd.day_key
+WHERE extract(YEAR
+              FROM gd.day_date) = 2010 -- 2009 2010 2011 2012
+GROUP BY YEAR,
+         MONTH
+ORDER BY YEAR,
+         MONTH</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="simple-12.sql" enabled="true">
+          <stringProp name="dataSource">simple</stringProp>
+          <stringProp name="query">-- simple-12.sql (*)
+-- retrieves total sales by year and quarter
+
+SELECT CASE gd.current_quarter
+           WHEN 1 THEN &apos;Q1&apos;
+           WHEN 2 THEN &apos;Q2&apos;
+           WHEN 3 THEN &apos;Q3&apos;
+           WHEN 4 THEN &apos;Q4&apos;
+           ELSE NULL
+       END AS QUARTER,
+       extract(YEAR
+               FROM gd.day_date) AS YEAR,
+       sum(sf.sale_total) AS total_sales
+FROM sls_sales_fact sf
+JOIN go_time_dim gd ON sf.order_day_key = gd.day_key
+GROUP BY YEAR,
+         QUARTER
+ORDER BY YEAR,
+         QUARTER</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="simple-13.sql" enabled="true">
+          <stringProp name="dataSource">simple</stringProp>
+          <stringProp name="query">-- simple-13.sql (*)
+-- number of products introduced by year
+
+SELECT extract(YEAR
+               FROM introduction_date) AS introduction_year,
+       count(*) AS product_count
+FROM sls_product_dim
+GROUP BY introduction_year
+ORDER BY introduction_year</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="simple-14.sql" enabled="true">
+          <stringProp name="dataSource">simple</stringProp>
+          <stringProp name="query">-- simple-14.sql (*)
+-- total quantity shipped per organization and branch
+
+SELECT organization_key,
+       branch_key,
+       sum(quantity_shipped) AS total_quantity_shipped
+FROM dist_inventory_fact
+GROUP BY organization_key,
+         branch_key
+ORDER BY total_quantity_shipped DESC
+</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="simple-15.sql" enabled="true">
+          <stringProp name="dataSource">simple</stringProp>
+          <stringProp name="query">-- simple-15.sql
+-- average unit cost for each product
+
+SELECT product_key,
+       avg(unit_cost) AS average_unit_cost
+FROM dist_inventory_fact
+GROUP BY product_key
+</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+        </JDBCSampler>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Intermediate Queries" enabled="true">
+        <stringProp name="ThreadGroup.num_threads">${i_users}</stringProp>
+        <intProp name="ThreadGroup.ramp_time">5</intProp>
+        <stringProp name="ThreadGroup.duration">${test_duration}</stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
+          <intProp name="LoopController.loops">-1</intProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+      </ThreadGroup>
+      <hashTree>
+        <JDBCDataSource guiclass="TestBeanGUI" testclass="JDBCDataSource" testname="JDBC Connection - Netezza userid: intermediate" enabled="true">
+          <boolProp name="autocommit">true</boolProp>
+          <stringProp name="checkQuery">select 1</stringProp>
+          <stringProp name="connectionAge">5000</stringProp>
+          <stringProp name="dataSource">intermediate</stringProp>
+          <stringProp name="dbUrl">jdbc:netezza://${host}:${port}/${database}</stringProp>
+          <stringProp name="driver">org.netezza.Driver</stringProp>
+          <boolProp name="keepAlive">true</boolProp>
+          <stringProp name="password">CHANGEME</stringProp>
+          <stringProp name="poolMax">25</stringProp>
+          <stringProp name="timeout">1000</stringProp>
+          <stringProp name="transactionIsolation">DEFAULT</stringProp>
+          <stringProp name="trimInterval">10</stringProp>
+          <stringProp name="username">${i_username}</stringProp>
+          <stringProp name="initQuery"></stringProp>
+          <boolProp name="preinit">false</boolProp>
+          <stringProp name="connectionProperties"></stringProp>
+        </JDBCDataSource>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="intermediate-01.sql" enabled="true">
+          <stringProp name="dataSource">intermediate</stringProp>
+          <stringProp name="query">-- intermediate-01.sql
+-- retrieves aggregated sales metrics such as quantity, revenue, and gross profit
+-- for different order method types and years
+
+SELECT sls_order_method_dim.order_method_en AS order_method_typekey,
+       go_time_dim.current_year AS yearkey, 
+       sum(sls_sales_fact.quantity) AS quantity,
+       sum(sls_sales_fact.sale_total) AS revenue,
+       sum(sls_sales_fact.gross_profit) AS gross_profit
+FROM sls_order_method_dim sls_order_method_dim,
+     go_time_dim go_time_dim,
+     sls_sales_fact sls_sales_fact
+WHERE (GO_TIME_DIM.CURRENT_YEAR in (2006, 2007, 2008, 2009, 2010, 2011, 2012))  -- (2010) (2011) (2012) (2010, 2011) (2011, 2012) (2010, 2011, 2012)
+and (sls_sales_fact.order_method_key = sls_order_method_dim.order_method_key)
+  AND (sls_sales_fact.order_day_key = go_time_dim.day_key)
+GROUP BY sls_order_method_dim.order_method_en,
+         go_time_dim.current_year;
+</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="intermediate-02.sql" enabled="true">
+          <stringProp name="dataSource">intermediate</stringProp>
+          <stringProp name="query">-- intermediate-02.sql
+-- count the total number of employees and the number of employees with EMPLOYEE_LEVEL above X for each branch
+
+SELECT branch_code,
+       count(*) AS total_employees,
+       sum(CASE
+               WHEN employee_level &gt; 5 THEN 1  --1 2 3 4 5 6 7 8 9 10
+               ELSE 0
+           END) AS employees_above_level 
+FROM emp_employee_dim
+GROUP BY branch_code
+ORDER BY branch_code,
+         total_employees</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="intermediate-03.sql" enabled="true">
+          <stringProp name="dataSource">intermediate</stringProp>
+          <stringProp name="query">-- intermediate-03.sql
+-- count the number of orders and sum all orders by WAREHOUSE_BRANCH_CODE
+
+SELECT warehouse_branch_code,
+       count(*) AS order_count,
+       sum(order_number) AS total_order_sum
+FROM sls_sales_order_dim
+GROUP BY GROUPING sets(warehouse_branch_code)
+ORDER BY total_order_sum DESC </stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="intermediate-04.sql" enabled="true">
+          <stringProp name="dataSource">intermediate</stringProp>
+          <stringProp name="query">-- intermediate-04.sql
+-- gross profit by top 25 PRODUCT_KEY
+
+SELECT sf.product_key,
+       pl.product_name,
+       sum(sf.gross_profit) AS total_gross_profit
+FROM sls_sales_fact sf
+JOIN sls_product_dim pd ON sf.product_key = pd.product_key
+JOIN sls_product_lookup pl ON pd.product_number = pl.product_number
+GROUP BY sf.product_key,
+         pl.product_name
+ORDER BY total_gross_profit DESC
+LIMIT 25</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="intermediate-05.sql" enabled="true">
+          <stringProp name="dataSource">intermediate</stringProp>
+          <stringProp name="query">-- intermediate-05.sql
+-- average gross margin per product type, grouped by quarter and year:
+
+SELECT pd.product_type_key,
+       extract(QUARTER
+               FROM g.day_date) AS QUARTER,
+       extract(YEAR
+               FROM g.day_date) AS YEAR,
+       avg(sf.gross_margin) AS average_gross_margin
+FROM sls_product_dim pd
+JOIN sls_sales_fact sf ON pd.product_key = sf.product_key
+JOIN go_time_dim g ON sf.order_day_key = g.day_key
+WHERE extract(YEAR
+              FROM g.day_date) = 2010 -- 2009 2010 2011 2012
+GROUP BY pd.product_type_key,
+         QUARTER,
+         YEAR
+ORDER BY YEAR,
+         QUARTER</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="intermediate-06.sql" enabled="true">
+          <stringProp name="dataSource">intermediate</stringProp>
+          <stringProp name="query">-- intermediate-06.sql
+-- count records from the SLS_ORDER_METHOD_DIM, SLS_PRODUCT_DIM, EMP_EMPLOYEE_DIM, and SLS_SALES_FACT tables
+-- matching PRODUCT_KEY between SLS_PRODUCT_DIM and SLS_SALES_FACT
+ 
+SELECT count(*) 
+FROM sls_order_method_dim AS md, 
+     sls_product_dim AS pd, 
+     emp_employee_dim AS ed, 
+     sls_sales_fact AS sf 
+WHERE pd.product_key = sf.product_key 
+  AND pd.product_number &gt; 10000 -- 100 1000 5000 10000 25000 50000 100000 150000
+  AND pd.base_product_key &gt; 30 -- 10 20 30 40 50 60 70 80 90 100
+  AND md.order_method_key = sf.order_method_key 
+  AND ed.employee_key = sf.employee_key 
+  AND ed.manager_code1 &gt; 20 -- 10 20 30 40 50 100 1000 5000 10000 100000
+  AND md.order_method_code &gt; 5 -- 1 2 3 4 5 6 7</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="intermediate-07.sql" enabled="true">
+          <stringProp name="dataSource">intermediate</stringProp>
+          <stringProp name="query">-- intermediate-07.sql
+-- retrieves information about sales transactions, including product details and marketing promotions for a given languauge
+
+SELECT product_name,
+       sales.product_key,
+       sales.quantity,
+       mkt.order_day_key,
+       sales.sales_order_key,
+       order_method_en
+FROM mrk_promotion_fact mkt ,
+     sls_sales_fact sales ,
+     sls_product_dim prod ,
+     sls_product_lookup pnumb ,
+     sls_order_method_dim meth
+WHERE mkt.order_day_key=sales.order_day_key
+  AND sales.product_key=prod.product_key
+  AND prod.product_number=pnumb.product_number
+  AND pnumb.product_language=&apos;EN&apos; --IT EL TR SV SL ID TH MS HU RU PL KK AR NO HR DE RO FI NL FR JA TC CS EN SC DA KO PT ES
+  AND meth.order_method_key=sales.order_method_key
+  AND sales.order_method_key = 602 -- 602 606 604 605 603 601 607
+  AND sales.quantity &gt; 5000
+--LIMIT 100</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="intermediate-08.sql" enabled="true">
+          <stringProp name="dataSource">intermediate</stringProp>
+          <stringProp name="query">-- intermediate-08.sql
+-- calculates the sum of quantities shipped and sold for products with specific criteria
+
+WITH sales AS
+  (SELECT sf.sales_order_key,
+          sf.product_key,
+          sf.quantity,
+          sf.unit_cost,
+          sf.unit_price,
+          sf.unit_sale_price,
+          sf.gross_margin,
+          sf.sale_total,
+          sf.gross_profit,
+          sf.order_day_key,
+          sf.order_method_key,
+          sf.retailer_key,
+          sf.retailer_site_key,
+          sf.employee_key,
+          sf.promotion_key,
+          sf.ship_day_key,
+          sf.close_day_key
+   FROM sls_sales_fact AS sf
+   JOIN sls_product_dim AS pd ON sf.product_key = pd.product_key
+   JOIN sls_order_method_dim AS md ON sf.order_method_key = md.order_method_key
+   JOIN emp_employee_dim AS ed ON sf.employee_key = ed.employee_key
+   WHERE pd.product_number &gt; 10000 -- 100 1000 5000 10000 25000 50000 100000 150000
+     AND pd.base_product_key &gt; 30 -- 10 20 30 40 50 60 70 80 90 100
+     AND md.order_method_code &gt; 5 -- 1 2 3 4 5 6 7
+     AND ed.manager_code1 &gt; 20 ), -- 10 20 30 40 50 100 1000 5000 10000 100000
+      inventory AS
+  (SELECT if.month_key,
+          if.organization_key,
+          if.branch_key,
+          if.product_key,
+          if.opening_inventory,
+          if.quantity_shipped,
+          if.additions,
+          if.unit_cost,
+          if.closing_inventory,
+          if.average_unit_cost
+   FROM dist_inventory_fact AS IF
+   JOIN go_branch_dim AS bd ON if.branch_key = bd.branch_key
+   WHERE bd.branch_code &gt; 20 --  6 7 9 13 14 15 17 18 19 20 21 22 23 24 25 26 28 29 30 31 32 33 34 35 36 37 38 39 40
+)
+SELECT sales.product_key,
+       sum(cast(inventory.quantity_shipped AS BIGINT)) AS total_quantity_shipped,
+       sum(cast(sales.quantity AS BIGINT)) AS total_quantity_sold
+FROM sales
+JOIN inventory ON sales.product_key = inventory.product_key
+GROUP BY sales.product_key</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="intermediate-09.sql" enabled="true">
+          <stringProp name="dataSource">intermediate</stringProp>
+          <stringProp name="query">-- intermediate-09.sql
+-- retrieving and aggregating inventory data for products from specific branches
+
+WITH inventory AS
+  (SELECT if.*
+   FROM dist_inventory_fact AS IF,
+        go_branch_dim AS bd,
+        go_org_dim od
+   WHERE if.branch_key = bd.branch_key
+     AND bd.branch_code &gt; 20) --  6 7 9 13 14 15 17 18 19 20 21 22 23 24 25 26 28 29 30 31 32 33 34 35 36 37 38 39 40
+SELECT inventory.product_key,
+       sum(cast(inventory.quantity_shipped AS bigint)) AS quantity_shipped
+FROM inventory
+GROUP BY inventory.product_key
+ORDER BY quantity_shipped DESC</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="intermediate-10.sql" enabled="true">
+          <stringProp name="dataSource">intermediate</stringProp>
+          <stringProp name="query">-- intermediate-10.sql
+-- gather and analyze sales and inventory data
+
+WITH sales AS
+  (SELECT sf.product_key AS sales_product_key,
+          sf.quantity AS sales_quantity,
+          sf.order_method_key AS sales_order_method_key
+   FROM sls_sales_fact AS sf,
+        sls_product_dim AS pd,
+        sls_order_method_dim AS md,
+        emp_employee_dim ed
+   WHERE pd.product_key = sf.product_key
+     AND pd.product_number &gt; 10000 -- 100 1000 5000 10000 25000 50000 100000 150000
+     AND pd.base_product_key &gt; 30 -- 10 20 30 40 50 60 70 80 90 100
+     AND md.order_method_key = sf.order_method_key
+     AND md.order_method_code &gt; 5 -- 1 2 3 4 5 6 7
+     AND ed.employee_key = sf.employee_key
+     AND ed.manager_code1 &gt; 20), -- 10 20 30 40 50 100 1000 5000 10000 100000
+      inventory AS
+  (SELECT if.product_key AS inventory_product_key,
+          if.quantity_shipped AS inventory_quantity_shipped
+   FROM dist_inventory_fact AS IF,
+        go_branch_dim AS bd
+   WHERE if.branch_key = bd.branch_key
+     AND bd.branch_code &gt; 20) --  6 7 9 13 14 15 17 18 19 20 21 22 23 24 25 26 28 29 30 31 32 33 34 35 36 37 38 39 40
+SELECT sales.sales_product_key,
+       sum(cast(inventory.inventory_quantity_shipped AS BIGINT)) AS total_quantity_shipped,
+       sum(cast(sales.sales_quantity AS BIGINT)) AS total_sales_quantity
+FROM sales,
+     inventory
+WHERE sales.sales_product_key = inventory.inventory_product_key
+GROUP BY sales.sales_product_key
+ORDER BY total_sales_quantity DESC</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+        </JDBCSampler>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Complex Queries" enabled="true">
+        <stringProp name="ThreadGroup.num_threads">${c_users}</stringProp>
+        <intProp name="ThreadGroup.ramp_time">5</intProp>
+        <stringProp name="ThreadGroup.duration">${test_duration}</stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
+          <intProp name="LoopController.loops">-1</intProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+      </ThreadGroup>
+      <hashTree>
+        <JDBCDataSource guiclass="TestBeanGUI" testclass="JDBCDataSource" testname="JDBC Connection - Netezza user: complex" enabled="true">
+          <boolProp name="autocommit">true</boolProp>
+          <stringProp name="checkQuery">select 1</stringProp>
+          <stringProp name="connectionAge">5000</stringProp>
+          <stringProp name="dataSource">complex</stringProp>
+          <stringProp name="dbUrl">jdbc:netezza://${host}:${port}/${database}</stringProp>
+          <stringProp name="driver">org.netezza.Driver</stringProp>
+          <boolProp name="keepAlive">true</boolProp>
+          <stringProp name="password">CHANGEME</stringProp>
+          <stringProp name="poolMax">25</stringProp>
+          <stringProp name="timeout">1000</stringProp>
+          <stringProp name="transactionIsolation">DEFAULT</stringProp>
+          <stringProp name="trimInterval">10</stringProp>
+          <stringProp name="username">${c_username}</stringProp>
+          <stringProp name="initQuery"></stringProp>
+          <boolProp name="preinit">false</boolProp>
+          <stringProp name="connectionProperties"></stringProp>
+        </JDBCDataSource>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="complex-01.sql" enabled="true">
+          <stringProp name="dataSource">complex</stringProp>
+          <stringProp name="query">-- complex-01.sql
+-- retrieves aggregated sales metrics such as quantity, revenue, and gross profit
+-- for different order method types and years
+
+ WITH sales AS
+  (SELECT sf.*
+   FROM sls_sales_fact AS sf,
+        sls_product_dim AS pd,
+        sls_order_method_dim AS md,
+        emp_employee_dim ed
+   WHERE pd.product_key = sf.product_key
+     AND pd.product_number &gt; 10000 -- 100 1000 5000 10000 25000 50000 100000 150000
+     AND pd.base_product_key &gt; 30 -- 10 20 30 40 50 60 70 80 90 100
+     AND md.order_method_key = sf.order_method_key
+     AND md.order_method_code &gt; 5 -- 1 2 3 4 5 6 7
+     AND ed.employee_key = sf.employee_key
+     AND ed.manager_code1 &gt; 20), -- 10 20 30 40 50 100 1000 5000 10000 100000
+      inventory AS
+  (SELECT if.*
+   FROM dist_inventory_fact AS IF,
+        go_branch_dim AS bd
+   WHERE if.branch_key = bd.branch_key
+     AND bd.branch_code &gt; 20) --  6 7 9 13 14 15 17 18 19 20 21 22 23 24 25 26 28 29 30 31 32 33 34 35 36 37 38 39 40
+SELECT sales.product_key prod_key,
+       sum(cast(inventory.quantity_shipped AS bigint)) inv_shipped,
+       sum(cast(sales.quantity AS bigint)) prod_quantity,
+       rank() OVER (
+                    ORDER BY sum(cast(sales.quantity AS bigint)) ASC) prod_rank
+FROM sales,
+     inventory
+WHERE sales.product_key = inventory.product_key
+GROUP BY sales.product_key</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="complex-02.sql" enabled="true">
+          <stringProp name="dataSource">complex</stringProp>
+          <stringProp name="query">-- complex-02.sql
+-- calculate total sales and average gross margin per product with product details
+
+WITH productsalesdetails AS
+  (SELECT p.product_key,
+          p.product_line_code,
+          p.product_type_key,
+          p.product_type_code,
+          p.introduction_date,
+          p.discontinued_date,
+          pl.product_name, -- Added for product name
+ sum(s.sale_total) AS total_sales,
+ avg(s.gross_margin) AS avg_gross_margin
+   FROM sls_sales_fact s
+   JOIN sls_product_dim p ON s.product_key = p.product_key
+   JOIN sls_product_lookup pl ON p.product_number = pl.product_number -- Added join for product name
+   GROUP BY p.product_key,
+            p.product_line_code,
+            p.product_type_key,
+            p.product_type_code,
+            p.introduction_date,
+            p.discontinued_date,
+            pl.product_name -- Added for product name
+) -- Select relevant columns
+SELECT psd.product_key,
+       psd.product_line_code,
+       psd.product_type_key,
+       psd.product_type_code,
+       psd.introduction_date,
+       psd.discontinued_date,
+       psd.product_name, -- Added for product name
+ psd.total_sales,
+ psd.avg_gross_margin
+FROM productsalesdetails psd
+ORDER BY psd.product_key</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="complex-03.sql" enabled="true">
+          <stringProp name="dataSource">complex</stringProp>
+          <stringProp name="query">-- complex-03.sql
+-- calculate total sales per organization by year with percentage of sales change year over year
+
+WITH organizationtotalsales AS(
+    SELECT
+        go.organization_code,
+        EXTRACT(YEAR FROM to_date(s.order_day_key::varchar(8), &apos;YYYYMMDD&apos;)) AS sale_year,
+        SUM(s.sale_total) AS org_total_sales
+    FROM
+        sls_sales_fact s
+        JOIN go_org_dim go
+            ON s.organization_key = go.organization_key
+    GROUP BY
+        go.organization_code,
+        sale_year
+) -- Select relevant columns and calculate percentage change from the prior year
+SELECT
+    ots.organization_code,
+    ots.sale_year,
+    ots.org_total_sales,
+    lag(ots.org_total_sales) OVER(PARTITION BY
+        ots.organization_code ORDER BY
+        ots.sale_year) AS previous_year_sales,
+    CASE WHEN lag(ots.org_total_sales) OVER(PARTITION BY
+            ots.organization_code ORDER BY
+            ots.sale_year) IS NOT NULL
+            THEN (ots.org_total_sales - lag(ots.org_total_sales) OVER(PARTITION BY
+                ots.organization_code ORDER BY
+                ots.sale_year)) / lag(ots.org_total_sales) OVER(PARTITION BY
+            ots.organization_code ORDER BY
+            ots.sale_year) * 100
+        ELSE NULL
+        END AS percentage_change
+FROM
+    organizationtotalsales ots
+ORDER BY
+    ots.organization_code,
+    ots.sale_year </stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="complex-04.sql" enabled="true">
+          <stringProp name="dataSource">complex</stringProp>
+          <stringProp name="query">-- complex-04.sql
+-- analyze sales and inventory data for products that meet specific criteria
+
+WITH sales AS
+  (SELECT sf.product_key AS prod_key,
+          sf.quantity AS quantity,
+          pll.product_line_en AS product,
+          pbl.product_brand_fr AS brand
+   FROM sls_order_method_dim AS md,
+        sls_product_dim AS pd,
+        sls_product_line_lookup AS pll,
+        sls_product_brand_lookup AS pbl,
+        emp_employee_dim AS ed,
+        sls_sales_fact AS sf -- 500,000 rows
+   WHERE pd.product_key = sf.product_key
+     AND pd.product_number &gt; 10000 -- 100 1000 5000 10000 25000 50000 100000 150000
+     AND pd.base_product_key &gt; 30  -- 10 20 30 40 50 60 70 80 90 100
+     AND md.order_method_key = sf.order_method_key
+     AND md.order_method_code &gt; 6 -- 1 2 3 4 5 6 7
+     AND ed.employee_key = sf.employee_key
+     AND ed.manager_code1 &gt; 38 -- 10 20 30 40 50 100 1000 5000 10000 100000
+     AND pll.product_line_code = pd.product_line_code
+     AND pbl.product_brand_code = pd.product_brand_code
+  ),
+inventory AS
+  (SELECT if.product_key AS prod_key,
+          od.organization_code1 AS org_code,
+          od.organization_level AS org
+   FROM go_branch_dim AS bd,
+        go_org_dim AS od,
+        dist_inventory_fact AS IF -- 50,000 rows
+   WHERE if.branch_key = bd.branch_key
+     AND bd.branch_code &gt; 38 --  6 7 9 13 14 15 17 18 19 20 21 22 23 24 25 26 28 29 30 31 32 33 34 35 36 37 38 39 40
+     AND od.organization_key = if.organization_key
+  )
+SELECT s.prod_key AS sales_prod_key,
+       s.quantity,
+       s.brand,
+       i.org,
+       i.org_code,
+       s.product
+FROM sales s
+JOIN inventory i ON s.prod_key = i.prod_key
+--LIMIT 100</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="complex-05.sql" enabled="true">
+          <stringProp name="dataSource">complex</stringProp>
+          <stringProp name="query">-- complex-05.sql
+-- sales data based on different order methods
+
+SELECT o.order_method_en,
+       g.month_en,
+       g.current_year,
+       sum(s.sale_total) AS total_sales,
+       count(s.sales_order_key) AS num_orders,
+       avg(s.unit_price) AS avg_unit_price,
+       avg(s.gross_margin) AS avg_gross_margin
+FROM sls_sales_fact s
+JOIN go_time_dim g ON s.order_day_key = g.day_key
+JOIN sls_order_method_dim o ON s.order_method_key = o.order_method_key
+WHERE g.current_year = 2010 -- 2010, 2011, 2012, 2013
+
+  AND g.month_en BETWEEN &apos;January&apos; AND &apos;March&apos; -- Filter by month range (&apos;April&apos; and &apos;June&apos;, &apos;July&apos; and &apos;September&apos;, &apos;October&apos; and &apos;December&apos;)
+GROUP BY o.order_method_en,
+         g.month_en,
+         g.current_year
+ORDER BY g.current_year,
+         g.month_en,
+         o.order_method_en</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="complex-06.sql" enabled="true">
+          <stringProp name="dataSource">complex</stringProp>
+          <stringProp name="query">-- complex-06.sql
+-- retrieves information about returned items, including product details, order methods, and return reasons
+-- for different languages.
+
+SELECT product_name,
+       introduction_date,
+       order_method_en,
+       reason_description_en
+FROM sls_product_lookup pl,
+     sls_product_dim sales,
+     sls_order_method_dim ord,
+     dist_return_reason_dim rr,
+     dist_returned_items_fact ret
+WHERE pl.product_number=sales.product_number
+  AND ret.product_key=sales.product_key
+  AND rr.return_reason_key=ret.return_reason_key
+  AND pl.product_language=&apos;EN&apos; -- AR CS DA DE EL EN ES FI FR HR HU ID IT JA KK KO MS NL NO PL PT RO RU SC SL SV TC TH TR
+  AND ret.order_method_key=ord.order_method_key
+</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="complex-07.sql" enabled="true">
+          <stringProp name="dataSource">complex</stringProp>
+          <stringProp name="query">-- complex-07.sql
+-- retrieves sales information including product details, product line, and product brand
+
+SELECT sf.product_key AS prod_key,
+       sf.quantity AS quantity,
+       pll.product_line_en AS product,
+       pbl.product_brand_fr AS brand
+FROM sls_order_method_dim AS md,
+     sls_product_dim AS pd,
+     sls_product_line_lookup AS pll,
+     sls_product_brand_lookup AS pbl,
+     emp_employee_dim AS ed,
+     sls_sales_fact AS sf -- 500,000 rows
+
+WHERE pd.product_key = sf.product_key
+  AND pd.product_number &gt; 10000 -- 100 1000 5000 10000 25000 50000 100000 150000 
+  AND pd.base_product_key &gt; 30 -- 10 20 30 40 50 60 70 80 90 100
+  AND md.order_method_key = sf.order_method_key
+  AND md.order_method_code &gt; 6 -- 1 2 3 4 5 6 7
+  AND ed.employee_key = sf.employee_key
+  AND ed.manager_code1 &gt; 38 -- 10 20 30 40 50 100 1000 5000 10000 100000
+  AND pll.product_line_code = pd.product_line_code
+  AND pbl.product_brand_code = pd.product_brand_code</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="complex-08.sql" enabled="true">
+          <stringProp name="dataSource">complex</stringProp>
+          <stringProp name="query">-- complex-08.sql
+-- analyze sales and inventory data for products that meet specific criteria
+
+ WITH sales AS
+  (SELECT sf.*
+   FROM sls_order_method_dim AS md,
+        sls_product_dim AS pd,
+        emp_employee_dim AS ed,
+        sls_sales_fact AS sf
+   WHERE pd.product_key = sf.product_key 
+     AND pd.product_number &gt; 10000 -- 100 1000 5000 10000 25000 50000 100000 150000
+     AND pd.base_product_key &gt; 30 -- 10 20 30 40 50 60 70 80 90 100
+     AND md.order_method_key = sf.order_method_key 
+     AND md.order_method_code &gt; 5 -- 1 2 3 4 5 6 7
+     AND ed.employee_key = sf.employee_key 
+     AND ed.manager_code1 &gt; 20), -- 10 20 30 40 50 100 1000 5000 10000 100000
+      inventory AS
+  (SELECT if.*
+   FROM go_branch_dim AS bd,
+        dist_inventory_fact AS IF
+   WHERE if.branch_key = bd.branch_key 
+     AND bd.branch_code &gt; 20) --  6 7 9 13 14 15 17 18 19 20 21 22 23 24 25 26 28 29 30 31 32 33 34 35 36 37 38 39 40
+SELECT sales.product_key AS prod_key,
+       sum(CAST (inventory.quantity_shipped AS BIGINT)) AS inv_shipped,
+       sum(CAST (sales.quantity AS BIGINT)) AS prod_quantity,
+       rank() OVER (
+                    ORDER BY sum(CAST (sales.quantity AS BIGINT)) DESC) AS prod_rank
+FROM sales,
+     inventory
+WHERE sales.product_key = inventory.product_key
+GROUP BY sales.product_key</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+        </JDBCSampler>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
