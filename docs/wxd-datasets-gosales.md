@@ -6,7 +6,7 @@ The Watson's Great Outdoors Company, or GO Sales, or any variation of the Sample
 
 Two links that provide more details on the database.
 
-* <a href="https://www.ibm.com/docs/en/cognos-analytics/11.1.0?topic=packages-sample-outdoors-company" target="_blank">Watson's Great Outdoors Company</a>
+* <a href="https://www.ibm.com/docs/en/cognos-analytics/12.0.0?topic=packages-sample-outdoors-company" target="_blank">Watson's Great Outdoors Company</a>
 * <a href="https://www.ibm.com/docs/en/data-studio/4.1.1?topic=database-gsdb-reference" target="_blank">Watson's Great Outdoors Database Reference</a>
 
 The second link will say that there is no content available, but if you click on the down arrow you will see the table names.
