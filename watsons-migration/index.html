@@ -979,14 +979,14 @@
 <p><img alt="Watsons" src="../wxd-images/watsons-go-logo-small.png" /></p>
 <h1 id="migration-requirements">Migration Requirements</h1>
 <p><img alt="Watsons" src="../wxd-images/poc-arrows.png" /> 
-The proof-of-concept for data warehouse modernization requirements aims to assess and demonstrate the feasibility of smoothly migrating data and SQL workloads to a new environment.</p>
+The proof-of-concept for this data warehouse modernization has the goal of assessing and demonstrating the feasibility of smoothly migrating data and SQL workloads to a new environment.</p>
 <h3 id="schema-migration">Schema Migration</h3>
 <ul>
 <li>Schema from existing warehouse will be provided as-is.</li>
 <li>Convert the data warehouse schema to data lakehouse objects.  </li>
-<li>Document any changes made to the table definition.</li>
+<li>Provide a copy of the DDL used to build the data lakehouse and document any changes made to the table definitions.</li>
 </ul>
-<p>Schema Information, <a href="#watsons-objects.md">Appendix C – Object Definitions</a>.</p>
+<p>Schema Information, <a href="../watsons-objects/">Appendix C – Object Definitions</a>.</p>
 <h3 id="data-ingestion">Data Ingestion</h3>
 <ul>
 <li>Data extracted from existing warehouse tables in the form of comma-separated values file (CSV) will be provided.</li>
@@ -994,20 +994,20 @@ The proof-of-concept for data warehouse modernization requirements aims to asses
 <li>Record the time to load each CSV into the data lakehouse and compare the size of the tables in the lakehouse to the raw files and to the size stored in the existing database.</li>
 <li>Verify that the number of rows aligns with the information outlined.</li>
 </ul>
-<p>File information: <a href="#watsons-fileinfo.md">Appendix A – File Information</a>.</p>
+<p>File information: <a href="../watsons-fileinfo/">Appendix A – File Information</a>.</p>
 <h3 id="workload-migration">Workload Migration</h3>
 <ul>
 <li>Modify or adapt a set of existing SQL queries to run in the data lakehouse.</li>
 <li>Ensure compatibility of the provided SQL with the data lakehouse.</li>
 <li>Document all changes to the SQL.</li>
 </ul>
-<p>SQL information: <a href="#watsons-objects.md">Appendix C – Object Definitions</a>.</p>
+<p>SQL information: <a href="../watsons-queries/">Appendix D – Query Definitions and Timings</a>.</p>
 <h3 id="performance-testing">Performance Testing</h3>
 <ul>
-<li>Run each query serial and record the time to execute.</li>
+<li>Run each query serially and record the time to execute.</li>
 <li>Concurrency tests to include running multiple query classes in parallel for a duration of time.</li>
 </ul>
-<p>Additional details in the <a href="#watsons-poc-tests.md">Testing section</a>.</p>
+<p>Additional details in the <a href="../watsons-poc-tests/">Testing section</a>.</p>
 
               
             </article>
