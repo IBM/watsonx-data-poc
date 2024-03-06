@@ -20,6 +20,7 @@ nav:
       - Dataset Details: "wxd-datasets-gosales.md"
       - Database Validation: "watsons-database-validation.md"
       - JMeter Test Plan: "watsons-jmeter.md"
+  - Watsonx.data Certificates: "wxd-certificate.md"
   - POC Image Details:
     - Introduction: "wxd-intro.md"
     # - Quick Start: "wxd-quick.md"
