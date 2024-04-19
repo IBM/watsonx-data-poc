@@ -1,0 +1,2268 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>Flot Reference # - Watson's Great Outdoors</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"IBM Plex Sans";--md-code-font:"IBM Plex Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="black">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#flot-reference" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../../.." title="Watson&#39;s Great Outdoors" class="md-header__button md-logo" aria-label="Watson's Great Outdoors" data-md-component="logo">
+      
+  <img src="../../../../../../wxd-images/IBM_logo®_rev_RGB.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Watson's Great Outdoors
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Flot Reference #
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../../.." title="Watson&#39;s Great Outdoors" class="md-nav__button md-logo" aria-label="Watson's Great Outdoors" data-md-component="logo">
+      
+  <img src="../../../../../../wxd-images/IBM_logo®_rev_RGB.png" alt="logo">
+
+    </a>
+    Watson's Great Outdoors
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          Watson's Great Outdoors POC
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Watson's Great Outdoors POC" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Watson's Great Outdoors POC
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../watsons-introduction/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../watsons-objectives/" class="md-nav__link">
+        Proof-of-Concept Objectives
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../watsons-migration/" class="md-nav__link">
+        Migration Requirements
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../watsons-architecture/" class="md-nav__link">
+        Architecture and Technology
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../watsons-testing/" class="md-nav__link">
+        Proof of Concept Tests
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../watsons-performance/" class="md-nav__link">
+        Performance Metrics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../watsons-report/" class="md-nav__link">
+        Final Report
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../wxd-milvus/" class="md-nav__link">
+        Watsonx Cross Platform Demonstration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../watsons-conclusion/" class="md-nav__link">
+        Conclusion
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_10" type="checkbox" id="__nav_1_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_10">
+          Appendices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Appendices" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_10">
+          <span class="md-nav__icon md-icon"></span>
+          Appendices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../watsons-fileinfo/" class="md-nav__link">
+        File Information
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../watsons-database/" class="md-nav__link">
+        Database and Table Sizes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../watsons-objects/" class="md-nav__link">
+        Object Definitions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../watsons-queries/" class="md-nav__link">
+        Query Definitions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../wxd-datasets-gosales/" class="md-nav__link">
+        Dataset Details
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../watsons-database-validation/" class="md-nav__link">
+        Database Validation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../watsons-jmeter/" class="md-nav__link">
+        JMeter Test Plan and Results
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../watsons-registration/" class="md-nav__link">
+        Proof-of-Concept Registration
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          POC Image Details
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="POC Image Details" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          POC Image Details
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../wxd-intro/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../wxd-reference-techzone/" class="md-nav__link">
+        Requesting an image
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../wxd-reference-access/" class="md-nav__link">
+        Accessing the reservation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../wxd-reference-ports/" class="md-nav__link">
+        Available Ports
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../wxd-reference-vnc/" class="md-nav__link">
+        VM Remote Console
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../wxd-reference-ssh/" class="md-nav__link">
+        SSH and SCP Commands
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../wxd-reference-passwords/" class="md-nav__link">
+        Userids and Passwords
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../wxd-reference-shortcuts/" class="md-nav__link">
+        Useful Commands
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../wxd-certificate/" class="md-nav__link">
+        Watsonx.data Certificates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../wxd-reference-documentation/" class="md-nav__link">
+        Documentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../wxd-lab-instructions/" class="md-nav__link">
+        Lab Conventions and Startup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_12" type="checkbox" id="__nav_3_12" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_12">
+          Core Components
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Core Components" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_12">
+          <span class="md-nav__icon md-icon"></span>
+          Core Components
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../wxd-prestocli/" class="md-nav__link">
+        Presto CLI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../wxd-watsonui/" class="md-nav__link">
+        watsonx.data UI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../wxd-presto/" class="md-nav__link">
+        Presto UI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../wxd-minio/" class="md-nav__link">
+        MinIO UI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_12_5" type="checkbox" id="__nav_3_12_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_12_5">
+          Presto SQL
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Presto SQL" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_12_5">
+          <span class="md-nav__icon md-icon"></span>
+          Presto SQL
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../wxd-analytics/" class="md-nav__link">
+        Analytic Workloads
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../wxd-advanced/" class="md-nav__link">
+        Advanced Functions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../wxd-timetravel/" class="md-nav__link">
+        Time Travel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../wxd-federation/" class="md-nav__link">
+        Federation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../wxd-systemconnector/" class="md-nav__link">
+        System Connector
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../wxd-reference-portainer/" class="md-nav__link">
+        Portainer Console
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../wxd-jupyter/" class="md-nav__link">
+        Jupyter Notebook
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-format" class="md-nav__link">
+    Data Format
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plot-options" class="md-nav__link">
+    Plot Options
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customizing-the-legend" class="md-nav__link">
+    Customizing the legend
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customizing-the-axes" class="md-nav__link">
+    Customizing the axes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-axes" class="md-nav__link">
+    Multiple axes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time-series-data" class="md-nav__link">
+    Time series data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customizing-the-data-series" class="md-nav__link">
+    Customizing the data series
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customizing-the-grid" class="md-nav__link">
+    Customizing the grid
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specifying-gradients" class="md-nav__link">
+    Specifying gradients
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plot-methods" class="md-nav__link">
+    Plot Methods
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hooks" class="md-nav__link">
+    Hooks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plugins" class="md-nav__link">
+    Plugins
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-number" class="md-nav__link">
+    Version number
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="flot-reference">Flot Reference</h1>
+<p><strong>Table of Contents</strong></p>
+<p><a href="#introduction">Introduction</a>
+| <a href="#data-format">Data Format</a>
+| <a href="#plot-options">Plot Options</a>
+| <a href="#customizing-the-legend">Customizing the legend</a>
+| <a href="#customizing-the-axes">Customizing the axes</a>
+| <a href="#multiple-axes">Multiple axes</a>
+| <a href="#time-series-data">Time series data</a>
+| <a href="#customizing-the-data-series">Customizing the data series</a>
+| <a href="#customizing-the-grid">Customizing the grid</a>
+| <a href="#specifying-gradients">Specifying gradients</a>
+| <a href="#plot-methods">Plot Methods</a>
+| <a href="#hooks">Hooks</a>
+| <a href="#plugins">Plugins</a>
+| <a href="#version-number">Version number</a></p>
+<hr />
+<h2 id="introduction">Introduction</h2>
+<p>Consider a call to the plot function:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">plot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">.</span><span class="nx">plot</span><span class="p">(</span><span class="nx">placeholder</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="p">,</span><span class="w"> </span><span class="nx">options</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>The placeholder is a jQuery object or DOM element or jQuery expression
+that the plot will be put into. This placeholder needs to have its
+width and height set as explained in the <a href="../">README</a> (go read that now if
+you haven't, it's short). The plot will modify some properties of the
+placeholder so it's recommended you simply pass in a div that you
+don't use for anything else. Make sure you check any fancy styling
+you apply to the div, e.g. background images have been reported to be a
+problem on IE 7.</p>
+<p>The plot function can also be used as a jQuery chainable property.  This form
+naturally can't return the plot object directly, but you can still access it
+via the 'plot' data key, like this:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">plot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#placeholder&quot;</span><span class="p">).</span><span class="nx">plot</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="w"> </span><span class="nx">options</span><span class="p">).</span><span class="nx">data</span><span class="p">(</span><span class="s2">&quot;plot&quot;</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>The format of the data is documented below, as is the available
+options. The plot object returned from the call has some methods you
+can call. These are documented separately below.</p>
+<p>Note that in general Flot gives no guarantees if you change any of the
+objects you pass in to the plot function or get out of it since
+they're not necessarily deep-copied.</p>
+<h2 id="data-format">Data Format</h2>
+<p>The data is an array of data series:</p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="w"> </span><span class="nx">series1</span><span class="p">,</span><span class="w"> </span><span class="nx">series2</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">]</span><span class="w"></span>
+</code></pre></div>
+<p>A series can either be raw data or an object with properties. The raw
+data format is an array of points:</p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="w"> </span><span class="p">[</span><span class="nx">x1</span><span class="p">,</span><span class="w"> </span><span class="nx">y1</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="nx">x2</span><span class="p">,</span><span class="w"> </span><span class="nx">y2</span><span class="p">],</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">]</span><span class="w"></span>
+</code></pre></div>
+<p>E.g.</p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">14.01</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mf">3.5</span><span class="p">,</span><span class="w"> </span><span class="mf">3.14</span><span class="p">]</span><span class="w"> </span><span class="p">]</span><span class="w"></span>
+</code></pre></div>
+<p>Note that to simplify the internal logic in Flot both the x and y
+values must be numbers (even if specifying time series, see below for
+how to do this). This is a common problem because you might retrieve
+data from the database and serialize them directly to JSON without
+noticing the wrong type. If you're getting mysterious errors, double
+check that you're inputting numbers and not strings.</p>
+<p>If a null is specified as a point or if one of the coordinates is null
+or couldn't be converted to a number, the point is ignored when
+drawing. As a special case, a null value for lines is interpreted as a
+line segment end, i.e. the points before and after the null value are
+not connected.</p>
+<p>Lines and points take two coordinates. For filled lines and bars, you
+can specify a third coordinate which is the bottom of the filled
+area/bar (defaults to 0).</p>
+<p>The format of a single series object is as follows:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="nx">color</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="nx">number</span><span class="w"></span>
+<span class="w">    </span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="nx">rawdata</span><span class="w"></span>
+<span class="w">    </span><span class="nx">label</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="w"></span>
+<span class="w">    </span><span class="nx">lines</span><span class="o">:</span><span class="w"> </span><span class="nx">specific</span><span class="w"> </span><span class="nx">lines</span><span class="w"> </span><span class="nx">options</span><span class="w"></span>
+<span class="w">    </span><span class="nx">bars</span><span class="o">:</span><span class="w"> </span><span class="nx">specific</span><span class="w"> </span><span class="nx">bars</span><span class="w"> </span><span class="nx">options</span><span class="w"></span>
+<span class="w">    </span><span class="nx">points</span><span class="o">:</span><span class="w"> </span><span class="nx">specific</span><span class="w"> </span><span class="nx">points</span><span class="w"> </span><span class="nx">options</span><span class="w"></span>
+<span class="w">    </span><span class="nx">xaxis</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="w"></span>
+<span class="w">    </span><span class="nx">yaxis</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="w"></span>
+<span class="w">    </span><span class="nx">clickable</span><span class="o">:</span><span class="w"> </span><span class="kr">boolean</span><span class="w"></span>
+<span class="w">    </span><span class="nx">hoverable</span><span class="o">:</span><span class="w"> </span><span class="kr">boolean</span><span class="w"></span>
+<span class="w">    </span><span class="nx">shadowSize</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="w"></span>
+<span class="w">    </span><span class="nx">highlightColor</span><span class="o">:</span><span class="w"> </span><span class="nx">color</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="nx">number</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>You don't have to specify any of them except the data, the rest are
+options that will get default values. Typically you'd only specify
+label and data, like this:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">label</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;y = 3&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="p">[[</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">]]</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>The label is used for the legend, if you don't specify one, the series
+will not show up in the legend.</p>
+<p>If you don't specify color, the series will get a color from the
+auto-generated colors. The color is either a CSS color specification
+(like "rgb(255, 100, 123)") or an integer that specifies which of
+auto-generated colors to select, e.g. 0 will get color no. 0, etc.</p>
+<p>The latter is mostly useful if you let the user add and remove series,
+in which case you can hard-code the color index to prevent the colors
+from jumping around between the series.</p>
+<p>The "xaxis" and "yaxis" options specify which axis to use. The axes
+are numbered from 1 (default), so { yaxis: 2} means that the series
+should be plotted against the second y axis.</p>
+<p>"clickable" and "hoverable" can be set to false to disable
+interactivity for specific series if interactivity is turned on in
+the plot, see below.</p>
+<p>The rest of the options are all documented below as they are the same
+as the default options passed in via the options parameter in the plot
+commmand. When you specify them for a specific data series, they will
+override the default options for the plot for that data series.</p>
+<p>Here's a complete example of a simple data specification:</p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">label</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Foo&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">[</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mf">17</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">14</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mf">30</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">]</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">label</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Bar&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">[</span><span class="mf">11</span><span class="p">,</span><span class="w"> </span><span class="mf">13</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mf">19</span><span class="p">,</span><span class="w"> </span><span class="mf">11</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mf">30</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">7</span><span class="p">]</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="p">]</span><span class="w"></span>
+</code></pre></div>
+<h2 id="plot-options">Plot Options</h2>
+<p>All options are completely optional. They are documented individually
+below, to change them you just specify them in an object, e.g.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">series</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">lines</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">show</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="nx">points</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">show</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="nx">$</span><span class="p">.</span><span class="nx">plot</span><span class="p">(</span><span class="nx">placeholder</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="p">,</span><span class="w"> </span><span class="nx">options</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<h2 id="customizing-the-legend">Customizing the legend</h2>
+<div class="highlight"><pre><span></span><code><span class="nx">legend</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">show</span><span class="o">:</span><span class="w"> </span><span class="kr">boolean</span><span class="w"></span>
+<span class="w">    </span><span class="nx">labelFormatter</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="p">(</span><span class="nx">fn</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="p">,</span><span class="w"> </span><span class="nx">series</span><span class="w"> </span><span class="nx">object</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nx">string</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="nx">labelBoxBorderColor</span><span class="o">:</span><span class="w"> </span><span class="nx">color</span><span class="w"></span>
+<span class="w">    </span><span class="nx">noColumns</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="w"></span>
+<span class="w">    </span><span class="nx">position</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;ne&quot;</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="s2">&quot;nw&quot;</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="s2">&quot;se&quot;</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="s2">&quot;sw&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nx">margin</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">pixels</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="p">[</span><span class="nx">x</span><span class="w"> </span><span class="nx">margin</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="nx">margin</span><span class="p">]</span><span class="w"></span>
+<span class="w">    </span><span class="nx">backgroundColor</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="nx">color</span><span class="w"></span>
+<span class="w">    </span><span class="nx">backgroundOpacity</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="nx">between</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="nx">and</span><span class="w"> </span><span class="mf">1</span><span class="w"></span>
+<span class="w">    </span><span class="nx">container</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="nx">jQuery</span><span class="w"> </span><span class="nx">object</span><span class="o">/</span><span class="nx">DOM</span><span class="w"> </span><span class="nx">element</span><span class="o">/</span><span class="nx">jQuery</span><span class="w"> </span><span class="nx">expression</span><span class="w"></span>
+<span class="w">    </span><span class="nx">sorted</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="o">/</span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;ascending&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;descending&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;reverse&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">comparator</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>The legend is generated as a table with the data series labels and
+small label boxes with the color of the series. If you want to format
+the labels in some way, e.g. make them to links, you can pass in a
+function for "labelFormatter". Here's an example that makes them
+clickable:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">labelFormatter</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">label</span><span class="p">,</span><span class="w"> </span><span class="nx">series</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// series is the series object for the label</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s1">&#39;&lt;a href=&quot;#&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">label</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&quot;&gt;&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">label</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&lt;/a&gt;&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>To prevent a series from showing up in the legend, simply have the function
+return null.</p>
+<p>"noColumns" is the number of columns to divide the legend table into.
+"position" specifies the overall placement of the legend within the
+plot (top-right, top-left, etc.) and margin the distance to the plot
+edge (this can be either a number or an array of two numbers like [x,
+y]). "backgroundColor" and "backgroundOpacity" specifies the
+background. The default is a partly transparent auto-detected
+background.</p>
+<p>If you want the legend to appear somewhere else in the DOM, you can
+specify "container" as a jQuery object/expression to put the legend
+table into. The "position" and "margin" etc. options will then be
+ignored. Note that Flot will overwrite the contents of the container.</p>
+<p>Legend entries appear in the same order as their series by default. If "sorted"
+is "reverse" then they appear in the opposite order from their series. To sort
+them alphabetically, you can specify true, "ascending" or "descending", where
+true and "ascending" are equivalent.</p>
+<p>You can also provide your own comparator function that accepts two
+objects with "label" and "color" properties, and returns zero if they
+are equal, a positive value if the first is greater than the second,
+and a negative value if the first is less than the second.</p>
+<div class="highlight"><pre><span></span><code><span class="nx">sorted</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// sort alphabetically in ascending order</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="p">.</span><span class="nx">label</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nx">b</span><span class="p">.</span><span class="nx">label</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="w">        </span><span class="nx">a</span><span class="p">.</span><span class="nx">label</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">b</span><span class="p">.</span><span class="nx">label</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="w"></span>
+<span class="w">    </span><span class="p">)</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h2 id="customizing-the-axes">Customizing the axes</h2>
+<div class="highlight"><pre><span></span><code><span class="nx">xaxis</span><span class="p">,</span><span class="w"> </span><span class="nx">yaxis</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">show</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="kc">true</span><span class="o">/</span><span class="kc">false</span><span class="w"></span>
+<span class="w">    </span><span class="nx">position</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;bottom&quot;</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="s2">&quot;top&quot;</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="s2">&quot;left&quot;</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="s2">&quot;right&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nx">mode</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="s2">&quot;time&quot;</span><span class="w"> </span><span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="w"> </span><span class="nx">requires</span><span class="w"> </span><span class="nx">jquery</span><span class="p">.</span><span class="nx">flot</span><span class="p">.</span><span class="nx">time</span><span class="p">.</span><span class="nx">js</span><span class="w"> </span><span class="nx">plugin</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="nx">timezone</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;browser&quot;</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="nx">timezone</span><span class="w"> </span><span class="p">(</span><span class="nx">only</span><span class="w"> </span><span class="nx">makes</span><span class="w"> </span><span class="nx">sense</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">mode</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;time&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">    </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="nx">color</span><span class="w"> </span><span class="nx">spec</span><span class="w"></span>
+<span class="w">    </span><span class="nx">tickColor</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="nx">color</span><span class="w"> </span><span class="nx">spec</span><span class="w"></span>
+<span class="w">    </span><span class="nx">font</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="nx">font</span><span class="w"> </span><span class="nx">spec</span><span class="w"> </span><span class="nx">object</span><span class="w"></span>
+
+<span class="w">    </span><span class="nx">min</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="nx">number</span><span class="w"></span>
+<span class="w">    </span><span class="nx">max</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="nx">number</span><span class="w"></span>
+<span class="w">    </span><span class="nx">autoscaleMargin</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="nx">number</span><span class="w"></span>
+
+<span class="w">    </span><span class="nx">transform</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="nx">fn</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nx">number</span><span class="w"></span>
+<span class="w">    </span><span class="nx">inverseTransform</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="nx">fn</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nx">number</span><span class="w"></span>
+
+<span class="w">    </span><span class="nx">ticks</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="nx">ticks</span><span class="w"> </span><span class="nx">array</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="p">(</span><span class="nx">fn</span><span class="o">:</span><span class="w"> </span><span class="nx">axis</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nx">ticks</span><span class="w"> </span><span class="nx">array</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="nx">tickSize</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="nx">array</span><span class="w"></span>
+<span class="w">    </span><span class="nx">minTickSize</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="nx">array</span><span class="w"></span>
+<span class="w">    </span><span class="nx">tickFormatter</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">fn</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="p">,</span><span class="w"> </span><span class="nx">object</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nx">string</span><span class="p">)</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="nx">string</span><span class="w"></span>
+<span class="w">    </span><span class="nx">tickDecimals</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="nx">number</span><span class="w"></span>
+
+<span class="w">    </span><span class="nx">labelWidth</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="nx">number</span><span class="w"></span>
+<span class="w">    </span><span class="nx">labelHeight</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="nx">number</span><span class="w"></span>
+<span class="w">    </span><span class="nx">reserveSpace</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+
+<span class="w">    </span><span class="nx">tickLength</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="nx">number</span><span class="w"></span>
+
+<span class="w">    </span><span class="nx">alignTicksWithAxis</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="nx">number</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>All axes have the same kind of options. The following describes how to
+configure one axis, see below for what to do if you've got more than
+one x axis or y axis.</p>
+<p>If you don't set the "show" option (i.e. it is null), visibility is
+auto-detected, i.e. the axis will show up if there's data associated
+with it. You can override this by setting the "show" option to true or
+false.</p>
+<p>The "position" option specifies where the axis is placed, bottom or
+top for x axes, left or right for y axes. The "mode" option determines
+how the data is interpreted, the default of null means as decimal
+numbers. Use "time" for time series data; see the time series data
+section. The time plugin (jquery.flot.time.js) is required for time
+series support.</p>
+<p>The "color" option determines the color of the line and ticks for the axis, and
+defaults to the grid color with transparency. For more fine-grained control you
+can also set the color of the ticks separately with "tickColor".</p>
+<p>You can customize the font and color used to draw the axis tick labels with CSS
+or directly via the "font" option. When "font" is null - the default - each
+tick label is given the 'flot-tick-label' class. For compatibility with Flot
+0.7 and earlier the labels are also given the 'tickLabel' class, but this is
+deprecated and scheduled to be removed with the release of version 1.0.0.</p>
+<p>To enable more granular control over styles, labels are divided between a set
+of text containers, with each holding the labels for one axis. These containers
+are given the classes 'flot-[x|y]-axis', and 'flot-[x|y]#-axis', where '#' is
+the number of the axis when there are multiple axes.  For example, the x-axis
+labels for a simple plot with only a single x-axis might look like this:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#39;flot-x-axis flot-x1-axis&#39;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#39;flot-tick-label&#39;</span><span class="p">&gt;</span>January 2013<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    ...
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>For direct control over label styles you can also provide "font" as an object
+with this format:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="mf">11</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nx">lineHeight</span><span class="o">:</span><span class="w"> </span><span class="mf">13</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nx">style</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;italic&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nx">weight</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;bold&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nx">family</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;sans-serif&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nx">variant</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;small-caps&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#545454&quot;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>The size and lineHeight must be expressed in pixels; CSS units such as 'em'
+or 'smaller' are not allowed.</p>
+<p>The options "min"/"max" are the precise minimum/maximum value on the
+scale. If you don't specify either of them, a value will automatically
+be chosen based on the minimum/maximum data values. Note that Flot
+always examines all the data values you feed to it, even if a
+restriction on another axis may make some of them invisible (this
+makes interactive use more stable).</p>
+<p>The "autoscaleMargin" is a bit esoteric: it's the fraction of margin
+that the scaling algorithm will add to avoid that the outermost points
+ends up on the grid border. Note that this margin is only applied when
+a min or max value is not explicitly set. If a margin is specified,
+the plot will furthermore extend the axis end-point to the nearest
+whole tick. The default value is "null" for the x axes and 0.02 for y
+axes which seems appropriate for most cases.</p>
+<p>"transform" and "inverseTransform" are callbacks you can put in to
+change the way the data is drawn. You can design a function to
+compress or expand certain parts of the axis non-linearly, e.g.
+suppress weekends or compress far away points with a logarithm or some
+other means. When Flot draws the plot, each value is first put through
+the transform function. Here's an example, the x axis can be turned
+into a natural logarithm axis with the following code:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">xaxis</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">transform</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">v</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">v</span><span class="p">);</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nx">inverseTransform</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">v</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">exp</span><span class="p">(</span><span class="nx">v</span><span class="p">);</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Similarly, for reversing the y axis so the values appear in inverse
+order:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">yaxis</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">transform</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">v</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="o">-</span><span class="nx">v</span><span class="p">;</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nx">inverseTransform</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">v</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="o">-</span><span class="nx">v</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Note that for finding extrema, Flot assumes that the transform
+function does not reorder values (it should be monotone).</p>
+<p>The inverseTransform is simply the inverse of the transform function
+(so v == inverseTransform(transform(v)) for all relevant v). It is
+required for converting from canvas coordinates to data coordinates,
+e.g. for a mouse interaction where a certain pixel is clicked. If you
+don't use any interactive features of Flot, you may not need it.</p>
+<p>The rest of the options deal with the ticks.</p>
+<p>If you don't specify any ticks, a tick generator algorithm will make
+some for you. The algorithm has two passes. It first estimates how
+many ticks would be reasonable and uses this number to compute a nice
+round tick interval size. Then it generates the ticks.</p>
+<p>You can specify how many ticks the algorithm aims for by setting
+"ticks" to a number. The algorithm always tries to generate reasonably
+round tick values so even if you ask for three ticks, you might get
+five if that fits better with the rounding. If you don't want any
+ticks at all, set "ticks" to 0 or an empty array.</p>
+<p>Another option is to skip the rounding part and directly set the tick
+interval size with "tickSize". If you set it to 2, you'll get ticks at
+2, 4, 6, etc. Alternatively, you can specify that you just don't want
+ticks at a size less than a specific tick size with "minTickSize".
+Note that for time series, the format is an array like [2, "month"],
+see the next section.</p>
+<p>If you want to completely override the tick algorithm, you can specify
+an array for "ticks", either like this:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">ticks</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.2</span><span class="p">,</span><span class="w"> </span><span class="mf">2.4</span><span class="p">]</span><span class="w"></span>
+</code></pre></div>
+<p>Or like this where the labels are also customized:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">ticks</span><span class="o">:</span><span class="w"> </span><span class="p">[[</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;zero&quot;</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mf">1.2</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;one mark&quot;</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mf">2.4</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;two marks&quot;</span><span class="p">]]</span><span class="w"></span>
+</code></pre></div>
+<p>You can mix the two if you like.</p>
+<p>For extra flexibility you can specify a function as the "ticks"
+parameter. The function will be called with an object with the axis
+min and max and should return a ticks array. Here's a simplistic tick
+generator that spits out intervals of pi, suitable for use on the x
+axis for trigonometric functions:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">piTickGenerator</span><span class="p">(</span><span class="nx">axis</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[],</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">axis</span><span class="p">.</span><span class="nx">min</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">do</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="nx">res</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="nx">v</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;\u03c0&quot;</span><span class="p">]);</span><span class="w"></span>
+<span class="w">        </span><span class="o">++</span><span class="nx">i</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">v</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">axis</span><span class="p">.</span><span class="nx">max</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">res</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>You can control how the ticks look like with "tickDecimals", the
+number of decimals to display (default is auto-detected).</p>
+<p>Alternatively, for ultimate control over how ticks are formatted you can
+provide a function to "tickFormatter". The function is passed two
+parameters, the tick value and an axis object with information, and
+should return a string. The default formatter looks like this:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">formatter</span><span class="p">(</span><span class="nx">val</span><span class="p">,</span><span class="w"> </span><span class="nx">axis</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">val</span><span class="p">.</span><span class="nx">toFixed</span><span class="p">(</span><span class="nx">axis</span><span class="p">.</span><span class="nx">tickDecimals</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>The axis object has "min" and "max" with the range of the axis,
+"tickDecimals" with the number of decimals to round the value to and
+"tickSize" with the size of the interval between ticks as calculated
+by the automatic axis scaling algorithm (or specified by you). Here's
+an example of a custom formatter:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">suffixFormatter</span><span class="p">(</span><span class="nx">val</span><span class="p">,</span><span class="w"> </span><span class="nx">axis</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">val</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">1000000</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="nx">val</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">1000000</span><span class="p">).</span><span class="nx">toFixed</span><span class="p">(</span><span class="nx">axis</span><span class="p">.</span><span class="nx">tickDecimals</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot; MB&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">val</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">1000</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="nx">val</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">1000</span><span class="p">).</span><span class="nx">toFixed</span><span class="p">(</span><span class="nx">axis</span><span class="p">.</span><span class="nx">tickDecimals</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot; kB&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">else</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">val</span><span class="p">.</span><span class="nx">toFixed</span><span class="p">(</span><span class="nx">axis</span><span class="p">.</span><span class="nx">tickDecimals</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot; B&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>"labelWidth" and "labelHeight" specifies a fixed size of the tick
+labels in pixels. They're useful in case you need to align several
+plots. "reserveSpace" means that even if an axis isn't shown, Flot
+should reserve space for it - it is useful in combination with
+labelWidth and labelHeight for aligning multi-axis charts.</p>
+<p>"tickLength" is the length of the tick lines in pixels. By default, the
+innermost axes will have ticks that extend all across the plot, while
+any extra axes use small ticks. A value of null means use the default,
+while a number means small ticks of that length - set it to 0 to hide
+the lines completely.</p>
+<p>If you set "alignTicksWithAxis" to the number of another axis, e.g.
+alignTicksWithAxis: 1, Flot will ensure that the autogenerated ticks
+of this axis are aligned with the ticks of the other axis. This may
+improve the looks, e.g. if you have one y axis to the left and one to
+the right, because the grid lines will then match the ticks in both
+ends. The trade-off is that the forced ticks won't necessarily be at
+natural places.</p>
+<h2 id="multiple-axes">Multiple axes</h2>
+<p>If you need more than one x axis or y axis, you need to specify for
+each data series which axis they are to use, as described under the
+format of the data series, e.g. { data: [...], yaxis: 2 } specifies
+that a series should be plotted against the second y axis.</p>
+<p>To actually configure that axis, you can't use the xaxis/yaxis options
+directly - instead there are two arrays in the options:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">xaxes</span><span class="o">:</span><span class="w"> </span><span class="p">[]</span><span class="w"></span>
+<span class="nx">yaxes</span><span class="o">:</span><span class="w"> </span><span class="p">[]</span><span class="w"></span>
+</code></pre></div>
+<p>Here's an example of configuring a single x axis and two y axes (we
+can leave options of the first y axis empty as the defaults are fine):</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">xaxes</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">position</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;top&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="nx">yaxes</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">position</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;right&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">min</span><span class="o">:</span><span class="w"> </span><span class="mf">20</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>The arrays get their default values from the xaxis/yaxis settings, so
+say you want to have all y axes start at zero, you can simply specify
+yaxis: { min: 0 } instead of adding a min parameter to all the axes.</p>
+<p>Generally, the various interfaces in Flot dealing with data points
+either accept an xaxis/yaxis parameter to specify which axis number to
+use (starting from 1), or lets you specify the coordinate directly as
+x2/x3/... or x2axis/x3axis/... instead of "x" or "xaxis".</p>
+<h2 id="time-series-data">Time series data</h2>
+<p>Please note that it is now required to include the time plugin,
+jquery.flot.time.js, for time series support.</p>
+<p>Time series are a bit more difficult than scalar data because
+calendars don't follow a simple base 10 system. For many cases, Flot
+abstracts most of this away, but it can still be a bit difficult to
+get the data into Flot. So we'll first discuss the data format.</p>
+<p>The time series support in Flot is based on Javascript timestamps,
+i.e. everywhere a time value is expected or handed over, a Javascript
+timestamp number is used. This is a number, not a Date object. A
+Javascript timestamp is the number of milliseconds since January 1,
+1970 00:00:00 UTC. This is almost the same as Unix timestamps, except it's
+in milliseconds, so remember to multiply by 1000!</p>
+<p>You can see a timestamp like this</p>
+<div class="highlight"><pre><span></span><code><span class="nx">alert</span><span class="p">((</span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">()).</span><span class="nx">getTime</span><span class="p">())</span><span class="w"></span>
+</code></pre></div>
+<p>There are different schools of thought when it comes to display of
+timestamps. Many will want the timestamps to be displayed according to
+a certain time zone, usually the time zone in which the data has been
+produced. Some want the localized experience, where the timestamps are
+displayed according to the local time of the visitor. Flot supports
+both. Optionally you can include a third-party library to get
+additional timezone support.</p>
+<p>Default behavior is that Flot always displays timestamps according to
+UTC. The reason being that the core Javascript Date object does not
+support other fixed time zones. Often your data is at another time
+zone, so it may take a little bit of tweaking to work around this
+limitation.</p>
+<p>The easiest way to think about it is to pretend that the data
+production time zone is UTC, even if it isn't. So if you have a
+datapoint at 2002-02-20 08:00, you can generate a timestamp for eight
+o'clock UTC even if it really happened eight o'clock UTC+0200.</p>
+<p>In PHP you can get an appropriate timestamp with:</p>
+<div class="highlight"><pre><span></span><code><span class="x">strtotime(&quot;2002-02-20 UTC&quot;) * 1000</span>
+</code></pre></div>
+<p>In Python you can get it with something like:</p>
+<p><div class="highlight"><pre><span></span><code><span class="n">calendar</span><span class="o">.</span><span class="n">timegm</span><span class="p">(</span><span class="n">datetime_object</span><span class="o">.</span><span class="n">timetuple</span><span class="p">())</span> <span class="o">*</span> <span class="mi">1000</span>
+</code></pre></div>
+In Ruby you can get it using the <code>#to_i</code> method on the
+<a href="http://apidock.com/ruby/Time/to_i"><code>Time</code></a> object. If you're using the
+<code>active_support</code> gem (default for Ruby on Rails applications) <code>#to_i</code> is also
+available on the <code>DateTime</code> and <code>ActiveSupport::TimeWithZone</code> objects. You
+simply need to multiply the result by 1000:</p>
+<div class="highlight"><pre><span></span><code><span class="no">Time</span><span class="o">.</span><span class="n">now</span><span class="o">.</span><span class="n">to_i</span> <span class="o">*</span> <span class="mi">1000</span>     <span class="c1"># =&gt; 1383582043000</span>
+<span class="c1"># ActiveSupport examples:</span>
+<span class="no">DateTime</span><span class="o">.</span><span class="n">now</span><span class="o">.</span><span class="n">to_i</span> <span class="o">*</span> <span class="mi">1000</span> <span class="c1"># =&gt; 1383582043000</span>
+<span class="no">ActiveSupport</span><span class="o">::</span><span class="no">TimeZone</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s1">&#39;Asia/Shanghai&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">now</span><span class="o">.</span><span class="n">to_i</span> <span class="o">*</span> <span class="mi">1000</span>
+<span class="c1"># =&gt; 1383582043000</span>
+</code></pre></div>
+<p>In .NET you can get it with something like:</p>
+<div class="highlight"><pre><span></span><code>public static int GetJavascriptTimestamp(System.DateTime input)
+{
+    System.TimeSpan span = new System.TimeSpan(System.DateTime.Parse(&quot;1/1/1970&quot;).Ticks);
+    System.DateTime time = input.Subtract(span);
+    return (long)(time.Ticks / 10000);
+}
+</code></pre></div>
+<p>Javascript also has some support for parsing date strings, so it is
+possible to generate the timestamps manually client-side.</p>
+<p>If you've already got the real UTC timestamp, it's too late to use the
+pretend trick described above. But you can fix up the timestamps by
+adding the time zone offset, e.g. for UTC+0200 you would add 2 hours
+to the UTC timestamp you got. Then it'll look right on the plot. Most
+programming environments have some means of getting the timezone
+offset for a specific date (note that you need to get the offset for
+each individual timestamp to account for daylight savings).</p>
+<p>The alternative with core Javascript is to interpret the timestamps
+according to the time zone that the visitor is in, which means that
+the ticks will shift with the time zone and daylight savings of each
+visitor. This behavior is enabled by setting the axis option
+"timezone" to the value "browser".</p>
+<p>If you need more time zone functionality than this, there is still
+another option. If you include the "timezone-js" library
+<a href="https://github.com/mde/timezone-js">https://github.com/mde/timezone-js</a> in the page and set axis.timezone
+to a value recognized by said library, Flot will use timezone-js to
+interpret the timestamps according to that time zone.</p>
+<p>Once you've gotten the timestamps into the data and specified "time"
+as the axis mode, Flot will automatically generate relevant ticks and
+format them. As always, you can tweak the ticks via the "ticks" option
+- just remember that the values should be timestamps (numbers), not
+Date objects.</p>
+<p>Tick generation and formatting can also be controlled separately
+through the following axis options:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">minTickSize</span><span class="o">:</span><span class="w"> </span><span class="nx">array</span><span class="w"></span>
+<span class="nx">timeformat</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="nx">format</span><span class="w"> </span><span class="nx">string</span><span class="w"></span>
+<span class="nx">monthNames</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="nx">array</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">size</span><span class="w"> </span><span class="mf">12</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">strings</span><span class="w"></span>
+<span class="nx">dayNames</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="nx">array</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">size</span><span class="w"> </span><span class="mf">7</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">strings</span><span class="w"></span>
+<span class="nx">twelveHourClock</span><span class="o">:</span><span class="w"> </span><span class="kr">boolean</span><span class="w"></span>
+</code></pre></div>
+<p>Here "timeformat" is a format string to use. You might use it like
+this:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">xaxis</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">mode</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;time&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nx">timeformat</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;%Y/%m/%d&quot;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>This will result in tick labels like "2000/12/24". A subset of the
+standard strftime specifiers are supported (plus the nonstandard %q):</p>
+<div class="highlight"><pre><span></span><code><span class="o">%</span><span class="nx">a</span><span class="o">:</span><span class="w"> </span><span class="nx">weekday</span><span class="w"> </span><span class="nx">name</span><span class="w"> </span><span class="p">(</span><span class="nx">customizable</span><span class="p">)</span><span class="w"></span>
+<span class="o">%</span><span class="nx">b</span><span class="o">:</span><span class="w"> </span><span class="nx">month</span><span class="w"> </span><span class="nx">name</span><span class="w"> </span><span class="p">(</span><span class="nx">customizable</span><span class="p">)</span><span class="w"></span>
+<span class="o">%</span><span class="nx">d</span><span class="o">:</span><span class="w"> </span><span class="nx">day</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">month</span><span class="p">,</span><span class="w"> </span><span class="nx">zero</span><span class="o">-</span><span class="nx">padded</span><span class="w"> </span><span class="p">(</span><span class="mo">01</span><span class="o">-</span><span class="mf">31</span><span class="p">)</span><span class="w"></span>
+<span class="o">%</span><span class="nx">e</span><span class="o">:</span><span class="w"> </span><span class="nx">day</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">month</span><span class="p">,</span><span class="w"> </span><span class="nx">space</span><span class="o">-</span><span class="nx">padded</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mf">1</span><span class="o">-</span><span class="mf">31</span><span class="p">)</span><span class="w"></span>
+<span class="o">%</span><span class="nx">H</span><span class="o">:</span><span class="w"> </span><span class="nx">hours</span><span class="p">,</span><span class="w"> </span><span class="mf">24</span><span class="o">-</span><span class="nx">hour</span><span class="w"> </span><span class="nx">time</span><span class="p">,</span><span class="w"> </span><span class="nx">zero</span><span class="o">-</span><span class="nx">padded</span><span class="w"> </span><span class="p">(</span><span class="mo">00</span><span class="o">-</span><span class="mf">23</span><span class="p">)</span><span class="w"></span>
+<span class="o">%</span><span class="nx">I</span><span class="o">:</span><span class="w"> </span><span class="nx">hours</span><span class="p">,</span><span class="w"> </span><span class="mf">12</span><span class="o">-</span><span class="nx">hour</span><span class="w"> </span><span class="nx">time</span><span class="p">,</span><span class="w"> </span><span class="nx">zero</span><span class="o">-</span><span class="nx">padded</span><span class="w"> </span><span class="p">(</span><span class="mo">01</span><span class="o">-</span><span class="mf">12</span><span class="p">)</span><span class="w"></span>
+<span class="o">%</span><span class="nx">m</span><span class="o">:</span><span class="w"> </span><span class="nx">month</span><span class="p">,</span><span class="w"> </span><span class="nx">zero</span><span class="o">-</span><span class="nx">padded</span><span class="w"> </span><span class="p">(</span><span class="mo">01</span><span class="o">-</span><span class="mf">12</span><span class="p">)</span><span class="w"></span>
+<span class="o">%</span><span class="nx">M</span><span class="o">:</span><span class="w"> </span><span class="nx">minutes</span><span class="p">,</span><span class="w"> </span><span class="nx">zero</span><span class="o">-</span><span class="nx">padded</span><span class="w"> </span><span class="p">(</span><span class="mo">00</span><span class="o">-</span><span class="mf">59</span><span class="p">)</span><span class="w"></span>
+<span class="o">%</span><span class="nx">q</span><span class="o">:</span><span class="w"> </span><span class="nx">quarter</span><span class="w"> </span><span class="p">(</span><span class="mf">1</span><span class="o">-</span><span class="mf">4</span><span class="p">)</span><span class="w"></span>
+<span class="o">%</span><span class="nx">S</span><span class="o">:</span><span class="w"> </span><span class="nx">seconds</span><span class="p">,</span><span class="w"> </span><span class="nx">zero</span><span class="o">-</span><span class="nx">padded</span><span class="w"> </span><span class="p">(</span><span class="mo">00</span><span class="o">-</span><span class="mf">59</span><span class="p">)</span><span class="w"></span>
+<span class="o">%</span><span class="nx">y</span><span class="o">:</span><span class="w"> </span><span class="nx">year</span><span class="w"> </span><span class="p">(</span><span class="nx">two</span><span class="w"> </span><span class="nx">digits</span><span class="p">)</span><span class="w"></span>
+<span class="o">%</span><span class="nx">Y</span><span class="o">:</span><span class="w"> </span><span class="nx">year</span><span class="w"> </span><span class="p">(</span><span class="nx">four</span><span class="w"> </span><span class="nx">digits</span><span class="p">)</span><span class="w"></span>
+<span class="o">%</span><span class="nx">p</span><span class="o">:</span><span class="w"> </span><span class="nx">am</span><span class="o">/</span><span class="nx">pm</span><span class="w"></span>
+<span class="o">%</span><span class="nx">P</span><span class="o">:</span><span class="w"> </span><span class="nx">AM</span><span class="o">/</span><span class="nx">PM</span><span class="w"> </span><span class="p">(</span><span class="nx">uppercase</span><span class="w"> </span><span class="nx">version</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="o">%</span><span class="nx">p</span><span class="p">)</span><span class="w"></span>
+<span class="o">%</span><span class="nx">w</span><span class="o">:</span><span class="w"> </span><span class="nx">weekday</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="p">(</span><span class="mf">0</span><span class="o">-</span><span class="mf">6</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="nx">being</span><span class="w"> </span><span class="nx">Sunday</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>Flot 0.8 switched from %h to the standard %H hours specifier. The %h specifier
+is still available, for backwards-compatibility, but is deprecated and
+scheduled to be removed permanently with the release of version 1.0.</p>
+<p>You can customize the month names with the "monthNames" option. For
+instance, for Danish you might specify:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">monthNames</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;jan&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;feb&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;mar&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;apr&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;maj&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;jun&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;jul&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;aug&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;sep&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;okt&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;nov&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;dec&quot;</span><span class="p">]</span><span class="w"></span>
+</code></pre></div>
+<p>Similarly you can customize the weekday names with the "dayNames"
+option. An example in French:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">dayNames</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;dim&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;lun&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;mar&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;mer&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;jeu&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;ven&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;sam&quot;</span><span class="p">]</span><span class="w"></span>
+</code></pre></div>
+<p>If you set "twelveHourClock" to true, the autogenerated timestamps
+will use 12 hour AM/PM timestamps instead of 24 hour. This only
+applies if you have not set "timeformat". Use the "%I" and "%p" or
+"%P" options if you want to build your own format string with 12-hour
+times.</p>
+<p>If the Date object has a strftime property (and it is a function), it
+will be used instead of the built-in formatter. Thus you can include
+a strftime library such as http://hacks.bluesmoon.info/strftime/ for
+more powerful date/time formatting.</p>
+<p>If everything else fails, you can control the formatting by specifying
+a custom tick formatter function as usual. Here's a simple example
+which will format December 24 as 24/12:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">tickFormatter</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">val</span><span class="p">,</span><span class="w"> </span><span class="nx">axis</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">(</span><span class="nx">val</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">d</span><span class="p">.</span><span class="nx">getUTCDate</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;/&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="nx">d</span><span class="p">.</span><span class="nx">getUTCMonth</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Note that for the time mode "tickSize" and "minTickSize" are a bit
+special in that they are arrays on the form "[value, unit]" where unit
+is one of "second", "minute", "hour", "day", "month" and "year". So
+you can specify</p>
+<div class="highlight"><pre><span></span><code><span class="nx">minTickSize</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;month&quot;</span><span class="p">]</span><span class="w"></span>
+</code></pre></div>
+<p>to get a tick interval size of at least 1 month and correspondingly,
+if axis.tickSize is [2, "day"] in the tick formatter, the ticks have
+been produced with two days in-between.</p>
+<h2 id="customizing-the-data-series">Customizing the data series</h2>
+<div class="highlight"><pre><span></span><code><span class="nx">series</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">lines</span><span class="p">,</span><span class="w"> </span><span class="nx">points</span><span class="p">,</span><span class="w"> </span><span class="nx">bars</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">show</span><span class="o">:</span><span class="w"> </span><span class="kr">boolean</span><span class="w"></span>
+<span class="w">        </span><span class="nx">lineWidth</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="w"></span>
+<span class="w">        </span><span class="nx">fill</span><span class="o">:</span><span class="w"> </span><span class="kr">boolean</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="nx">number</span><span class="w"></span>
+<span class="w">        </span><span class="nx">fillColor</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="nx">color</span><span class="o">/</span><span class="nx">gradient</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="nx">lines</span><span class="p">,</span><span class="w"> </span><span class="nx">bars</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">zero</span><span class="o">:</span><span class="w"> </span><span class="kr">boolean</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="nx">points</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">radius</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="w"></span>
+<span class="w">        </span><span class="nx">symbol</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;circle&quot;</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="kd">function</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="nx">bars</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">barWidth</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="w"></span>
+<span class="w">        </span><span class="nx">align</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;left&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;right&quot;</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="s2">&quot;center&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="nx">horizontal</span><span class="o">:</span><span class="w"> </span><span class="kr">boolean</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="nx">lines</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">steps</span><span class="o">:</span><span class="w"> </span><span class="kr">boolean</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="nx">shadowSize</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="w"></span>
+<span class="w">    </span><span class="nx">highlightColor</span><span class="o">:</span><span class="w"> </span><span class="nx">color</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="nx">number</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="nx">colors</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="nx">color1</span><span class="p">,</span><span class="w"> </span><span class="nx">color2</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">]</span><span class="w"></span>
+</code></pre></div>
+<p>The options inside "series: {}" are copied to each of the series. So
+you can specify that all series should have bars by putting it in the
+global options, or override it for individual series by specifying
+bars in a particular the series object in the array of data.</p>
+<p>The most important options are "lines", "points" and "bars" that
+specify whether and how lines, points and bars should be shown for
+each data series. In case you don't specify anything at all, Flot will
+default to showing lines (you can turn this off with
+lines: { show: false }). You can specify the various types
+independently of each other, and Flot will happily draw each of them
+in turn (this is probably only useful for lines and points), e.g.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">series</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">lines</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">show</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nx">fill</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nx">fillColor</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;rgba(255, 255, 255, 0.8)&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="nx">points</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">show</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nx">fill</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<p>"lineWidth" is the thickness of the line or outline in pixels. You can
+set it to 0 to prevent a line or outline from being drawn; this will
+also hide the shadow.</p>
+<p>"fill" is whether the shape should be filled. For lines, this produces
+area graphs. You can use "fillColor" to specify the color of the fill.
+If "fillColor" evaluates to false (default for everything except
+points which are filled with white), the fill color is auto-set to the
+color of the data series. You can adjust the opacity of the fill by
+setting fill to a number between 0 (fully transparent) and 1 (fully
+opaque).</p>
+<p>For bars, fillColor can be a gradient, see the gradient documentation
+below. "barWidth" is the width of the bars in units of the x axis (or
+the y axis if "horizontal" is true), contrary to most other measures
+that are specified in pixels. For instance, for time series the unit
+is milliseconds so 24 * 60 * 60 * 1000 produces bars with the width of
+a day. "align" specifies whether a bar should be left-aligned
+(default), right-aligned or centered on top of the value it represents. 
+When "horizontal" is on, the bars are drawn horizontally, i.e. from the 
+y axis instead of the x axis; note that the bar end points are still
+defined in the same way so you'll probably want to swap the
+coordinates if you've been plotting vertical bars first.</p>
+<p>Area and bar charts normally start from zero, regardless of the data's range.
+This is because they convey information through size, and starting from a
+different value would distort their meaning. In cases where the fill is purely
+for decorative purposes, however, "zero" allows you to override this behavior.
+It defaults to true for filled lines and bars; setting it to false tells the
+series to use the same automatic scaling as an un-filled line.</p>
+<p>For lines, "steps" specifies whether two adjacent data points are
+connected with a straight (possibly diagonal) line or with first a
+horizontal and then a vertical line. Note that this transforms the
+data by adding extra points.</p>
+<p>For points, you can specify the radius and the symbol. The only
+built-in symbol type is circles, for other types you can use a plugin
+or define them yourself by specifying a callback:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">cross</span><span class="p">(</span><span class="nx">ctx</span><span class="p">,</span><span class="w"> </span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="p">,</span><span class="w"> </span><span class="nx">radius</span><span class="p">,</span><span class="w"> </span><span class="nx">shadow</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">radius</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nx">ctx</span><span class="p">.</span><span class="nx">moveTo</span><span class="p">(</span><span class="nx">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">size</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">size</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="nx">ctx</span><span class="p">.</span><span class="nx">lineTo</span><span class="p">(</span><span class="nx">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">size</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">size</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="nx">ctx</span><span class="p">.</span><span class="nx">moveTo</span><span class="p">(</span><span class="nx">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">size</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">size</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="nx">ctx</span><span class="p">.</span><span class="nx">lineTo</span><span class="p">(</span><span class="nx">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">size</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">size</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>The parameters are the drawing context, x and y coordinates of the
+center of the point, a radius which corresponds to what the circle
+would have used and whether the call is to draw a shadow (due to
+limited canvas support, shadows are currently faked through extra
+draws). It's good practice to ensure that the area covered by the
+symbol is the same as for the circle with the given radius, this
+ensures that all symbols have approximately the same visual weight.</p>
+<p>"shadowSize" is the default size of shadows in pixels. Set it to 0 to
+remove shadows.</p>
+<p>"highlightColor" is the default color of the translucent overlay used
+to highlight the series when the mouse hovers over it.</p>
+<p>The "colors" array specifies a default color theme to get colors for
+the data series from. You can specify as many colors as you like, like
+this:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">colors</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;#d18b2c&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#dba255&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#919733&quot;</span><span class="p">]</span><span class="w"></span>
+</code></pre></div>
+<p>If there are more data series than colors, Flot will try to generate
+extra colors by lightening and darkening colors in the theme.</p>
+<h2 id="customizing-the-grid">Customizing the grid</h2>
+<div class="highlight"><pre><span></span><code><span class="nx">grid</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">show</span><span class="o">:</span><span class="w"> </span><span class="kr">boolean</span><span class="w"></span>
+<span class="w">    </span><span class="nx">aboveData</span><span class="o">:</span><span class="w"> </span><span class="kr">boolean</span><span class="w"></span>
+<span class="w">    </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="nx">color</span><span class="w"></span>
+<span class="w">    </span><span class="nx">backgroundColor</span><span class="o">:</span><span class="w"> </span><span class="nx">color</span><span class="o">/</span><span class="nx">gradient</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
+<span class="w">    </span><span class="nx">margin</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="nx">margin</span><span class="w"> </span><span class="nx">object</span><span class="w"></span>
+<span class="w">    </span><span class="nx">labelMargin</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="w"></span>
+<span class="w">    </span><span class="nx">axisMargin</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="w"></span>
+<span class="w">    </span><span class="nx">markings</span><span class="o">:</span><span class="w"> </span><span class="nx">array</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">markings</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="p">(</span><span class="nx">fn</span><span class="o">:</span><span class="w"> </span><span class="nx">axes</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nx">array</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">markings</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="nx">borderWidth</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="nx">object</span><span class="w"> </span><span class="kd">with</span><span class="w"> </span><span class="s2">&quot;top&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;right&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;bottom&quot;</span><span class="w"> </span><span class="nx">and</span><span class="w"> </span><span class="s2">&quot;left&quot;</span><span class="w"> </span><span class="nx">properties</span><span class="w"> </span><span class="kd">with</span><span class="w"> </span><span class="nx">different</span><span class="w"> </span><span class="nx">widths</span><span class="w"></span>
+<span class="w">    </span><span class="nx">borderColor</span><span class="o">:</span><span class="w"> </span><span class="nx">color</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="nx">object</span><span class="w"> </span><span class="kd">with</span><span class="w"> </span><span class="s2">&quot;top&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;right&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;bottom&quot;</span><span class="w"> </span><span class="nx">and</span><span class="w"> </span><span class="s2">&quot;left&quot;</span><span class="w"> </span><span class="nx">properties</span><span class="w"> </span><span class="kd">with</span><span class="w"> </span><span class="nx">different</span><span class="w"> </span><span class="nx">colors</span><span class="w"></span>
+<span class="w">    </span><span class="nx">minBorderMargin</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
+<span class="w">    </span><span class="nx">clickable</span><span class="o">:</span><span class="w"> </span><span class="kr">boolean</span><span class="w"></span>
+<span class="w">    </span><span class="nx">hoverable</span><span class="o">:</span><span class="w"> </span><span class="kr">boolean</span><span class="w"></span>
+<span class="w">    </span><span class="nx">autoHighlight</span><span class="o">:</span><span class="w"> </span><span class="kr">boolean</span><span class="w"></span>
+<span class="w">    </span><span class="nx">mouseActiveRadius</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="nx">interaction</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">redrawOverlayInterval</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>The grid is the thing with the axes and a number of ticks. Many of the
+things in the grid are configured under the individual axes, but not
+all. "color" is the color of the grid itself whereas "backgroundColor"
+specifies the background color inside the grid area, here null means
+that the background is transparent. You can also set a gradient, see
+the gradient documentation below.</p>
+<p>You can turn off the whole grid including tick labels by setting
+"show" to false. "aboveData" determines whether the grid is drawn
+above the data or below (below is default).</p>
+<p>"margin" is the space in pixels between the canvas edge and the grid,
+which can be either a number or an object with individual margins for
+each side, in the form:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">margin</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">top</span><span class="o">:</span><span class="w"> </span><span class="nx">top</span><span class="w"> </span><span class="nx">margin</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">pixels</span><span class="w"></span>
+<span class="w">    </span><span class="nx">left</span><span class="o">:</span><span class="w"> </span><span class="nx">left</span><span class="w"> </span><span class="nx">margin</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">pixels</span><span class="w"></span>
+<span class="w">    </span><span class="nx">bottom</span><span class="o">:</span><span class="w"> </span><span class="nx">bottom</span><span class="w"> </span><span class="nx">margin</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">pixels</span><span class="w"></span>
+<span class="w">    </span><span class="nx">right</span><span class="o">:</span><span class="w"> </span><span class="nx">right</span><span class="w"> </span><span class="nx">margin</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">pixels</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>"labelMargin" is the space in pixels between tick labels and axis
+line, and "axisMargin" is the space in pixels between axes when there
+are two next to each other.</p>
+<p>"borderWidth" is the width of the border around the plot. Set it to 0
+to disable the border. Set it to an object with "top", "right",
+"bottom" and "left" properties to use different widths. You can
+also set "borderColor" if you want the border to have a different color
+than the grid lines. Set it to an object with "top", "right", "bottom"
+and "left" properties to use different colors. "minBorderMargin" controls
+the default minimum margin around the border - it's used to make sure
+that points aren't accidentally clipped by the canvas edge so by default
+the value is computed from the point radius.</p>
+<p>"markings" is used to draw simple lines and rectangular areas in the
+background of the plot. You can either specify an array of ranges on
+the form { xaxis: { from, to }, yaxis: { from, to } } (with multiple
+axes, you can specify coordinates for other axes instead, e.g. as
+x2axis/x3axis/...) or with a function that returns such an array given
+the axes for the plot in an object as the first parameter.</p>
+<p>You can set the color of markings by specifying "color" in the ranges
+object. Here's an example array:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">markings</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">xaxis</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kr">from</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">to</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="nx">yaxis</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kr">from</span><span class="o">:</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="nx">to</span><span class="o">:</span><span class="w"> </span><span class="mf">10</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#bb0000&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">]</span><span class="w"></span>
+</code></pre></div>
+<p>If you leave out one of the values, that value is assumed to go to the
+border of the plot. So for example if you only specify { xaxis: {
+from: 0, to: 2 } } it means an area that extends from the top to the
+bottom of the plot in the x range 0-2.</p>
+<p>A line is drawn if from and to are the same, e.g.</p>
+<div class="highlight"><pre><span></span><code><span class="nx">markings</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">yaxis</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kr">from</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">to</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">]</span><span class="w"></span>
+</code></pre></div>
+<p>would draw a line parallel to the x axis at y = 1. You can control the
+line width with "lineWidth" in the range object.</p>
+<p>An example function that makes vertical stripes might look like this:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">markings</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">axes</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">markings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">axes</span><span class="p">.</span><span class="nx">xaxis</span><span class="p">.</span><span class="nx">min</span><span class="p">);</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">axes</span><span class="p">.</span><span class="nx">xaxis</span><span class="p">.</span><span class="nx">max</span><span class="p">;</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mf">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="nx">markings</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span><span class="w"> </span><span class="nx">xaxis</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kr">from</span><span class="o">:</span><span class="w"> </span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">to</span><span class="o">:</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">});</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">markings</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>If you set "clickable" to true, the plot will listen for click events
+on the plot area and fire a "plotclick" event on the placeholder with
+a position and a nearby data item object as parameters. The coordinates
+are available both in the unit of the axes (not in pixels) and in
+global screen coordinates.</p>
+<p>Likewise, if you set "hoverable" to true, the plot will listen for
+mouse move events on the plot area and fire a "plothover" event with
+the same parameters as the "plotclick" event. If "autoHighlight" is
+true (the default), nearby data items are highlighted automatically.
+If needed, you can disable highlighting and control it yourself with
+the highlight/unhighlight plot methods described elsewhere.</p>
+<p>You can use "plotclick" and "plothover" events like this:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">$</span><span class="p">.</span><span class="nx">plot</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#placeholder&quot;</span><span class="p">),</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="nx">d</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">grid</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">clickable</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">});</span><span class="w"></span>
+
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#placeholder&quot;</span><span class="p">).</span><span class="nx">bind</span><span class="p">(</span><span class="s2">&quot;plotclick&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">event</span><span class="p">,</span><span class="w"> </span><span class="nx">pos</span><span class="p">,</span><span class="w"> </span><span class="nx">item</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;You clicked at &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">pos</span><span class="p">.</span><span class="nx">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;, &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">pos</span><span class="p">.</span><span class="nx">y</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// axis coordinates for other axes, if present, are in pos.x2, pos.x3, ...</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// if you need global screen coordinates, they are pos.pageX, pos.pageY</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">item</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">highlight</span><span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">series</span><span class="p">,</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">datapoint</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;You clicked a point!&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">});</span><span class="w"></span>
+</code></pre></div>
+<p>The item object in this example is either null or a nearby object on the form:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">item</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">datapoint</span><span class="o">:</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">point</span><span class="p">,</span><span class="w"> </span><span class="nx">e</span><span class="p">.</span><span class="nx">g</span><span class="p">.</span><span class="w"> </span><span class="p">[</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">]</span><span class="w"></span>
+<span class="w">    </span><span class="nx">dataIndex</span><span class="o">:</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">index</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">point</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="nx">array</span><span class="w"></span>
+<span class="w">    </span><span class="nx">series</span><span class="o">:</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">series</span><span class="w"> </span><span class="nx">object</span><span class="w"></span>
+<span class="w">    </span><span class="nx">seriesIndex</span><span class="o">:</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">index</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">series</span><span class="w"></span>
+<span class="w">    </span><span class="nx">pageX</span><span class="p">,</span><span class="w"> </span><span class="nx">pageY</span><span class="o">:</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nb">global</span><span class="w"> </span><span class="nx">screen</span><span class="w"> </span><span class="nx">coordinates</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">point</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>For instance, if you have specified the data like this </p>
+<div class="highlight"><pre><span></span><code><span class="nx">$</span><span class="p">.</span><span class="nx">plot</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#placeholder&quot;</span><span class="p">),</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">label</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Foo&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="p">[[</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mf">7</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">]]</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="p">...);</span><span class="w"></span>
+</code></pre></div>
+<p>and the mouse is near the point (7, 3), "datapoint" is [7, 3],
+"dataIndex" will be 1, "series" is a normalized series object with
+among other things the "Foo" label in series.label and the color in
+series.color, and "seriesIndex" is 0. Note that plugins and options
+that transform the data can shift the indexes from what you specified
+in the original data array.</p>
+<p>If you use the above events to update some other information and want
+to clear out that info in case the mouse goes away, you'll probably
+also need to listen to "mouseout" events on the placeholder div.</p>
+<p>"mouseActiveRadius" specifies how far the mouse can be from an item
+and still activate it. If there are two or more points within this
+radius, Flot chooses the closest item. For bars, the top-most bar
+(from the latest specified data series) is chosen.</p>
+<p>If you want to disable interactivity for a specific data series, you
+can set "hoverable" and "clickable" to false in the options for that
+series, like this:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="p">[...],</span><span class="w"> </span><span class="nx">label</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Foo&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">clickable</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>"redrawOverlayInterval" specifies the maximum time to delay a redraw
+of interactive things (this works as a rate limiting device). The
+default is capped to 60 frames per second. You can set it to -1 to
+disable the rate limiting.</p>
+<h2 id="specifying-gradients">Specifying gradients</h2>
+<p>A gradient is specified like this:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nx">colors</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="nx">color1</span><span class="p">,</span><span class="w"> </span><span class="nx">color2</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>For instance, you might specify a background on the grid going from
+black to gray like this:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">grid</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">backgroundColor</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">colors</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;#000&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#999&quot;</span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>For the series you can specify the gradient as an object that
+specifies the scaling of the brightness and the opacity of the series
+color, e.g.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nx">colors</span><span class="o">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nx">opacity</span><span class="o">:</span><span class="w"> </span><span class="mf">0.8</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">brightness</span><span class="o">:</span><span class="w"> </span><span class="mf">0.6</span><span class="p">,</span><span class="w"> </span><span class="nx">opacity</span><span class="o">:</span><span class="w"> </span><span class="mf">0.8</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>where the first color simply has its alpha scaled, whereas the second
+is also darkened. For instance, for bars the following makes the bars
+gradually disappear, without outline:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">bars</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">show</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nx">lineWidth</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nx">fill</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nx">fillColor</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">colors</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">opacity</span><span class="o">:</span><span class="w"> </span><span class="mf">0.8</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">opacity</span><span class="o">:</span><span class="w"> </span><span class="mf">0.1</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Flot currently only supports vertical gradients drawn from top to
+bottom because that's what works with IE.</p>
+<h2 id="plot-methods">Plot Methods</h2>
+<p>The Plot object returned from the plot function has some methods you
+can call:</p>
+<ul>
+<li>
+<p>highlight(series, datapoint)</p>
+<p>Highlight a specific datapoint in the data series. You can either
+specify the actual objects, e.g. if you got them from a
+"plotclick" event, or you can specify the indices, e.g.
+highlight(1, 3) to highlight the fourth point in the second series
+(remember, zero-based indexing).</p>
+</li>
+<li>
+<p>unhighlight(series, datapoint) or unhighlight()</p>
+<p>Remove the highlighting of the point, same parameters as
+highlight.</p>
+<p>If you call unhighlight with no parameters, e.g. as
+plot.unhighlight(), all current highlights are removed.</p>
+</li>
+<li>
+<p>setData(data)</p>
+<p>You can use this to reset the data used. Note that axis scaling,
+ticks, legend etc. will not be recomputed (use setupGrid() to do
+that). You'll probably want to call draw() afterwards.</p>
+<p>You can use this function to speed up redrawing a small plot if
+you know that the axes won't change. Put in the new data with
+setData(newdata), call draw(), and you're good to go. Note that
+for large datasets, almost all the time is consumed in draw()
+plotting the data so in this case don't bother.</p>
+</li>
+<li>
+<p>setupGrid()</p>
+<p>Recalculate and set axis scaling, ticks, legend etc.</p>
+<p>Note that because of the drawing model of the canvas, this
+function will immediately redraw (actually reinsert in the DOM)
+the labels and the legend, but not the actual tick lines because
+they're drawn on the canvas. You need to call draw() to get the
+canvas redrawn.</p>
+</li>
+<li>
+<p>draw()</p>
+<p>Redraws the plot canvas.</p>
+</li>
+<li>
+<p>triggerRedrawOverlay()</p>
+<p>Schedules an update of an overlay canvas used for drawing
+interactive things like a selection and point highlights. This
+is mostly useful for writing plugins. The redraw doesn't happen
+immediately, instead a timer is set to catch multiple successive
+redraws (e.g. from a mousemove). You can get to the overlay by
+setting up a drawOverlay hook.</p>
+</li>
+<li>
+<p>width()/height()</p>
+<p>Gets the width and height of the plotting area inside the grid.
+This is smaller than the canvas or placeholder dimensions as some
+extra space is needed (e.g. for labels).</p>
+</li>
+<li>
+<p>offset()</p>
+<p>Returns the offset of the plotting area inside the grid relative
+to the document, useful for instance for calculating mouse
+positions (event.pageX/Y minus this offset is the pixel position
+inside the plot).</p>
+</li>
+<li>
+<p>pointOffset({ x: xpos, y: ypos })</p>
+<p>Returns the calculated offset of the data point at (x, y) in data
+space within the placeholder div. If you are working with multiple
+axes, you can specify the x and y axis references, e.g. </p>
+<p>```js
+  o = pointOffset({ x: xpos, y: ypos, xaxis: 2, yaxis: 3 })
+  // o.left and o.top now contains the offset within the div
+````</p>
+</li>
+<li>
+<p>resize()</p>
+<p>Tells Flot to resize the drawing canvas to the size of the
+placeholder. You need to run setupGrid() and draw() afterwards as
+canvas resizing is a destructive operation. This is used
+internally by the resize plugin.</p>
+</li>
+<li>
+<p>shutdown()</p>
+<p>Cleans up any event handlers Flot has currently registered. This
+is used internally.</p>
+</li>
+</ul>
+<p>There are also some members that let you peek inside the internal
+workings of Flot which is useful in some cases. Note that if you change
+something in the objects returned, you're changing the objects used by
+Flot to keep track of its state, so be careful.</p>
+<ul>
+<li>
+<p>getData()</p>
+<p>Returns an array of the data series currently used in normalized
+form with missing settings filled in according to the global
+options. So for instance to find out what color Flot has assigned
+to the data series, you could do this:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">series</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">plot</span><span class="p">.</span><span class="nx">getData</span><span class="p">();</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">series</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="nx">i</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="nx">series</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">color</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>A notable other interesting field besides color is datapoints
+which has a field "points" with the normalized data points in a
+flat array (the field "pointsize" is the increment in the flat
+array to get to the next point so for a dataset consisting only of
+(x,y) pairs it would be 2).</p>
+</li>
+<li>
+<p>getAxes()</p>
+<p>Gets an object with the axes. The axes are returned as the
+attributes of the object, so for instance getAxes().xaxis is the
+x axis.</p>
+<p>Various things are stuffed inside an axis object, e.g. you could
+use getAxes().xaxis.ticks to find out what the ticks are for the
+xaxis. Two other useful attributes are p2c and c2p, functions for
+transforming from data point space to the canvas plot space and
+back. Both returns values that are offset with the plot offset.
+Check the Flot source code for the complete set of attributes (or
+output an axis with console.log() and inspect it).</p>
+<p>With multiple axes, the extra axes are returned as x2axis, x3axis,
+etc., e.g. getAxes().y2axis is the second y axis. You can check
+y2axis.used to see whether the axis is associated with any data
+points and y2axis.show to see if it is currently shown. </p>
+</li>
+<li>
+<p>getPlaceholder()</p>
+<p>Returns placeholder that the plot was put into. This can be useful
+for plugins for adding DOM elements or firing events.</p>
+</li>
+<li>
+<p>getCanvas()</p>
+<p>Returns the canvas used for drawing in case you need to hack on it
+yourself. You'll probably need to get the plot offset too.</p>
+</li>
+<li>
+<p>getPlotOffset()</p>
+<p>Gets the offset that the grid has within the canvas as an object
+with distances from the canvas edges as "left", "right", "top",
+"bottom". I.e., if you draw a circle on the canvas with the center
+placed at (left, top), its center will be at the top-most, left
+corner of the grid.</p>
+</li>
+<li>
+<p>getOptions()</p>
+<p>Gets the options for the plot, normalized, with default values
+filled in. You get a reference to actual values used by Flot, so
+if you modify the values in here, Flot will use the new values.
+If you change something, you probably have to call draw() or
+setupGrid() or triggerRedrawOverlay() to see the change.</p>
+</li>
+</ul>
+<h2 id="hooks">Hooks</h2>
+<p>In addition to the public methods, the Plot object also has some hooks
+that can be used to modify the plotting process. You can install a
+callback function at various points in the process, the function then
+gets access to the internal data structures in Flot.</p>
+<p>Here's an overview of the phases Flot goes through:</p>
+<ol>
+<li>
+<p>Plugin initialization, parsing options</p>
+</li>
+<li>
+<p>Constructing the canvases used for drawing</p>
+</li>
+<li>
+<p>Set data: parsing data specification, calculating colors,
+     copying raw data points into internal format,
+     normalizing them, finding max/min for axis auto-scaling</p>
+</li>
+<li>
+<p>Grid setup: calculating axis spacing, ticks, inserting tick
+     labels, the legend</p>
+</li>
+<li>
+<p>Draw: drawing the grid, drawing each of the series in turn</p>
+</li>
+<li>
+<p>Setting up event handling for interactive features</p>
+</li>
+<li>
+<p>Responding to events, if any</p>
+</li>
+<li>
+<p>Shutdown: this mostly happens in case a plot is overwritten </p>
+</li>
+</ol>
+<p>Each hook is simply a function which is put in the appropriate array.
+You can add them through the "hooks" option, and they are also available
+after the plot is constructed as the "hooks" attribute on the returned
+plot object, e.g.</p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="c1">// define a simple draw hook</span><span class="w"></span>
+<span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">hellohook</span><span class="p">(</span><span class="nx">plot</span><span class="p">,</span><span class="w"> </span><span class="nx">canvascontext</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;hello!&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">// pass it in, in an array since we might want to specify several</span><span class="w"></span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">plot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">.</span><span class="nx">plot</span><span class="p">(</span><span class="nx">placeholder</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">hooks</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">draw</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">hellohook</span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">});</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">// we can now find it again in plot.hooks.draw[0] unless a plugin</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// has added other hooks</span><span class="w"></span>
+</code></pre></div>
+<p>The available hooks are described below. All hook callbacks get the
+plot object as first parameter. You can find some examples of defined
+hooks in the plugins bundled with Flot.</p>
+<ul>
+<li>
+<p>processOptions  [phase 1]</p>
+<p><code>function(plot, options)</code></p>
+<p>Called after Flot has parsed and merged options. Useful in the
+instance where customizations beyond simple merging of default
+values is needed. A plugin might use it to detect that it has been
+enabled and then turn on or off other options.</p>
+</li>
+<li>
+<p>processRawData  [phase 3]</p>
+<p><code>function(plot, series, data, datapoints)</code></p>
+<p>Called before Flot copies and normalizes the raw data for the given
+series. If the function fills in datapoints.points with normalized
+points and sets datapoints.pointsize to the size of the points,
+Flot will skip the copying/normalization step for this series.</p>
+<p>In any case, you might be interested in setting datapoints.format,
+an array of objects for specifying how a point is normalized and
+how it interferes with axis scaling. It accepts the following options:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="o">:</span><span class="w"> </span><span class="kr">boolean</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nx">number</span><span class="o">:</span><span class="w"> </span><span class="kr">boolean</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nx">required</span><span class="o">:</span><span class="w"> </span><span class="kr">boolean</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nx">defaultValue</span><span class="o">:</span><span class="w"> </span><span class="nx">value</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nx">autoscale</span><span class="o">:</span><span class="w"> </span><span class="kr">boolean</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>"x" and "y" specify whether the value is plotted against the x or y axis,
+and is currently used only to calculate axis min-max ranges. The default
+format array, for example, looks like this:</p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nx">number</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nx">required</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">y</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nx">number</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nx">required</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="p">]</span><span class="w"></span>
+</code></pre></div>
+<p>This indicates that a point, i.e. [0, 25], consists of two values, with the
+first being plotted on the x axis and the second on the y axis.</p>
+<p>If "number" is true, then the value must be numeric, and is set to null if
+it cannot be converted to a number.</p>
+<p>"defaultValue" provides a fallback in case the original value is null. This
+is for instance handy for bars, where one can omit the third coordinate
+(the bottom of the bar), which then defaults to zero.</p>
+<p>If "required" is true, then the value must exist (be non-null) for the
+point as a whole to be valid. If no value is provided, then the entire
+point is cleared out with nulls, turning it into a gap in the series.</p>
+<p>"autoscale" determines whether the value is considered when calculating an
+automatic min-max range for the axes that the value is plotted against.</p>
+</li>
+<li>
+<p>processDatapoints  [phase 3]</p>
+<p><code>function(plot, series, datapoints)</code></p>
+<p>Called after normalization of the given series but before finding
+min/max of the data points. This hook is useful for implementing data
+transformations. "datapoints" contains the normalized data points in
+a flat array as datapoints.points with the size of a single point
+given in datapoints.pointsize. Here's a simple transform that
+multiplies all y coordinates by 2:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">multiply</span><span class="p">(</span><span class="nx">plot</span><span class="p">,</span><span class="w"> </span><span class="nx">series</span><span class="p">,</span><span class="w"> </span><span class="nx">datapoints</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">points</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">datapoints</span><span class="p">.</span><span class="nx">points</span><span class="p">,</span><span class="w"> </span><span class="nx">ps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">datapoints</span><span class="p">.</span><span class="nx">pointsize</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">points</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">ps</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="nx">points</span><span class="p">[</span><span class="nx">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">]</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Note that you must leave datapoints in a good condition as Flot
+doesn't check it or do any normalization on it afterwards.</p>
+</li>
+<li>
+<p>processOffset  [phase 4]</p>
+<p><code>function(plot, offset)</code></p>
+<p>Called after Flot has initialized the plot's offset, but before it
+draws any axes or plot elements. This hook is useful for customizing
+the margins between the grid and the edge of the canvas. "offset" is
+an object with attributes "top", "bottom", "left" and "right",
+corresponding to the margins on the four sides of the plot.</p>
+</li>
+<li>
+<p>drawBackground [phase 5]</p>
+<p><code>function(plot, canvascontext)</code></p>
+<p>Called before all other drawing operations. Used to draw backgrounds
+or other custom elements before the plot or axes have been drawn.</p>
+</li>
+<li>
+<p>drawSeries  [phase 5]</p>
+<p><code>function(plot, canvascontext, series)</code></p>
+<p>Hook for custom drawing of a single series. Called just before the
+standard drawing routine has been called in the loop that draws
+each series.</p>
+</li>
+<li>
+<p>draw  [phase 5]</p>
+<p><code>function(plot, canvascontext)</code></p>
+<p>Hook for drawing on the canvas. Called after the grid is drawn
+(unless it's disabled or grid.aboveData is set) and the series have
+been plotted (in case any points, lines or bars have been turned
+on). For examples of how to draw things, look at the source code.</p>
+</li>
+<li>
+<p>bindEvents  [phase 6]</p>
+<p><code>function(plot, eventHolder)</code></p>
+<p>Called after Flot has setup its event handlers. Should set any
+necessary event handlers on eventHolder, a jQuery object with the
+canvas, e.g.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">plot</span><span class="p">,</span><span class="w"> </span><span class="nx">eventHolder</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">eventHolder</span><span class="p">.</span><span class="nx">mousedown</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;You pressed the mouse at &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">e</span><span class="p">.</span><span class="nx">pageX</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">e</span><span class="p">.</span><span class="nx">pageY</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">});</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Interesting events include click, mousemove, mouseup/down. You can
+use all jQuery events. Usually, the event handlers will update the
+state by drawing something (add a drawOverlay hook and call
+triggerRedrawOverlay) or firing an externally visible event for
+user code. See the crosshair plugin for an example.</p>
+<p>Currently, eventHolder actually contains both the static canvas
+used for the plot itself and the overlay canvas used for
+interactive features because some versions of IE get the stacking
+order wrong. The hook only gets one event, though (either for the
+overlay or for the static canvas).</p>
+<p>Note that custom plot events generated by Flot are not generated on
+eventHolder, but on the div placeholder supplied as the first
+argument to the plot call. You can get that with
+plot.getPlaceholder() - that's probably also the one you should use
+if you need to fire a custom event.</p>
+</li>
+<li>
+<p>drawOverlay  [phase 7]</p>
+<p><code>function (plot, canvascontext)</code></p>
+<p>The drawOverlay hook is used for interactive things that need a
+canvas to draw on. The model currently used by Flot works the way
+that an extra overlay canvas is positioned on top of the static
+canvas. This overlay is cleared and then completely redrawn
+whenever something interesting happens. This hook is called when
+the overlay canvas is to be redrawn.</p>
+<p>"canvascontext" is the 2D context of the overlay canvas. You can
+use this to draw things. You'll most likely need some of the
+metrics computed by Flot, e.g. plot.width()/plot.height(). See the
+crosshair plugin for an example.</p>
+</li>
+<li>
+<p>shutdown  [phase 8]</p>
+<p><code>function (plot, eventHolder)</code></p>
+<p>Run when plot.shutdown() is called, which usually only happens in
+case a plot is overwritten by a new plot. If you're writing a
+plugin that adds extra DOM elements or event handlers, you should
+add a callback to clean up after you. Take a look at the section in
+the <a href="../PLUGINS/">PLUGINS</a> document for more info.</p>
+</li>
+</ul>
+<h2 id="plugins">Plugins</h2>
+<p>Plugins extend the functionality of Flot. To use a plugin, simply
+include its Javascript file after Flot in the HTML page.</p>
+<p>If you're worried about download size/latency, you can concatenate all
+the plugins you use, and Flot itself for that matter, into one big file
+(make sure you get the order right), then optionally run it through a
+Javascript minifier such as YUI Compressor.</p>
+<p>Here's a brief explanation of how the plugin plumbings work:</p>
+<p>Each plugin registers itself in the global array $.plot.plugins. When
+you make a new plot object with $.plot, Flot goes through this array
+calling the "init" function of each plugin and merging default options
+from the "option" attribute of the plugin. The init function gets a
+reference to the plot object created and uses this to register hooks
+and add new public methods if needed.</p>
+<p>See the <a href="../PLUGINS/">PLUGINS</a> document for details on how to write a plugin. As the
+above description hints, it's actually pretty easy.</p>
+<h2 id="version-number">Version number</h2>
+<p>The version number of Flot is available in <code>$.plot.version</code>.</p>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 IBM
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../../../../..", "features": [], "search": "../../../../../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../../../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+    
+  </body>
+</html>

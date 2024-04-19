@@ -1,0 +1,1306 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>Advanced Functions - Watson's Great Outdoors</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"IBM Plex Sans";--md-code-font:"IBM Plex Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="black">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#advanced-functions" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Watson&#39;s Great Outdoors" class="md-header__button md-logo" aria-label="Watson's Great Outdoors" data-md-component="logo">
+      
+  <img src="../wxd-images/IBM_logo®_rev_RGB.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Watson's Great Outdoors
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Advanced Functions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Watson&#39;s Great Outdoors" class="md-nav__button md-logo" aria-label="Watson's Great Outdoors" data-md-component="logo">
+      
+  <img src="../wxd-images/IBM_logo®_rev_RGB.png" alt="logo">
+
+    </a>
+    Watson's Great Outdoors
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          Watson's Great Outdoors POC
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Watson's Great Outdoors POC" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Watson's Great Outdoors POC
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../watsons-introduction/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../watsons-objectives/" class="md-nav__link">
+        Proof-of-Concept Objectives
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../watsons-migration/" class="md-nav__link">
+        Migration Requirements
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../watsons-architecture/" class="md-nav__link">
+        Architecture and Technology
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../watsons-testing/" class="md-nav__link">
+        Proof of Concept Tests
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../watsons-performance/" class="md-nav__link">
+        Performance Metrics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../watsons-report/" class="md-nav__link">
+        Final Report
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-milvus/" class="md-nav__link">
+        Watsonx Cross Platform Demonstration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../watsons-conclusion/" class="md-nav__link">
+        Conclusion
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_10" type="checkbox" id="__nav_1_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_10">
+          Appendices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Appendices" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_10">
+          <span class="md-nav__icon md-icon"></span>
+          Appendices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../watsons-fileinfo/" class="md-nav__link">
+        File Information
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../watsons-database/" class="md-nav__link">
+        Database and Table Sizes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../watsons-objects/" class="md-nav__link">
+        Object Definitions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../watsons-queries/" class="md-nav__link">
+        Query Definitions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-datasets-gosales/" class="md-nav__link">
+        Dataset Details
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../watsons-database-validation/" class="md-nav__link">
+        Database Validation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../watsons-jmeter/" class="md-nav__link">
+        JMeter Test Plan and Results
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../watsons-registration/" class="md-nav__link">
+        Proof-of-Concept Registration
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          POC Image Details
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="POC Image Details" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          POC Image Details
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-intro/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-reference-techzone/" class="md-nav__link">
+        Requesting an image
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-reference-access/" class="md-nav__link">
+        Accessing the reservation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-reference-ports/" class="md-nav__link">
+        Available Ports
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-reference-vnc/" class="md-nav__link">
+        VM Remote Console
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-reference-ssh/" class="md-nav__link">
+        SSH and SCP Commands
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-reference-passwords/" class="md-nav__link">
+        Userids and Passwords
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-reference-shortcuts/" class="md-nav__link">
+        Useful Commands
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-certificate/" class="md-nav__link">
+        Watsonx.data Certificates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-reference-documentation/" class="md-nav__link">
+        Documentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-lab-instructions/" class="md-nav__link">
+        Lab Conventions and Startup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_12" type="checkbox" id="__nav_3_12" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_12">
+          Core Components
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Core Components" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_12">
+          <span class="md-nav__icon md-icon"></span>
+          Core Components
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-prestocli/" class="md-nav__link">
+        Presto CLI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-watsonui/" class="md-nav__link">
+        watsonx.data UI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-presto/" class="md-nav__link">
+        Presto UI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-minio/" class="md-nav__link">
+        MinIO UI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_12_5" type="checkbox" id="__nav_3_12_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_12_5">
+          Presto SQL
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Presto SQL" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_12_5">
+          <span class="md-nav__icon md-icon"></span>
+          Presto SQL
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-analytics/" class="md-nav__link">
+        Analytic Workloads
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Advanced Functions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Advanced Functions
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#concatenation-of-one-or-more-stringvarchar-values" class="md-nav__link">
+    Concatenation of one or more string/varchar values
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#date-functions" class="md-nav__link">
+    Date functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geospatial-functions" class="md-nav__link">
+    Geospatial functions
+  </a>
+  
+    <nav class="md-nav" aria-label="Geospatial functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#points" class="md-nav__link">
+    Points
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lines" class="md-nav__link">
+    Lines
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#polygons" class="md-nav__link">
+    Polygons
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-timetravel/" class="md-nav__link">
+        Time Travel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-federation/" class="md-nav__link">
+        Federation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-systemconnector/" class="md-nav__link">
+        System Connector
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-reference-portainer/" class="md-nav__link">
+        Portainer Console
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wxd-jupyter/" class="md-nav__link">
+        Jupyter Notebook
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#concatenation-of-one-or-more-stringvarchar-values" class="md-nav__link">
+    Concatenation of one or more string/varchar values
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#date-functions" class="md-nav__link">
+    Date functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geospatial-functions" class="md-nav__link">
+    Geospatial functions
+  </a>
+  
+    <nav class="md-nav" aria-label="Geospatial functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#points" class="md-nav__link">
+    Points
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lines" class="md-nav__link">
+    Lines
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#polygons" class="md-nav__link">
+    Polygons
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="advanced-functions">Advanced Functions</h1>
+<p>Watsonx.data supports several types of functions including:</p>
+<ul>
+<li>Mathematical functions</li>
+<li>Conversion functions</li>
+<li>String functions</li>
+<li>Regular expression functions</li>
+<li>Window functions</li>
+<li>URL functions</li>
+<li>Geospatial functions </li>
+</ul>
+<p>For a complete list see - <a href="https://prestodb.io/docs/current/functions.html">https://prestodb.io/docs/current/functions.html</a>. We will look at using a few simple examples as part of this lab.</p>
+<p>Switch to the bin directory.</p>
+<p><div class="highlight"><pre><span></span><code>cd /root/ibm-lh-dev/bin
+</code></pre></div>
+Connect to the Workshop Schema.
+<div class="highlight"><pre><span></span><code>./presto-cli --catalog iceberg_data --schema workshop
+</code></pre></div></p>
+<h3 id="concatenation-of-one-or-more-stringvarchar-values">Concatenation of one or more string/varchar values</h3>
+<p>Note: We are using a combination of the “concat” string function and the “cast” conversion function as part of this query.
+<div class="highlight"><pre><span></span><code>select 
+   concat(cast(custkey as varchar),&#39;--&#39;,name) 
+from 
+   customer
+limit 2;
+</code></pre></div></p>
+<pre style="font-size: small; color: darkgreen; overflow: auto">
+          _col0          
+-------------------------
+ 376--Customer#000000376 
+ 377--Customer#000000377 
+(2 rows)
+</pre>
+<h3 id="date-functions">Date functions</h3>
+<p>Date functions can be used as part of the projected columns or in the predicate/where clause.
+Select orders from the last 2 days.
+<div class="highlight"><pre><span></span><code>select
+   orderdate 
+from 
+   orders 
+where 
+   orderdate &gt;  date &#39;1998-08-02&#39; - interval &#39;2&#39; day;
+</code></pre></div></p>
+<pre style="font-size: small; color: darkgreen; overflow: auto">
+ orderdate  
+------------
+ 1998-08-02 
+ 1998-08-02 
+ 1998-08-01 
+ 1998-08-01 
+ 1998-08-02 
+ 1998-08-01 
+ 1998-08-01 
+ 1998-08-01 
+ 1998-08-02 
+ 1998-08-02 
+ 1998-08-02 
+ 1998-08-02 
+(12 rows)
+</pre>
+<p>Number of orders by year.
+<div class="highlight"><pre><span></span><code>select 
+   distinct year(orderdate), count(orderkey) 
+from 
+   orders 
+group by 
+   year(orderdate);
+</code></pre></div></p>
+<pre style="font-size: small; color: darkgreen; overflow: auto">
+ _col0 | _col1 
+-------+-------
+  1993 |  2307 
+  1994 |  2303 
+  1998 |  1346 
+  1996 |  2297 
+  1995 |  2204 
+  1992 |  2256 
+  1997 |  2287 
+(7 rows)
+</pre>
+<h3 id="geospatial-functions">Geospatial functions</h3>
+<p>There are 3 basic geometries, then some complex geometries. The basic geometries include:</p>
+<ul>
+<li>Points</li>
+<li>Lines</li>
+<li>Polygons</li>
+</ul>
+<h4 id="points">Points</h4>
+<p>You could use <a href="https://www.latlong.net">https://www.latlong.net</a> to get the longitude/latitude given any address.
+<div class="highlight"><pre><span></span><code>select 
+   ST_Point(-121.748360,37.195840) as SVL, 
+   ST_Point(-122.378952, 37.621311) as SFO;
+</code></pre></div></p>
+<pre style="font-size: small; color: darkgreen; overflow: auto">
+             SVL             |              SFO              
+-----------------------------+-------------------------------
+ POINT (-121.74836 37.19584) | POINT (-122.378952 37.621311) 
+(1 row)
+</pre>
+
+<h4 id="lines">Lines</h4>
+<p>You could use <a href="https://www.latlong.net">https://www.latlong.net</a> to get the longitude/latitude for 2 points and then create a straight line from it. Below is just a small stretch of the road leading to IBM SVL campus.
+<div class="highlight"><pre><span></span><code>select 
+   ST_LineFromText(&#39;LINESTRING (-121.74294303079807 37.19665657093434, -121.73659072815602 37.20102399761407)&#39;);
+</code></pre></div></p>
+<pre style="font-size: small; color: darkgreen; overflow: auto">
+                                           _col0                                           
+-------------------------------------------------------------------------------------------
+ LINESTRING (-121.74294303079807 37.19665657093434, -121.73659072815602 37.20102399761407) 
+(1 row)
+</pre>
+<h4 id="polygons">Polygons</h4>
+<p>You could use <a href="https://geojson.io/#map=16.39/37.196336/-121.746303">https://geojson.io/#map=16.39/37.196336/-121.746303</a> to click around and generate the coordinates for a polygon of any shape. The following is a polygon of the IBM Silicon Valley campus.
+<div class="highlight"><pre><span></span><code>select ST_Polygon(&#39;POLYGON (
+   (-121.74418635253568 37.196001834113844, 
+    -121.74499684288966 37.19668005184322,
+    -121.74584008032835 37.19707784979194,  
+    -121.74629035274705 37.197645197338105, 
+    -121.74672425162339 37.198186455965086, 
+    -121.74705172247337 37.19828427337538, 
+    -121.74760023614738 37.19827775221884,  
+    -121.74848440744239 37.19836252721197, 
+    -121.74932764488139 37.19789300297414,  
+    -121.75039192514376 37.19746260319114, 
+    -121.75130884352407 37.19721479614175, 
+    -121.75195559845278 37.1963670290329, 
+    -121.75198015876644 37.19555185937345,  
+    -121.7508585711051 37.19458016564036, 
+    -121.74940132582242 37.19447582194559,  
+    -121.74841891327239 37.1942866986312,
+    -121.7474446874937 37.193556286900346, 
+    -121.74418635253568 37.196001834113844))&#39;);
+</code></pre></div></p>
+<pre style="font-size: small; color: darkgreen; overflow: auto">
+Truncated output
+------------------------------------------------------------------------------------------------------------------------------------------------------>
+ POLYGON ((-121.74418635253568 37.196001834113844, -121.74499684288966 37.19668005184322, -121.74584008032835 37.19707784979194, -121.74629035274705 3>
+(1 row)
+</pre>
+<p>So now that we have 3 basic geometries Point, Line and Polygon we can perform different operations on spatial data including:</p>
+<ul>
+<li>Distance between 2 points</li>
+<li>Point in polygon</li>
+<li>Intersection of line and polygon
+ 
+Distance between SFO airport and IBM SVL</li>
+</ul>
+<p>We can now use geospatial functions in a nested way to find the distance between 2 points.
+<div class="highlight"><pre><span></span><code>select 
+   ST_Distance(to_spherical_geography(ST_Point(-122.378952, 37.621311)), 
+   to_spherical_geography(ST_Point(-121.748360,37.195840)))*0.000621371 as distance_in_miles;
+</code></pre></div></p>
+<pre style="font-size: small; color: darkgreen; overflow: auto">
+distance_in_miles  
+--------------------
+ 45.408431373195654 
+(1 row)
+</pre>
+
+<p>Exit Presto.
+<div class="highlight"><pre><span></span><code>quit;
+</code></pre></div></p>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../wxd-analytics/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Analytic Workloads" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Analytic Workloads
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../wxd-timetravel/" class="md-footer__link md-footer__link--next" aria-label="Next: Time Travel" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Time Travel
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 IBM
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+    
+  </body>
+</html>

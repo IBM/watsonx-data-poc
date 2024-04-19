@@ -1,0 +1,1162 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>[Bootstrap](http://getbootstrap.com) - Watson's Great Outdoors</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"IBM Plex Sans";--md-code-font:"IBM Plex Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="black">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#bootstrap" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Watson&#39;s Great Outdoors" class="md-header__button md-logo" aria-label="Watson's Great Outdoors" data-md-component="logo">
+      
+  <img src="../../../../../wxd-images/IBM_logo®_rev_RGB.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Watson's Great Outdoors
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              [Bootstrap](http://getbootstrap.com)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Watson&#39;s Great Outdoors" class="md-nav__button md-logo" aria-label="Watson's Great Outdoors" data-md-component="logo">
+      
+  <img src="../../../../../wxd-images/IBM_logo®_rev_RGB.png" alt="logo">
+
+    </a>
+    Watson's Great Outdoors
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          Watson's Great Outdoors POC
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Watson's Great Outdoors POC" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Watson's Great Outdoors POC
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../watsons-introduction/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../watsons-objectives/" class="md-nav__link">
+        Proof-of-Concept Objectives
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../watsons-migration/" class="md-nav__link">
+        Migration Requirements
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../watsons-architecture/" class="md-nav__link">
+        Architecture and Technology
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../watsons-testing/" class="md-nav__link">
+        Proof of Concept Tests
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../watsons-performance/" class="md-nav__link">
+        Performance Metrics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../watsons-report/" class="md-nav__link">
+        Final Report
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../wxd-milvus/" class="md-nav__link">
+        Watsonx Cross Platform Demonstration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../watsons-conclusion/" class="md-nav__link">
+        Conclusion
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_10" type="checkbox" id="__nav_1_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_10">
+          Appendices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Appendices" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_10">
+          <span class="md-nav__icon md-icon"></span>
+          Appendices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../watsons-fileinfo/" class="md-nav__link">
+        File Information
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../watsons-database/" class="md-nav__link">
+        Database and Table Sizes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../watsons-objects/" class="md-nav__link">
+        Object Definitions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../watsons-queries/" class="md-nav__link">
+        Query Definitions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../wxd-datasets-gosales/" class="md-nav__link">
+        Dataset Details
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../watsons-database-validation/" class="md-nav__link">
+        Database Validation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../watsons-jmeter/" class="md-nav__link">
+        JMeter Test Plan and Results
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../watsons-registration/" class="md-nav__link">
+        Proof-of-Concept Registration
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          POC Image Details
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="POC Image Details" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          POC Image Details
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../wxd-intro/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../wxd-reference-techzone/" class="md-nav__link">
+        Requesting an image
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../wxd-reference-access/" class="md-nav__link">
+        Accessing the reservation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../wxd-reference-ports/" class="md-nav__link">
+        Available Ports
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../wxd-reference-vnc/" class="md-nav__link">
+        VM Remote Console
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../wxd-reference-ssh/" class="md-nav__link">
+        SSH and SCP Commands
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../wxd-reference-passwords/" class="md-nav__link">
+        Userids and Passwords
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../wxd-reference-shortcuts/" class="md-nav__link">
+        Useful Commands
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../wxd-certificate/" class="md-nav__link">
+        Watsonx.data Certificates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../wxd-reference-documentation/" class="md-nav__link">
+        Documentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../wxd-lab-instructions/" class="md-nav__link">
+        Lab Conventions and Startup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_12" type="checkbox" id="__nav_3_12" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_12">
+          Core Components
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Core Components" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_12">
+          <span class="md-nav__icon md-icon"></span>
+          Core Components
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../wxd-prestocli/" class="md-nav__link">
+        Presto CLI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../wxd-watsonui/" class="md-nav__link">
+        watsonx.data UI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../wxd-presto/" class="md-nav__link">
+        Presto UI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../wxd-minio/" class="md-nav__link">
+        MinIO UI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_12_5" type="checkbox" id="__nav_3_12_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_12_5">
+          Presto SQL
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Presto SQL" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_12_5">
+          <span class="md-nav__icon md-icon"></span>
+          Presto SQL
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../wxd-analytics/" class="md-nav__link">
+        Analytic Workloads
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../wxd-advanced/" class="md-nav__link">
+        Advanced Functions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../wxd-timetravel/" class="md-nav__link">
+        Time Travel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../wxd-federation/" class="md-nav__link">
+        Federation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../wxd-systemconnector/" class="md-nav__link">
+        System Connector
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../wxd-reference-portainer/" class="md-nav__link">
+        Portainer Console
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../wxd-jupyter/" class="md-nav__link">
+        Jupyter Notebook
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    Table of contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start" class="md-nav__link">
+    Quick start
+  </a>
+  
+    <nav class="md-nav" aria-label="Quick start">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#whats-included" class="md-nav__link">
+    What's included
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bugs-and-feature-requests" class="md-nav__link">
+    Bugs and feature requests
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    Documentation
+  </a>
+  
+    <nav class="md-nav" aria-label="Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#running-documentation-locally" class="md-nav__link">
+    Running documentation locally
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentation-for-previous-releases" class="md-nav__link">
+    Documentation for previous releases
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributing" class="md-nav__link">
+    Contributing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#community" class="md-nav__link">
+    Community
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#versioning" class="md-nav__link">
+    Versioning
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creators" class="md-nav__link">
+    Creators
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#copyright-and-license" class="md-nav__link">
+    Copyright and license
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="bootstrap"><a href="http://getbootstrap.com">Bootstrap</a></h1>
+<p><img alt="Bower version" src="https://img.shields.io/bower/v/bootstrap.svg?style=flat" />
+<a href="https://www.npmjs.com/package/bootstrap"><img alt="npm version" src="https://img.shields.io/npm/v/bootstrap.svg?style=flat" /></a>
+<a href="https://travis-ci.org/twbs/bootstrap"><img alt="Build Status" src="https://img.shields.io/travis/twbs/bootstrap/master.svg?style=flat" /></a>
+<a href="https://david-dm.org/twbs/bootstrap#info=devDependencies"><img alt="devDependency Status" src="https://img.shields.io/david/dev/twbs/bootstrap.svg?style=flat" /></a>
+<a href="https://saucelabs.com/u/bootstrap"><img alt="Selenium Test Status" src="https://saucelabs.com/browser-matrix/bootstrap.svg" /></a></p>
+<p>Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development, created by <a href="https://twitter.com/mdo">Mark Otto</a> and <a href="https://twitter.com/fat">Jacob Thornton</a>, and maintained by the <a href="https://github.com/orgs/twbs/people">core team</a> with the massive support and involvement of the community.</p>
+<p>To get started, check out <a href="http://getbootstrap.com">http://getbootstrap.com</a>!</p>
+<h2 id="table-of-contents">Table of contents</h2>
+<ul>
+<li><a href="#quick-start">Quick start</a></li>
+<li><a href="#bugs-and-feature-requests">Bugs and feature requests</a></li>
+<li><a href="#documentation">Documentation</a></li>
+<li><a href="#contributing">Contributing</a></li>
+<li><a href="#community">Community</a></li>
+<li><a href="#versioning">Versioning</a></li>
+<li><a href="#creators">Creators</a></li>
+<li><a href="#copyright-and-license">Copyright and license</a></li>
+</ul>
+<h2 id="quick-start">Quick start</h2>
+<p>Five quick start options are available:</p>
+<ul>
+<li><a href="https://github.com/twbs/bootstrap/archive/v3.3.4.zip">Download the latest release</a>.</li>
+<li>Clone the repo: <code>git clone https://github.com/twbs/bootstrap.git</code>.</li>
+<li>Install with <a href="http://bower.io">Bower</a>: <code>bower install bootstrap</code>.</li>
+<li>Install with <a href="https://www.npmjs.com">npm</a>: <code>npm install bootstrap</code>.</li>
+<li>Install with <a href="https://www.meteor.com/">Meteor</a>: <code>meteor add twbs:bootstrap</code>.</li>
+</ul>
+<p>Read the <a href="http://getbootstrap.com/getting-started/">Getting started page</a> for information on the framework contents, templates and examples, and more.</p>
+<h3 id="whats-included">What's included</h3>
+<p>Within the download you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations. You'll see something like this:</p>
+<div class="highlight"><pre><span></span><code>bootstrap/
+├── css/
+│   ├── bootstrap.css
+│   ├── bootstrap.css.map
+│   ├── bootstrap.min.css
+│   ├── bootstrap-theme.css
+│   ├── bootstrap-theme.css.map
+│   └── bootstrap-theme.min.css
+├── js/
+│   ├── bootstrap.js
+│   └── bootstrap.min.js
+└── fonts/
+    ├── glyphicons-halflings-regular.eot
+    ├── glyphicons-halflings-regular.svg
+    ├── glyphicons-halflings-regular.ttf
+    ├── glyphicons-halflings-regular.woff
+    └── glyphicons-halflings-regular.woff2
+</code></pre></div>
+<p>We provide compiled CSS and JS (<code>bootstrap.*</code>), as well as compiled and minified CSS and JS (<code>bootstrap.min.*</code>). CSS <a href="https://developers.google.com/chrome-developer-tools/docs/css-preprocessors">source maps</a> (<code>bootstrap.*.map</code>) are available for use with certain browsers' developer tools. Fonts from Glyphicons are included, as is the optional Bootstrap theme.</p>
+<h2 id="bugs-and-feature-requests">Bugs and feature requests</h2>
+<p>Have a bug or a feature request? Please first read the <a href="https://github.com/twbs/bootstrap/blob/master/CONTRIBUTING.md#using-the-issue-tracker">issue guidelines</a> and search for existing and closed issues. If your problem or idea is not addressed yet, <a href="https://github.com/twbs/bootstrap/issues/new">please open a new issue</a>.</p>
+<h2 id="documentation">Documentation</h2>
+<p>Bootstrap's documentation, included in this repo in the root directory, is built with <a href="http://jekyllrb.com">Jekyll</a> and publicly hosted on GitHub Pages at <a href="http://getbootstrap.com">http://getbootstrap.com</a>. The docs may also be run locally.</p>
+<h3 id="running-documentation-locally">Running documentation locally</h3>
+<ol>
+<li>If necessary, <a href="http://jekyllrb.com/docs/installation">install Jekyll</a> (requires v2.5.x).</li>
+<li><strong>Windows users:</strong> Read <a href="http://jekyll-windows.juthilo.com/">this unofficial guide</a> to get Jekyll up and running without problems.</li>
+<li>Install the Ruby-based syntax highlighter, <a href="https://github.com/jneen/rouge">Rouge</a>, with <code>gem install rouge</code>.</li>
+<li>From the root <code>/bootstrap</code> directory, run <code>jekyll serve</code> in the command line.</li>
+<li>Open <a href="http://localhost:9001">http://localhost:9001</a> in your browser, and voilà.</li>
+</ol>
+<p>Learn more about using Jekyll by reading its <a href="http://jekyllrb.com/docs/home/">documentation</a>.</p>
+<h3 id="documentation-for-previous-releases">Documentation for previous releases</h3>
+<p>Documentation for v2.3.2 has been made available for the time being at <a href="http://getbootstrap.com/2.3.2/">http://getbootstrap.com/2.3.2/</a> while folks transition to Bootstrap 3.</p>
+<p><a href="https://github.com/twbs/bootstrap/releases">Previous releases</a> and their documentation are also available for download.</p>
+<h2 id="contributing">Contributing</h2>
+<p>Please read through our <a href="https://github.com/twbs/bootstrap/blob/master/CONTRIBUTING.md">contributing guidelines</a>. Included are directions for opening issues, coding standards, and notes on development.</p>
+<p>Moreover, if your pull request contains JavaScript patches or features, you must include <a href="https://github.com/twbs/bootstrap/tree/master/js/tests">relevant unit tests</a>. All HTML and CSS should conform to the <a href="https://github.com/mdo/code-guide">Code Guide</a>, maintained by <a href="https://github.com/mdo">Mark Otto</a>.</p>
+<p>Editor preferences are available in the <a href="https://github.com/twbs/bootstrap/blob/master/.editorconfig">editor config</a> for easy use in common text editors. Read more and download plugins at <a href="http://editorconfig.org">http://editorconfig.org</a>.</p>
+<h2 id="community">Community</h2>
+<p>Keep track of development and community news.</p>
+<ul>
+<li>Follow <a href="https://twitter.com/getbootstrap">@getbootstrap on Twitter</a>.</li>
+<li>Read and subscribe to <a href="http://blog.getbootstrap.com">The Official Bootstrap Blog</a>.</li>
+<li>Chat with fellow Bootstrappers in IRC. On the <code>irc.freenode.net</code> server, in the <code>##bootstrap</code> channel.</li>
+<li>Implementation help may be found at Stack Overflow (tagged <a href="http://stackoverflow.com/questions/tagged/twitter-bootstrap-3"><code>twitter-bootstrap-3</code></a>).</li>
+<li>Developers should use the keyword <code>bootstrap</code> on packages which modify or add to the functionality of Bootstrap when distributing through <a href="https://www.npmjs.com/browse/keyword/bootstrap">npm</a> or similar delivery mechanisms for maximum discoverability.</li>
+</ul>
+<h2 id="versioning">Versioning</h2>
+<p>For transparency into our release cycle and in striving to maintain backward compatibility, Bootstrap is maintained under <a href="http://semver.org/">the Semantic Versioning guidelines</a>. Sometimes we screw up, but we'll adhere to those rules whenever possible.</p>
+<h2 id="creators">Creators</h2>
+<p><strong>Mark Otto</strong></p>
+<ul>
+<li><a href="https://twitter.com/mdo">https://twitter.com/mdo</a></li>
+<li><a href="https://github.com/mdo">https://github.com/mdo</a></li>
+</ul>
+<p><strong>Jacob Thornton</strong></p>
+<ul>
+<li><a href="https://twitter.com/fat">https://twitter.com/fat</a></li>
+<li><a href="https://github.com/fat">https://github.com/fat</a></li>
+</ul>
+<h2 id="copyright-and-license">Copyright and license</h2>
+<p>Code and documentation copyright 2011-2015 Twitter, Inc. Code released under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">the MIT license</a>. Docs released under <a href="https://github.com/twbs/bootstrap/blob/master/docs/LICENSE">Creative Commons</a>.</p>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 IBM
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": [], "search": "../../../../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+    
+  </body>
+</html>
