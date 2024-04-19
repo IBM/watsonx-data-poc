@@ -13,7 +13,7 @@ you have logged in, you should see the following.
  
 Select the Environment tab on the far-left side. 
 
-**Note**: There may be more than one environment available. Choose the **IBM watsonx.data Development POC R1M1**. The version number may change as newer versions of watsonx.data are released. Make sure to sure to select the **POC** image and not the standard Developer edition versions.
+**Note**: There may be more than one environment available. Choose the **IBM watsonx.data Development POC R1M3** or higher. The version number may change as newer versions of watsonx.data are released. Make sure to select the **POC** image and not the standard Developer edition versions.
 
 ![Browser](wxd-images/techzone-environment.png)
  
@@ -32,13 +32,13 @@ For “Purpose” select Self Education. This will expand to request additional 
 Fill in the purpose field with something meaningful (watsonx.data
 education). Next select preferred Geography for the image. 
 
-**Note:** The data centers and geographies available will change over time. The current release is only available in the Americas (WDC04 data center).
+**Note:** The data centers and geographies available will change over time. 
 
 ![Browser](wxd-images/techzone-region.png)
 
 Choose any of the regions that are closest to your location. 
 
-**Note**: The TechZone scheduler will pick a location in your region that has capacity to deploy your image. Previously you needed to pick a physical location (DAL10, WDC04, TOK02, etc...). The number of locations has expanded to 4 North American, 4 European and 2 AP locations which will hopefully provide more capacity to deploy the lab.
+**Note**: The TechZone scheduler will pick a location in your region that has capacity to deploy your image. Previously you needed to pick a physical location (DAL10, WDC04, TOK02, etc...). The number of locations has increased which will hopefully provide more capacity to deploy the lab.
 
 If you find that your reservation is not being provisioned, check the status of the TechZone environment by referring to the TechZone status page at <a href="https://techzone.status.io" target="_blank">https://techzone.status.io</a>.
 

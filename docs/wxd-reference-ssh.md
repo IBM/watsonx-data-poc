@@ -50,7 +50,7 @@ Press the browser "refresh" button, and you should see the login prompt.
 
 !!! note "Patience!"
 
-    Sometimes it takes a few "refresh" commands to get the login prompt to display. It may take 5-6 attempts before it wakes up. Don't give up too soon! It will eventually display the login prompt. 
+    Sometimes it takes a few "refresh" commands to get the login prompt to display. It may take 5-6 attempts before it wakes up. Don't give up too soon! It will eventually display the login prompt. Mac OSX users should use Chrome or Firefox when using this feature. Safari does not render the logon screen properly.
 
 The userid is `watsonx` and the password is `watsonx.data`. You are now using a terminal session inside the watsonx.data server. 
 
