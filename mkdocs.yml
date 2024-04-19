@@ -10,8 +10,8 @@ nav:
     - Proof of Concept Tests: "watsons-testing.md"
  #   - Proof of Concept Tests: "watsons-poc-tests.md"
     - Performance Metrics: "watsons-performance.md"
-    - Final Report: "watsons-report.md"
     - Watsonx Cross Platform Demonstration: "wxd-milvus.md"    
+    - Final Report: "watsons-report.md"
     - Conclusion: "watsons-conclusion.md"
     - Appendices:
       - File Information: "watsons-fileinfo.md"
