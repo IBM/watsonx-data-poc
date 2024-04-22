@@ -8,7 +8,7 @@ The following details the tests to be performance by each vendor.
 ## JDBC Connectivity
 ### Connectivity Test
 * Ensure seamless communication between the data lakehouse and external tools through JDBC connections.
-* Demonstrate DBeaver connectivity to the data lakehouse and execute one query from each category (simple, medium, complex).
+* Demonstrate DBeaver connectivity to the data lakehouse and execute one query from each category (simple, intermediate, complex).
 
 ### Connectivity Results
 * Provide details on the process to establish connectivity.

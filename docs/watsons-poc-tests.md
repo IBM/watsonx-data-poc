@@ -13,7 +13,7 @@ The following test are to be executed during the proof-of-concept.
 ## JDBC Connectivity
 ### Connectivity Test
 * Ensure seamless communication between the data lakehouse and external tools through JDBC connections.
-* Demonstrate DBeaver connectivity to the data lakehouse and execute one query from each category (simple, medium, complex).
+* Demonstrate DBeaver connectivity to the data lakehouse and execute one query from each category (simple, intermediate, complex).
 
 ### Connectivity Results
 * Provide details on the process to establish connectivity.
