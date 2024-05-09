@@ -9,7 +9,18 @@ The following control files contain the information required to run JMeter tests
     The settings in the testplans below were built for the original data warehouse. You will need to modify the values in the test plan to match your watsonx.data configuration.
 
 * [JMeter Serial Testplan](./wxd-files/watsons-serial-testplan-netezza.jmx)
+
+!!! abstract "Download JMeter Serial Testplan"
+    ```bash
+    wget https://ibm.github.io/watsonx-data-poc/wxd-files/watsons-serial-testplan-netezza.jmx -O watsons-serial-testplan-netezza.jmx
+    ```
+
 * [Jmeter Concurrent Testplan](./wxd-files/watsons-concur-testplan-netezza.jmx)
+
+!!! abstract "Download JMeter Concurrent Testplan"
+    ```bash
+    wget https://ibm.github.io/watsonx-data-poc/wxd-files/watsons-concur-testplan-netezza.jmx -O watsons-concur-testplan-netezza.jmx
+    ```
 
 ## Watsons JMeter Results
 
