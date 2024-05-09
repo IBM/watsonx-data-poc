@@ -10,11 +10,19 @@ This model contains financial, human resources, and sales and marketing informat
 The DDL file can be downloaded with the following URL: 
 [Watsons Go DDL](wxd-files/watsons-go.sql)
 
+Alternatively, use the following command to save the file inside your image.
+
+!!! abstract "Download Watsons Go DDL"
+    ```bash
+    wget https://ibm.github.io/watsonx-data-poc/wxd-files/watsons-go.sql -O watsons-go.sql
+    ```
+
 The data to load into the tables can be found in the following URL:
 [Watsons Go Data](wxd-files/watsons-go-pocdata.tar.gz)
 
 If you want to load the data directly in your virtual machine, use the following command in a terminal shell. Change the name of the output file with the `-O` option. 
 
-```
-wget https://ibm.github.io/watsonx-data-poc/wxd-files/watsons-go-pocdata.tar.gz -O pocdata.tar.gz
-```
+!!! abstract "Download Watsons Go Data"
+    ```bash
+    wget https://ibm.github.io/watsonx-data-poc/wxd-files/watsons-go-pocdata.tar.gz -O pocdata.tar.gz
+    ```

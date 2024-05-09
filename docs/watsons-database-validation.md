@@ -4,6 +4,11 @@
 
 You can validate that you have the correct number of rows in your database by using the notebook found in the following link: [Validation Notebook](./wxd-files/Verify.ipynb).
 
+!!! abstract "Download Verification Notebook"
+    ```bash
+    wget https://ibm.github.io/watsonx-data-poc/wxd-files/Verify.ipynb -O Verify.ipynb
+    ```
+
 Alternatively, you can run the following SQL to check your files sizes. You must replace the `{schema}` value with the schema that you stored the tables in.
 
 ```sql

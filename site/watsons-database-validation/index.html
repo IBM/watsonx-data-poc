@@ -465,6 +465,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../watsons-utilities/" class="md-nav__link">
+        POC Utilities
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -936,6 +950,11 @@
 <p><img alt="Watsons" src="../wxd-images/watsons-go-logo-small.png" /></p>
 <h1 id="appendix-f-database-validation">Appendix F - Database Validation</h1>
 <p>You can validate that you have the correct number of rows in your database by using the notebook found in the following link: <a href="../wxd-files/Verify.ipynb">Validation Notebook</a>.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Download Verification Notebook</p>
+<div class="highlight"><pre><span></span><code>wget https://ibm.github.io/watsonx-data-poc/wxd-files/Verify.ipynb -O Verify.ipynb
+</code></pre></div>
+</div>
 <p>Alternatively, you can run the following SQL to check your files sizes. You must replace the <code>{schema}</code> value with the schema that you stored the tables in.</p>
 <div class="highlight"><pre><span></span><code><span class="k">WITH</span><span class="w"> </span><span class="n">TABLES</span><span class="p">(</span><span class="k">TABLE_NAME</span><span class="p">,</span><span class="w"> </span><span class="n">EXPECTED_ROWS</span><span class="p">,</span><span class="w"> </span><span class="n">ACTUAL_ROWS</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"></span>
 <span class="w">  </span><span class="p">(</span><span class="w"></span>
