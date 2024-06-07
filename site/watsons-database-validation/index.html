@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#appendix-f-database-validation" class="md-skip">
+        <a href="#appendix-f-database-and-table-validation" class="md-skip">
           Skip to content
         </a>
       
@@ -442,9 +442,47 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Database Validation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Database Validation
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#database-validation" class="md-nav__link">
+    Database Validation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#table-validation" class="md-nav__link">
+    Table Validation
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -935,6 +973,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#database-validation" class="md-nav__link">
+    Database Validation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#table-validation" class="md-nav__link">
+    Table Validation
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -948,7 +1008,8 @@
 
 
 <p><img alt="Watsons" src="../wxd-images/watsons-go-logo-small.png" /></p>
-<h1 id="appendix-f-database-validation">Appendix F - Database Validation</h1>
+<h1 id="appendix-f-database-and-table-validation">Appendix F - Database and Table Validation</h1>
+<h2 id="database-validation">Database Validation</h2>
 <p>You can validate that you have the correct number of rows in your database by using the notebook found in the following link: <a href="../wxd-files/Verify.ipynb">Validation Notebook</a>.</p>
 <div class="admonition abstract">
 <p class="admonition-title">Download Verification Notebook</p>
@@ -1103,6 +1164,14 @@
 <span class="k">SELECT</span><span class="w"> </span><span class="k">TABLE_NAME</span><span class="p">,</span><span class="w"> </span><span class="k">IF</span><span class="p">(</span><span class="n">EXPECTED_ROWS</span><span class="o">-</span><span class="n">ACTUAL_ROWS</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;OK&#39;</span><span class="p">,</span><span class="s1">&#39;ERROR&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">STATUS</span><span class="p">,</span><span class="w"> </span><span class="n">EXPECTED_ROWS</span><span class="p">,</span><span class="w"> </span><span class="n">ACTUAL_ROWS</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">TABLES</span><span class="w"></span>
 <span class="w">  </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="k">TABLE_NAME</span><span class="w"> </span><span class="k">ASC</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
+<h2 id="table-validation">Table Validation</h2>
+<p>The following script is used to compare your table definitions with a generic one. The output from this report should be provided to the POC organizers. There is no "correct" output from this program. It is used to compare the different approaches POC teams used to create the tables in the system.</p>
+<p>Download the following notebook into your Jupyter notebook environment and then run the code in the notebook: <a href="../wxd-files/Verify-Watsons.ipynb">Validation Notebook</a>.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Download Verification Notebook</p>
+<div class="highlight"><pre><span></span><code>wget https://ibm.github.io/watsonx-data-poc/wxd-files/Verify-Watsons.ipynb -O Verify-Watsons.ipynb
+</code></pre></div>
+</div>
 
               
             </article>
